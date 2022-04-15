@@ -1,0 +1,96 @@
+.display-filters td {
+  position: relative;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  vertical-align: middle;
+  border-top: 0;
+}
+
+.display-filters [data-type='range']:not(.inline) > div:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.display-filters [data-type='range'].inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.display-filters [data-type='range'].inline > div:first-child {
+  margin-right: 0.5rem;
+}
+
+.display-filters .input-group.input-date.date {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.display-filters .input-group-text span {
+  line-height: 1.5;
+}
+
+tfoot.display-filters .select2-container,
+tfoot.display-filters .column-filter.select2-hidden-accessible {
+  width: auto !important;
+  display: block;
+}
+
+.display-filters-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.display-filters-top > div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  padding-right: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 667px) {
+  .display-filters-top > div > div {
+    min-width: 1% !important;
+    max-width: 100% !important;
+  }
+}
+
+.display-filters-top > div:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 8rem;
+          flex: 1 1 8rem;
+  padding-right: 0;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  text-align: right;
+}
+
+/*datatables card-heading correct styles: for create button, actions & column filters*/
+.display-filters.display-filters-top {
+  margin-bottom: 0;
+}
+
+.display-filters.display-filters-top > div {
+  margin-bottom: 0;
+}
+
+.btn-create + .block-actions + .display-filters.display-filters-top {
+  margin-top: 0.75rem;
+}
+
+.card-heading .block-actions #action_form {
+  padding: 0;
+}
+
+.card-heading .block-actions:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+/*# sourceMappingURL=display-filters.css.map */

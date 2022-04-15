@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACZ,QAAQ,EAAE,MAAM;CACjB;;AAED,AAAA,YAAY,CAAC,YAAY,CAAC;EACxB,UAAU,EAAE,UAAU;EACtB,SAAS,EAAE,KAAK;EAChB,QAAQ,EAAE,MAAM;CACjB;;AAED,AAAA,YAAY,CAAC;EACX,UAAU,EAAE,IAAI;CACjB",
+    "sources": [
+        "sweetalert2.scss"
+    ],
+    "names": [],
+    "file": "sweetalert2.css"
+}

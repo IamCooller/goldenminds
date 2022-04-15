@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,SAAS,EAAE,IAAI,CAAA,UAAU;CAC1B;;AAED,AAAA,eAAe,CAAC;EACd,SAAS,EAAE,IAAI,CAAA,UAAU;EACzB,UAAU,EAAE,MAAM;CACnB",
+    "sources": [
+        "summernote.scss"
+    ],
+    "names": [],
+    "file": "summernote.css"
+}

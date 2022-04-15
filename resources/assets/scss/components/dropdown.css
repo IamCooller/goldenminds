@@ -1,0 +1,12 @@
+.dropdown-menu {
+  min-width: 20rem;
+  left: inherit;
+  right: 0;
+}
+
+.dropdown-menu.btn-actions {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+/*# sourceMappingURL=dropdown.css.map */

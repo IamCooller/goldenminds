@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,cAAc,EAAE,GAAG;CACpB",
+    "sources": [
+        "panel-tree.scss"
+    ],
+    "names": [],
+    "file": "panel-tree.css"
+}

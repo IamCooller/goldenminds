@@ -1,0 +1,35 @@
+.sidebar .nav-link p {
+  max-width: 190px;
+}
+
+.sidebar .pull-right-container {
+  position: absolute;
+  right: 1.2rem;
+  margin-top: -0.15rem;
+}
+
+.brand .brand-link svg, .brand .brand-link img {
+  max-height: 32px;
+}
+
+.brand .brand-text {
+  margin-left: 0.5rem !important;
+}
+
+.brand .logo-mini {
+  text-align: center;
+}
+
+.sidebar-open .logo-mini {
+  display: none;
+}
+
+.sidebar-collapse .logo {
+  display: none;
+}
+
+.sidebar-collapse .logo-mini {
+  width: 3.5rem;
+  display: inline-block;
+}
+/*# sourceMappingURL=logo.css.map */

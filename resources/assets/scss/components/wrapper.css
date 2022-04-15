@@ -1,0 +1,14 @@
+.wrapper {
+  min-height: 100vh;
+}
+
+.wrapper .content-wrapper {
+  min-height: calc(100vh - 57px);
+  /* Fix for horizontal scroll */
+  max-width: 99.9%;
+}
+
+.wrapper .content-wrapper .content.body {
+  padding-bottom: 1em;
+}
+/*# sourceMappingURL=wrapper.css.map */

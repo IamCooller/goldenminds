@@ -1,0 +1,19 @@
+.pagination {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 1em;
+}
+
+.pagination .page-item {
+  margin-bottom: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0;
+  }
+}
+/*# sourceMappingURL=pagination.css.map */

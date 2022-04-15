@@ -1,0 +1,7 @@
+.nav.nav-tabs .last {
+  -webkit-box-ordinal-group: 1000;
+      -ms-flex-order: 999;
+          order: 999;
+  margin-left: auto;
+}
+/*# sourceMappingURL=tabs.css.map */
