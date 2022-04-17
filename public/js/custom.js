@@ -76,7 +76,47 @@ $(function() {
                     '</div>',
                 tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
 
+
             }
+
+        });
+
+
+
+        $('.PhotoGallerySingle__list').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            callbacks: {
+                open: function() {
+                    $('body').addClass('scroll_disabled')
+                },
+                close: function() {
+                    $('body').removeClass('scroll_disabled')
+                },
+            },
+            image: {
+                markup: '<div class="mfp-figure mfp-figure-costumer">' +
+                    '<div class="mfp-close"></div>' +
+                    '<div class="mfp-img"></div>' +
+                    '<div class="mfp-bottom-bar">' +
+                    '<div class="mfp-title"></div>' +
+
+                    '</div>' +
+                    '</div>',
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+
+                titleSrc: function(item) {
+                    return '<p>' + item.el.attr('title') + '</p>' + '<p>' + item.el.attr('data-description') + '</p>';
+                }
+            }
+
         });
     });
 

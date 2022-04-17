@@ -22,20 +22,22 @@
         </section>
         <section class="PhotoGallerySingle aos-init aos-animate" data-aos="fade-down">
         <div class="_container">
-            <div class="popup-gallery PhotoGallerySingle__list">
+            <div class="PhotoGallerySingle__list">
               
-                @foreach($data as $el)
+            @foreach(json_decode($data[0]) as $member)
                 <div class="PhotoGallerySingle__block">
-                <a href="/{{$el}}" class="licensesAndSerf__item-href hoverImgHref">
-                            <img src="/{{$el}}" alt="Лицензия" class="licensesAndSerf__item-img hoverImg">
+                <a href="/{{$member->url}}" title="{{ $member->title }}" data-description="{{ $member->desc }}" class="licensesAndSerf__item-href hoverImgHref">
+                            <img src="/{{$member->url}}" alt="{{ $member->title }}" class="licensesAndSerf__item-img hoverImg">
                         </a>
                 </div>
                 @endforeach
+            
             
               
             </div>
             {{ $data->links() }}
             </div>
         </section>
+        
 @endsection
 

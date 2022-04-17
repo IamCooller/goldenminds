@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 
-
+use App;
 use App\Model\PhotoGallery;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -45,6 +45,13 @@ class PhotoGalleryController extends Controller
         //
     }
 
+
+    public function getImagesHomeAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "images_" . $locale;
+        return $this->{$column};
+    }
     /**
      * Display the specified resource.
      *
@@ -62,12 +69,16 @@ class PhotoGalleryController extends Controller
             $currentPage = 1; // The index page.
             $paginator = new LengthAwarePaginator($photos, $total, $perPage, $currentPage, ['path' => route('photo-gallery-single', $currentPage)]);
              */
+            $locale = App::getLocale();
+            $column = "images_" . $locale;
 
-
-            $data = $this->paginate($title['images'], ['path' => route('photo-gallery-single', $id)]);
-
+            
+            $data = $this->paginate($title[$column], ['path' => route('photo-gallery-single', $id)]);
+     
         return view('frontend/photo-gallery/single',compact('data','title'));
     }
+
+    
 
     /**
      * Show the form for editing the specified resource.
