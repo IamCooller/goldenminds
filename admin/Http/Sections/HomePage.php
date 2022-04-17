@@ -67,7 +67,8 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::text('title_ru', 'Title'),
                 AdminFormElement::text('description_ru', 'Description'),
                 AdminFormElement::text('keywords_ru', 'Keywords'),
-
+                AdminFormElement::text('toptitle_ru', 'Главный заголовок'),
+                
                 AdminFormElement::wysiwyg('about_ru', 'О компании'),
                 AdminFormElement::wysiwyg('mission_ru', 'МИССИЯ АО'),
                 AdminFormElement::textarea('compitence_1_ru', 'Преимущество №1'),
@@ -83,7 +84,7 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::text('title_oz', 'Title'),
                 AdminFormElement::text('keywords_oz', 'Keywords'),
                 AdminFormElement::text('description_oz', 'Description'),
-  
+                AdminFormElement::text('toptitle_oz', 'Главный заголовок'),
                 AdminFormElement::wysiwyg('about_oz', 'О компании'),
                 AdminFormElement::wysiwyg('mission_oz', 'МИССИЯ АО'),
                 AdminFormElement::textarea('compitence_1_oz', 'Преимущество №1'),
@@ -99,7 +100,7 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::text('title_en', 'Title'),
                 AdminFormElement::text('description_en', 'Description'),
                 AdminFormElement::text('keywords_en', 'Keywords'),
- 
+                AdminFormElement::text('toptitle_en', 'Главный заголовок'),
                 AdminFormElement::wysiwyg('about_en', 'О компании'),
                 AdminFormElement::wysiwyg('mission_en', 'МИССИЯ АО'),
                 AdminFormElement::textarea('compitence_1_en', 'Преимущество №1'),
@@ -127,6 +128,7 @@ class HomePage extends Section implements Initializable
         ->addScript('custom-image', '/customjs/customimage.js', ['admin-default'])
        ->addBody([
 
+            AdminFormElement::image('background', 'Задний фон')->setView(view('admin.custom.image'))->required(),
            AdminFormElement::text('completed_projects', 'Выполненных проектов'),
            AdminFormElement::text('year_market', 'Год на рынке'),
            AdminFormElement::text('million_power', 'Млн. кВт мощности'),

@@ -24,9 +24,9 @@ class HomePage extends Model
        "keywords_ru",
        "keywords_oz",
 
-       "h_en",
-       "h_ru",
-       "h_oz",
+       "h1_en",
+       "h1_ru",
+       "h1_oz",
 
         "completed_projects",
         "year_market",
@@ -73,6 +73,11 @@ class HomePage extends Model
        "task_5_ru",
         
        "task_img",
+
+         "toptitle_en",
+        "toptitle_ru",
+        "toptitle_oz",
+        "background",
     ];
 
     /**
@@ -88,6 +93,12 @@ class HomePage extends Model
     {
         $locale = App::getLocale();
         $column = "title_" . $locale;
+        return $this->{$column};
+    }
+    public function getTopTitleAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "toptitle_" . $locale;
         return $this->{$column};
     }
     public function getDescriptionAttribute()
@@ -116,6 +127,8 @@ class HomePage extends Model
         $column = "about_" . $locale;
         return $this->{$column};
     }
+
+    
 
     public function getCompitence1Attribute()
     {

@@ -399,14 +399,14 @@
 
 
 
-    <section class="achievement" data-aos="fade-down">
+    <section class="achievement" data-aos="fade-down" style="background-image: url({{$homepage->background}});">
             <div class="_container">
                 <div class="achievement__body">
                     <div class="achievement__sound">
                         <i class="fas fa-volume-down"></i>
                     </div>
                     <h1 class="achievement__title">
-                    {{ trans('Обеспечение лидирующего положения на рынке проектирования и инженерных изысканий для строительства объектов гидроэнергетики')}}      
+                    {{$homepage->toptitle}}    
                     </h1>
 
                     <div class="achievement__ul ul-achievement">
