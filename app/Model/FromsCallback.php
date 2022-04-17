@@ -5,6 +5,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class FromsCallback extends Model
 {
+    const NEW_STATUS = 0;
+    const APPROVED_STATUS = 1;
     /**
      * @var string
      */
@@ -24,6 +26,14 @@ class FromsCallback extends Model
     public function contacts()
     {
         return $this->hasMany(Contact::class);
+    }
+    
+    public static function getListStatus() 
+    {
+        return [
+            static::NEW_STATUS => 'Новый',
+            static::APPROVED_STATUS => 'Обработан'
+        ];
     }
 
 

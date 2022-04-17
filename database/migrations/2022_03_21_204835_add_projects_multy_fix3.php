@@ -17,9 +17,9 @@ class AddProjectsMultyFix3 extends Migration
     {
         Schema::table('mainstream', function (Blueprint $table) {
             
-            $table->text("content_consultation_en")->nullable()->change();
-            $table->text("content_consultation_ru")->nullable()->change();
-            $table->text("content_consultation_oz")->nullable()->change();
+            $table->text("content_consultation_en")->nullable();
+            $table->text("content_consultation_ru")->nullable();
+            $table->text("content_consultation_oz")->nullable();
         });
     }
 
