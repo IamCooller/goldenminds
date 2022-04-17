@@ -35,7 +35,10 @@ class FromsCallback extends Model
             static::APPROVED_STATUS => 'Обработан'
         ];
     }
-
+    
+    protected $attributes = [
+        'status' => self::NEW_STATUS,
+    ];
 
     /**
      * @var array
