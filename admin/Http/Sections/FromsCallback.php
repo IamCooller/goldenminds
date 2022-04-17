@@ -10,6 +10,7 @@ use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 use SleepingOwl\Admin\Contracts\Form\FormInterface;
 use SleepingOwl\Admin\Contracts\Initializable;
 use SleepingOwl\Admin\Section;
+use App\Model\FromsCallback as FromsCallbackModel;
 
 /**
  * Class FromsCallback
@@ -37,14 +38,18 @@ class FromsCallback extends Section implements Initializable
      */
     public function initialize()
     {
+        $countNews = FromsCallbackModel::where('status', FromsCallbackModel::NEW_STATUS)->count();
         $this->addToNavigation()->setIcon('fa fa-anchor')->setPriority(99);
+        if($countNews) {
+            $this->addToNavigation()->addBadge(new \SleepingOwl\Admin\Navigation\Badge($countNews));
+        }
     }
     
 
     /**
      * @return DisplayInterface
      */
-    public function onDisplay(\App\Model\FromsCallback $model)
+    public function onDisplay(FromsCallbackModel $model)
     {
  
         $display = AdminDisplay::datatablesAsync()->setColumns([
@@ -53,6 +58,9 @@ class FromsCallback extends Section implements Initializable
             AdminColumn::link('email')->setLabel('Email'),
             AdminColumn::link('form')->setLabel('Форма'),
             AdminColumn::link('created_at')->setLabel('Время'),
+            AdminColumn::custom('status', function($model){
+                return $model::getListStatus()[$model->status];
+            })->setLabel('Статус')
         ]);
 
         
@@ -86,8 +94,7 @@ class FromsCallback extends Section implements Initializable
                 AdminFormElement::file('file')->setLabel('Резюме'),
                 AdminFormElement::text('service')->setLabel('Услуга'),
                 AdminFormElement::text('index')->setLabel('Индекс'),
-                AdminFormElement::text('form')->setLabel('Форма'),
-                
+                AdminFormElement::text('form')->setLabel('Форма')
             ]);
             return $form;
         }
@@ -128,6 +135,7 @@ class FromsCallback extends Section implements Initializable
             $elements[]=    
                 AdminFormElement::text('vacancy')->setLabel('Вакансия');
         }
+        $elements[] = AdminFormElement::select('status', 'Статус', FromsCallbackModel::getListStatus());
         $form = AdminForm::form()->setElements($elements);
         return $form;
     
