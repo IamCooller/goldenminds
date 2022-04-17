@@ -1316,7 +1316,7 @@
                     <div class="about-company__body about-body">
                         <div class="about-body__title">{{trans('О компании')}}</div>
                        {!! $homepage->about !!}
-                        <a href="{{route('guidance')}}" class="about-body__link">
+                        <a href="{{route('mainstream')}}" class="about-body__link">
                             <span>{{trans('подробнее')}}</span>
                             <i class="fas fa-arrow-up"></i>
                         </a>

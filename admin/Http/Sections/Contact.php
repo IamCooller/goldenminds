@@ -59,15 +59,49 @@ class Contact extends Section implements Initializable
      */
     public function onEdit($id)
     {
-        $form = AdminForm::form()->setElements([
-            AdminFormElement::text('tel1', 'Номер телефона №1')->required()->unique(),
-            AdminFormElement::text('tel2', 'Номер телефона №2'),
-            AdminFormElement::text('email', 'E-mail')->required()->unique(),
-            AdminFormElement::wysiwyg('text', 'Текст'),
-            AdminFormElement::wysiwyg('address', 'Адрес'),
-            AdminFormElement::wysiwyg('map', 'Карта'),
-        ]);
-        return $form;
+
+    
+
+        $tabs = AdminDisplay::tabbed();
+
+
+        $tabs->setTabs(function ($id) {
+            $tabsRU = [];
+            $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
+                AdminFormElement::text('tel1_ru', 'Номер телефона №1'),
+                AdminFormElement::text('tel2_ru', 'Номер телефона №2'),
+                AdminFormElement::text('email_ru', 'E-mail'),
+                AdminFormElement::wysiwyg('text_ru', 'Текст'),
+                AdminFormElement::wysiwyg('address_ru', 'Адрес'),
+            ]))->setLabel('RU');
+            $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
+                AdminFormElement::text('tel1_oz', 'Номер телефона №1'),
+                AdminFormElement::text('tel2_oz', 'Номер телефона №2'),
+                AdminFormElement::text('email_oz', 'E-mail'),
+                AdminFormElement::wysiwyg('text_oz', 'Текст'),
+                AdminFormElement::wysiwyg('address_oz', 'Адрес'),
+            ]))->setLabel('OZ');
+            $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
+                AdminFormElement::text('tel1_en', 'Номер телефона №1'),
+                AdminFormElement::text('tel2_en', 'Номер телефона №2'),
+                AdminFormElement::text('email_en', 'E-mail'),
+                AdminFormElement::wysiwyg('text_en', 'Текст'),
+                AdminFormElement::wysiwyg('address_en', 'Адрес'),
+            ]))->setLabel('EN'); 
+            return $tabsRU;
+        });
+
+       
+        $form = AdminForm::card()
+        ->addHeader([
+            $tabs
+        ])
+       ->addBody([
+        AdminFormElement::wysiwyg('map', 'Карта'),
+       ]);
+      
+   
+    return $form;
     
     }
 
