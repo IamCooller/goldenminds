@@ -99,7 +99,7 @@ class ContactsController extends Controller
         
         $name = $request->email;
         $email = $request->email;
-        $emailTo = Options::latest()->first()->value('email');
+        $emailTo = Options::latest()->first()->value('email_form');
        
         $header = 'Форма контактов';
         $message = $request->message;;

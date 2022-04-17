@@ -34,7 +34,7 @@ class MainController extends Controller
         
 
         $email = $request->email;
-        $emailTo = Options::latest()->first()->value('email');
+        $emailTo = Options::latest()->first()->value('email_form');
        
         $header = 'Форма Подписки';
         // Формируем сообщение для отправки, в нём мы соберём всё, что ввели в форме
@@ -75,7 +75,7 @@ class MainController extends Controller
         $email = $request->email;
         $tel = $request->tel;
         $subject = $request->subject;
-        $emailTo = Options::latest()->first()->value('email');
+        $emailTo = Options::latest()->first()->value('email_form');
        
         $header = 'Форма Обратной связи';
         // Формируем сообщение для отправки, в нём мы соберём всё, что ввели в форме

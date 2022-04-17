@@ -19,10 +19,10 @@
  
 Route::group(['prefix' => App\Http\Middleware\LocaleMiddleware::getLocale()], function() {
 
-  Route::get('sitemap.xml','\App\Http\Controllers\SitemapController@index')->name('sitemap');
+  Route::get('sitemap.xml','\App\Http\Controllers\SitemapController@index');
   Route::get('/', '\App\Http\Controllers\Frontend\HomeController@index')->name('home');
 
-
+  Route::get('/sitemap', '\App\Http\Controllers\SitemapController@sitemap')->name('sitemap');
 
   Route::get('newlocale/{newlang}', function ($lang) {
 

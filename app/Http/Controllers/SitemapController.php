@@ -47,4 +47,10 @@ class SitemapController extends Controller
           ->header('Content-Type', 'text/xml');
 
     }
+
+    public function sitemap(Request $r)
+    {
+
+        return view('frontend/sitemap/index');
+    }
 }
