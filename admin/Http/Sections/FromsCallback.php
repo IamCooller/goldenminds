@@ -41,7 +41,7 @@ class FromsCallback extends Section implements Initializable
         $countNews = FromsCallbackModel::where('status', FromsCallbackModel::NEW_STATUS)->count();
         $this->addToNavigation()->setIcon('fa fa-anchor')->setPriority(99);
         if($countNews) {
-            $this->addToNavigation()->addBadge(new \SleepingOwl\Admin\Navigation\Badge($countNews));
+            $this->addToNavigation()->setIcon('fa fa-anchor')->setPriority(99)->addBadge(new \SleepingOwl\Admin\Navigation\Badge($countNews));
         }
     }
     
