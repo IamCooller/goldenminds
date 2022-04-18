@@ -22,12 +22,11 @@ class RolesSectionModelPolicy
      */
     public function before(User $user, $ability, Roles $section, Role $item)
     {
-        if ($user->hasRole('superadmin')) {
-            //if ($ability != 'display' && $ability != 'create' && $item->id <= 2) {
-            //    return false;
-            //}
-
+        if ($user->hasRole('admin')) {
             return true;
+        }
+        else {
+            return false;
         }
     }
 

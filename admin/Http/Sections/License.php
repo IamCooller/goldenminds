@@ -24,7 +24,7 @@ class License extends Section
      *
      * @var bool
      */
-    protected $checkAccess = false;
+    protected $checkAccess = true;
 
     /**
      * @var string

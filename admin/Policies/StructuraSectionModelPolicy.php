@@ -2,12 +2,11 @@
 
 namespace Admin\Policies;
 
-use Admin\Http\Sections\Contacts;
 use App\Model\Contact;
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ContactsSectionModelPolicy
+class StructuraSectionModelPolicy
 {
     use HandlesAuthorization;
 
@@ -19,7 +18,7 @@ class ContactsSectionModelPolicy
      *
      * @return bool
      */
-    public function before(User $user, $ability, Contacts $section, Contact $contact)
+    public function before(User $user, $ability, $section, $model)
     {
         if ($user->hasRole('admin') || $user->hasRole('manager')) {
             return true;
@@ -35,7 +34,7 @@ class ContactsSectionModelPolicy
      *
      * @return bool
      */
-    public function display(User $user, Contacts $section, Contact $contact)
+    public function display(User $user, $section, $model)
     {
         return $user->hasRole('manager');
     }
@@ -47,7 +46,7 @@ class ContactsSectionModelPolicy
      *
      * @return bool
      */
-    public function create(User $user, Contacts $section, Contact $contact)
+    public function create(User $user, $section, $model)
     {
         return $user->hasRole('manager');
     }
@@ -59,9 +58,9 @@ class ContactsSectionModelPolicy
      *
      * @return bool
      */
-    public function edit(User $user, Contacts $section, Contact $contact)
+    public function edit(User $user, $section, $model)
     {
-        return $user->hasRole('manager') && $contact->isAuthor($user);
+        return $user->hasRole('manager') && $model->isAuthor($user);
     }
 
     /**
@@ -71,9 +70,9 @@ class ContactsSectionModelPolicy
      *
      * @return bool
      */
-    public function restore(User $user, Contacts $section, Contact $contact)
+    public function restore(User $user, $section, $model)
     {
-        return $user->hasRole('manager') && $contact->isAuthor($user);
+        return $user->hasRole('manager') && $model->isAuthor($user);
     }
 
     /**
@@ -83,8 +82,8 @@ class ContactsSectionModelPolicy
      *
      * @return bool
      */
-    public function delete(User $user, Contacts $section, Contact $contact)
+    public function delete(User $user, $section, $model)
     {
-        return $user->hasRole('manager') && $contact->isAuthor($user);
+        return $user->hasRole('manager') && $model->isAuthor($user);
     }
 }

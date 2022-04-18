@@ -2,7 +2,7 @@
 
 namespace Admin\Policies;
 
-use Admin\Http\Sections\Contacts;
+use Admin\Http\Sections\Options;
 use App\Model\Contact;
 use App\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
@@ -19,10 +19,12 @@ class OptionsSectionModelPolicy
      *
      * @return bool
      */
-    public function before(User $user, $ability, Contacts $section, Contact $contact)
+    public function before(User $user, $ability, $section, $contact)
     {
-        if ($user->isSuperAdmin()) {
+        if ($user->hasRole('admin') || $user->hasRole('manager')) {
             return true;
+        }else{
+            return false;
         }
     }
 
@@ -33,7 +35,7 @@ class OptionsSectionModelPolicy
      *
      * @return bool
      */
-    public function display(User $user, Contacts $section, Contact $contact)
+    public function display(User $user, $section, $contact)
     {
         return $user->hasRole('manager');
     }
@@ -45,7 +47,7 @@ class OptionsSectionModelPolicy
      *
      * @return bool
      */
-    public function create(User $user, Contacts $section, Contact $contact)
+    public function create(User $user, $section, $contact)
     {
         return $user->hasRole('manager');
     }
@@ -57,7 +59,7 @@ class OptionsSectionModelPolicy
      *
      * @return bool
      */
-    public function edit(User $user, Contacts $section, Contact $contact)
+    public function edit(User $user, $section, $contact)
     {
         return $user->hasRole('manager') && $contact->isAuthor($user);
     }
@@ -69,7 +71,7 @@ class OptionsSectionModelPolicy
      *
      * @return bool
      */
-    public function restore(User $user, Contacts $section, Contact $contact)
+    public function restore(User $user, $section, $contact)
     {
         return $user->hasRole('manager') && $contact->isAuthor($user);
     }
@@ -81,7 +83,7 @@ class OptionsSectionModelPolicy
      *
      * @return bool
      */
-    public function delete(User $user, Contacts $section, Contact $contact)
+    public function delete(User $user, $section, $contact)
     {
         return $user->hasRole('manager') && $contact->isAuthor($user);
     }

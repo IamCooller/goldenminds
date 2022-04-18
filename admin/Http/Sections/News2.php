@@ -24,7 +24,7 @@ class News2 extends Section
      *
      * @var bool
      */
-    protected $checkAccess = false;
+    protected $checkAccess = true;
 
     /**
      * @var string

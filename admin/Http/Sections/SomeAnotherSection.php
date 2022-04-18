@@ -20,7 +20,7 @@ class SomeAnotherSection extends Section
      *
      * @var bool
      */
-    protected $checkAccess = false;
+    protected $checkAccess = true;
 
     /**
      * @var string

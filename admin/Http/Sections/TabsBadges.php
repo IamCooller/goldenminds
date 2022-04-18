@@ -30,7 +30,7 @@ class TabsBadges extends Contacts5
      *
      * @var bool
      */
-    protected $checkAccess = false;
+    protected $checkAccess = true;
     /**
      * @var string
      */

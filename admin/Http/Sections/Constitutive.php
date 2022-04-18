@@ -21,14 +21,14 @@ use SleepingOwl\Admin\Section;
  *
  * @see http://sleepingowladmin.ru/docs/model_configuration_section
  */
-class constitutive extends Section implements Initializable
+class Constitutive extends Section implements Initializable
 {
     /**
      * @see http://sleepingowladmin.ru/docs/model_configuration#ограничение-прав-доступа
      *
      * @var bool
      */
-    protected $checkAccess = false;
+    protected $checkAccess = true;
   
     /**
      * @var string
