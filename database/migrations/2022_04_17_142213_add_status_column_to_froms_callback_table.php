@@ -14,7 +14,7 @@ class AddStatusColumnToFromsCallbackTable extends Migration
     public function up()
     {
         Schema::table('formscallback', function (Blueprint $table) {
-            $table->integer('status');
+            $table->integer('status')->nullable();
         });
     }
 
