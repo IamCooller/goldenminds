@@ -37,6 +37,17 @@ class Options extends Model
         'google_analyt',
         'yandex_met',
         'nip',
+
+
+
+
+        'blogo_en',
+        'blogo_ru',
+        'blogo_oz',
+        'slogo_en',
+        'slogo_ru',
+        'slogo_oz',
+        
     ];
 
     /**
@@ -46,6 +57,20 @@ class Options extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function getBlogoAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "blogo_" . $locale;
+        return $this->{$column};
+    }
+    public function getSlogohAttribute()
+    {
+        
+        $locale = App::getLocale();
+        $column = "slogo_" . $locale;
+        return $this->{$column};
+    }
 
     public function getGraphAttribute()
     {

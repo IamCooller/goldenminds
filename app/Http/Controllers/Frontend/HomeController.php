@@ -19,7 +19,7 @@ use App\Models\Structure;
 use App\Notifications\InboxMessage;
 use phpDocumentor\Reflection\Types\Null_;
 use App;
-
+use App\Model\Options;
 use App\Model\Guidance;
 use App\Model\HomePage;
 class HomeController extends Controller
@@ -43,7 +43,9 @@ class HomeController extends Controller
         $guidances = Guidance::all();
         $news = News::latest('created_at')->where('published', '1')->paginate(5);
         $homepage = HomePage::latest()->first();
-        return view('frontend.home.index', compact('projectsAfg','projectsViet','projectsKazah','projectsKirgiz','projectsTajik','projectsTurk','projectsUzbek','guidances','news', 'homepage'));
+        $options = Options::latest()->first();
+    
+        return view('frontend.home.index', compact('projectsAfg','projectsViet','projectsKazah','projectsKirgiz','projectsTajik','projectsTurk','projectsUzbek','guidances','news', 'homepage', 'options'));
     }
 
 

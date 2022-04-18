@@ -72,6 +72,9 @@ class Options extends Section implements Initializable
                 AdminFormElement::text('email_ru', 'E-mail'),
                 AdminFormElement::ckeditor('graph_ru', 'График работы'),
                 AdminFormElement::ckeditor('address_ru', 'Адрес'),
+                AdminFormElement::image('blogo_ru', 'Логотип'),
+                AdminFormElement::image('slogo_ru', 'Мини логотип'),
+           
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('tel1_oz', 'Номер телефона №1'),
@@ -79,6 +82,8 @@ class Options extends Section implements Initializable
                 AdminFormElement::text('email_oz', 'E-mail'),
                 AdminFormElement::ckeditor('graph_oz', 'График работы'),
                 AdminFormElement::ckeditor('address_oz', 'Адрес'),
+                AdminFormElement::image('blogo_oz', 'Логотип'),
+                AdminFormElement::image('slogo_oz', 'Мини логотип'),
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('tel1_en', 'Номер телефона №1'),
@@ -86,6 +91,9 @@ class Options extends Section implements Initializable
                 AdminFormElement::text('email_en', 'E-mail'),
                 AdminFormElement::ckeditor('graph_en', 'График работы'),
                 AdminFormElement::ckeditor('address_en', 'Адрес'),
+                AdminFormElement::image('blogo_en', 'Логотип'),
+                AdminFormElement::image('slogo_en', 'Мини логотип'),
+                
             ]))->setLabel('EN'); 
             return $tabsRU;
         });

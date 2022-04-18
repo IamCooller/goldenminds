@@ -56,6 +56,7 @@
 
 </head>
 
+
 <body id='app'>
 
 <div id="myOverlay" class="overlay searchClose">
@@ -149,8 +150,14 @@
                 </div>
 
                 <div class="header__bottom bottom-header">
+
+                
                     <a href="{{ route('home') }}" class="bottom-header__logo">
-                        <img src="{{ asset('img/logo.svg')}}" alt="Логотип" />
+                        @if($options->blogo !='')
+                        <img src="/{{ $options->blogo}}" alt="Логотип" />
+                        @else
+                       <p style="font-size: 12px;">{{ trans('Реализованные и действующие проекты АО “Гидропроект”') }}</p> 
+                        @endif
                     </a>
                     <nav class="bottom-header__nav print_hide">
                
@@ -397,7 +404,11 @@
         <div class="_container footer__container footerMain__container">
             <div class="footer__container-inner footerMain__container-inner">
                 <a href="{{ route('home') }}" class="footer__logo">
-                    <img src="{{ asset('img/logo.svg')}}" alt="Логотип" />
+                @if($options->blogo !='')
+                        <img src="/{{ $options->blogo}}" alt="Логотип" />
+                        @else
+                       <p style="font-size: 12px;">{{ trans('Реализованные и действующие проекты АО “Гидропроект”') }}</p> 
+                        @endif
                 </a>
 
                 <div class="footer__tels">

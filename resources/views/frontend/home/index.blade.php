@@ -1334,7 +1334,27 @@
                     <div class="missions__text">
                        {!! $homepage->mission !!}
                     </div>
-                    <img src="/img/missions/1.svg" alt="" />
+
+					@if(App::isLocale('ru'))
+					@if($options->slogo_ru !='')
+                        <img src="/{{ $options->slogo_ru}}" alt="Логотип" />
+                        @else
+                       <p style="font-size: 12px;">{{ trans('Реализованные и действующие проекты АО “Гидропроект”') }}</p> 
+                        @endif
+@elseif(App::isLocale('en'))
+@if($options->slogo_en !='')
+                        <img src="/{{ $options->slogo_en}}" alt="Логотип" />
+                        @else
+                       <p style="font-size: 12px;">{{ trans('Реализованные и действующие проекты АО “Гидропроект”') }}</p> 
+                        @endif
+@elseif(App::isLocale('oz'))
+@if($options->slogo_oz !='')
+                        <img src="/{{ $options->slogo_oz}}" alt="Логотип" />
+                        @else
+                       <p style="font-size: 12px;">{{ trans('Реализованные и действующие проекты АО “Гидропроект”') }}</p> 
+                        @endif
+@endif
+					
                 </div>
             </div>
         </section>
