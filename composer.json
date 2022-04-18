@@ -16,7 +16,7 @@
         "joedixon/laravel-translation": "^1.1",
         "laravel/framework": "6.0",
         "laravel/tinker": "^1.0",
-        "laravelrus/sleepingowl": "^7.*",
+        "laravelrus/sleepingowl": "^7",
         "santigarcor/laratrust": "*",
         "spatie/laravel-translatable": "^4.6",
         "tanmuhittin/laravel-google-translate": "^2.1"
