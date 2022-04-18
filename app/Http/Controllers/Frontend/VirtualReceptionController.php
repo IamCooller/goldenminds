@@ -54,7 +54,7 @@ class VirtualReceptionController extends Controller
         $service = $request->service;
         $index = $request->indexx;
 
-        $emailTo = Options::latest()->first()->value('email');
+        $emailTo = Options::latest()->first()->value('email_form');
        
         $header = 'Форма виртуальной приемной';
         $headerTo = 'Виртуальная приемная';

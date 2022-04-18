@@ -7695,6 +7695,94 @@ ul.breadcrumb li a:hover {
   width: 100% !important;
 }
 
+.sitemap .sitemap__body-title {
+  color: #263475;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.sitemap .sitemap__body #tree {
+  width: 100%;
+  font-size: 18px;
+}
+
+.sitemap .sitemap__body #tree .tree {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #fbfbfb;
+  border: none;
+  border-radius: 4px;
+}
+
+.sitemap .sitemap__body #tree .tree li {
+  list-style-type: none;
+  margin: 0px 10px 0px 25px;
+  padding: 10px 5px 4px 18px;
+  position: relative;
+}
+
+.sitemap .sitemap__body #tree .tree li:last-child::before {
+  bottom: 50px;
+  height: 100%;
+  top: 0;
+  width: 1px;
+  height: 30px;
+}
+
+.sitemap .sitemap__body #tree .tree li.parent_li > span {
+  cursor: pointer;
+  background: #eee;
+}
+
+.sitemap .sitemap__body #tree .tree li::before, .sitemap .sitemap__body #tree .tree li::after {
+  content: '';
+  left: -20px;
+  position: absolute;
+  right: auto;
+}
+
+.sitemap .sitemap__body #tree .tree li span {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 3px 9px 6px 9px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  border: 1px solid #00acf9;
+}
+
+.sitemap .sitemap__body #tree .tree li a {
+  font-size: 16px;
+}
+
+.sitemap .sitemap__body #tree .tree li::after {
+  border-top: 1px solid #00acf9;
+  height: 20px;
+  top: 27px;
+  width: 38px;
+}
+
+.sitemap .sitemap__body #tree .tree li::before {
+  border-left: 1px solid #00acf9;
+  bottom: 50px;
+  height: 100%;
+  top: 0;
+  width: 1px;
+}
+
+#tree .tree > ul > li::before,
+#tree .tree > ul > li::after {
+  border: 0 !important;
+}
+
+#tree .tree li.parent_li > span:hover,
+#tree .tree li.parent_li > span:hover + ul li span {
+  background: #eee;
+  border: 1px solid #94a0b4;
+  color: #000;
+  opacity: 0.8;
+}
+
 @media only screen and (max-width: 1600px) {
   .popup {
     padding: 40px 80px;
