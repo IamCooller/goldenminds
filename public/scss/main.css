@@ -7783,6 +7783,10 @@ ul.breadcrumb li a:hover {
   opacity: 0.8;
 }
 
+.structuraMap__tab {
+  margin-left: 20px;
+}
+
 @media only screen and (max-width: 1600px) {
   .popup {
     padding: 40px 80px;
@@ -8046,9 +8050,6 @@ ul.breadcrumb li a:hover {
   }
   .footerMain__RightBottom_links_inner {
     grid-gap: 10px;
-  }
-  .structuraMap__tab {
-    margin-left: 20px;
   }
   .licensesAndSerf__list {
     grid-gap: 30px;
