@@ -66,6 +66,7 @@ class Mainstream extends Section
                 AdminFormElement::wysiwyg('content_design_ru', 'Контент Проектирование'),
                 AdminFormElement::wysiwyg('content_economy_ru', 'Контент Расчеты'),
                 AdminFormElement::wysiwyg('content_consultation_ru', 'Контент Консультация'),
+                AdminFormElement::files('file_ru', 'Файл'),
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_oz', 'Title'),
@@ -75,6 +76,7 @@ class Mainstream extends Section
                 AdminFormElement::wysiwyg('content_design_oz', 'Контент Проектирование'),
                 AdminFormElement::wysiwyg('content_economy_oz', 'Контент Расчеты'),
                 AdminFormElement::wysiwyg('content_consultation_oz', 'Контент Консультация'),
+                AdminFormElement::files('file_oz', 'Файл'),
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_en', 'Title'),
@@ -84,6 +86,7 @@ class Mainstream extends Section
                 AdminFormElement::wysiwyg('content_design_en', 'Контент Проектирование'),
                 AdminFormElement::wysiwyg('content_economy_en', 'Контент Расчеты'),
                 AdminFormElement::wysiwyg('content_consultation_en', 'Контент Консультация'),
+                AdminFormElement::files('file_en', 'Файл'),
             ]))->setLabel('EN'); 
             return $tabsRU;
         });
@@ -95,7 +98,6 @@ class Mainstream extends Section
         ])
         ->addScript('custom-image', '/customjs/customimage.js', ['admin-default'])
        ->addBody([
-        AdminFormElement::files('file', 'Файл'),
        ]);
       
    

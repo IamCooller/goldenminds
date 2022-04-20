@@ -32,6 +32,9 @@ class Mainstream extends Model
         'content_consultation_ru',
         'content_consultation_oz',
         'file',
+        'file_en',
+        'file_ru',
+        'file_oz',
         'publish_at',
     ];
 
@@ -42,6 +45,13 @@ class Mainstream extends Model
         'created_at',
         'updated_at'
     ];
+    
+    public function getFileAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "file_" . $locale;
+        return $this->{$column};
+    }
 
     public function getTitleAttribute()
     {
