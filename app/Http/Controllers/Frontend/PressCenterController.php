@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
-use App\Model\News;
+use App\Model\News2 as News;
 use Illuminate\Http\Request;
-
+use App;
 class PressCenterController extends Controller
 {
     /**
@@ -14,8 +14,9 @@ class PressCenterController extends Controller
      */
     public function index()
     {
-
-        $news = News::latest('created_at')->where('published', '1')->paginate(
+        $locale = App::getLocale();
+        $column = "date_" . $locale;
+        $news = News::latest($column)->where('published', '1')->paginate(
             $perPage = 9, $columns = ['*'], $pageName = 'news', $onFirstPage = 0
         );
        

@@ -1499,7 +1499,7 @@
 
                         <div class="left-news__content">
                             <div class="left-news__data">
-                                <i class="far fa-clock"></i> {{$el->created_at->format('d.m.Y')}}
+                                <i class="far fa-clock"></i> {{$el->date}}
                             </div>
                             <div class="left-news__title">
                             {{$el->name}}
@@ -1524,7 +1524,7 @@
                         <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="reght-news__blok blok-reght">
                             <div class="blok-reght__left">
                                 <div class="blok-reght__data">
-                                    <i class="far fa-clock"></i> {{$el->created_at->format('d.m.Y')}}
+                                    <i class="far fa-clock"></i> {{$el->date}}
                                 </div>
                                 <div class="blok-reght__text">
                                 {{$el->name}}

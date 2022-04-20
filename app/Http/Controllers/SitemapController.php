@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Model\News;
+use App\Model\News2 as News;
 use App\Model\Structura;
 use App\Model\Mainstream;
 use App\Model\License;

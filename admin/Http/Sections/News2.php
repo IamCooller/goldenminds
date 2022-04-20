@@ -47,7 +47,7 @@ class News2 extends Section
         $display->setColumns([
             
             AdminColumn::link('title_oz', 'Заголовок'),
-            AdminColumn::datetime('date', 'Дата')->setFormat('d.m.Y')->setWidth('150px'),
+            AdminColumn::datetime('date_oz', 'Дата')->setFormat('d.m.Y')->setWidth('150px'),
            /*  AdminColumnEditable::checkbox('published', 'Публикация'), */
             AdminColumn::custom('Публикация', function (\App\Model\News2 $model) {
                 return $model->published ? '<i class="fa fa-check"></i>' : '<i class="fa fa-minus"></i>';
@@ -83,6 +83,10 @@ class News2 extends Section
                 AdminFormElement::text('keywords_ru', 'Keywords'),
                 AdminFormElement::text('name_ru', 'Заголовок'),
                 AdminFormElement::wysiwyg('content_ru', 'Текст'),
+                AdminFormElement::date('date_ru', 'Дата')->setFormat('d.m.Y'),
+                AdminFormElement::image('image_ru', 'Главное изображение 16:9 (макс. 1280 × 960 px)')->setView(view('admin.custom.image')),
+                AdminFormElement::images('images_ru', 'Дополнительные изображения 16:9 (макс. 1280 × 960 px)'),
+                AdminFormElement::text('author_ru', 'Автор'),  
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_oz', 'Title'),
@@ -90,6 +94,10 @@ class News2 extends Section
                 AdminFormElement::text('description_oz', 'Description'),
                 AdminFormElement::text('name_oz', 'Заголовок'),
                 AdminFormElement::wysiwyg('content_oz', 'Текст'),
+                AdminFormElement::date('date_oz', 'Дата')->setFormat('d.m.Y'),
+                AdminFormElement::image('image_oz', 'Главное изображение 16:9 (макс. 1280 × 960 px)')->setView(view('admin.custom.image')),
+                AdminFormElement::images('images_oz', 'Дополнительные изображения 16:9 (макс. 1280 × 960 px)'),
+                AdminFormElement::text('author_oz', 'Автор'),  
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_en', 'Title'),
@@ -97,9 +105,14 @@ class News2 extends Section
                 AdminFormElement::text('keywords_en', 'Keywords'),
                 AdminFormElement::text('name_en', 'Заголовок'),
                 AdminFormElement::wysiwyg('content_en', 'Текст'),
+                AdminFormElement::date('date_en', 'Дата')->setFormat('d.m.Y'),
+                AdminFormElement::image('image_en', 'Главное изображение 16:9 (макс. 1280 × 960 px)')->setView(view('admin.custom.image')),
+                AdminFormElement::images('images_en', 'Дополнительные изображения 16:9 (макс. 1280 × 960 px)'),
+                AdminFormElement::text('author_en', 'Автор'),  
             ]))->setLabel('EN'); 
             return $tabsRU;
         });
+
 
        
         $form = AdminForm::card()
@@ -108,19 +121,15 @@ class News2 extends Section
         ])
         ->addScript('custom-image', '/customjs/customimage.js', ['admin-default'])
        ->addBody([
-           AdminFormElement::date('date', 'Дата')->required()->setFormat('Y-m-d'),
+        
            AdminFormElement::checkbox('published', 'Публикация'),
-           AdminFormElement::image('image', 'Главное изображение 16:9 (макс. 1280 × 960 px)')->setView(view('admin.custom.image'))->required(),
-           AdminFormElement::images('images', 'Дополнительные изображения 16:9 (макс. 1280 × 960 px)'),
-       ])
-       ->addBody([
-         
-           AdminFormElement::text('author', 'Автор')->required(),  
+     
        ]);
       
    
     return $form;
     }
+
     /**
      * @return FormInterface
      */

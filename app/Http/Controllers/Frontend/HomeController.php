@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Backend\NewsController;
-use App\Model\News;
+use App\Model\News2 as News;
 use App\Model\Projects;
 use App\Models\Tenders;
 use App\Models\Contacts;
@@ -41,7 +41,10 @@ class HomeController extends Controller
         $projectsTurk = Projects::where('category', 'Туркменистан')->get();
         $projectsUzbek = Projects::where('category', 'Узбекистан')->get();
         $guidances = Guidance::all();
-        $news = News::latest('created_at')->where('published', '1')->paginate(5);
+        
+        $locale = App::getLocale();
+        $column = "date_" . $locale;
+        $news = News::latest($column)->where('published', '1')->paginate(5);
         $homepage = HomePage::latest()->first();
         $options = Options::latest()->first();
     

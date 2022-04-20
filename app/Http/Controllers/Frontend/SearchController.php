@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 
-use App\Model\News;
+use App\Model\News2 as News;
 use App\Model\Regulations;
 use Illuminate\Http\Request;
 use App;
