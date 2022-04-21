@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\Model\Projects;
 use Illuminate\Http\Request;
-
+use App;
 class ProjectsController extends Controller
 {
     /**
@@ -16,9 +16,13 @@ class ProjectsController extends Controller
     public function index($status='all')
     {
         $active='';
+        $locale = App::getLocale();
+        $category = 'category_' . $locale;
+        
         if($status == 'Afghanistan')
         {
-            $projects = Projects::latest('created_at')->where( 'category', 'Афганистан')->paginate(
+            
+            $projects = Projects::latest('created_at')->where( $category, 'Афганистан')->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'projects', $onFirstPage = 0
             );
             $active='Afghanistan';
@@ -27,7 +31,7 @@ class ProjectsController extends Controller
 
         if($status == 'Vietnam')
         {
-            $projects = Projects::latest('created_at')->where( 'category', 'Вьетнам')->paginate(
+            $projects = Projects::latest('created_at')->where( $category, 'Вьетнам')->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'projects', $onFirstPage = 0
             );
             $active='Vietnam';
@@ -36,7 +40,7 @@ class ProjectsController extends Controller
 
         if($status == 'Kazakstan')
         {
-            $projects = Projects::latest('created_at')->where( 'category', 'Казахстан')->paginate(
+            $projects = Projects::latest('created_at')->where( $category, 'Казахстан')->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'projects', $onFirstPage = 0
             );
             $active='Kazakstan';
@@ -45,7 +49,7 @@ class ProjectsController extends Controller
 
         if($status == 'Kirgizia')
         {
-            $projects = Projects::latest('created_at')->where( 'category', 'Киргизия')->paginate(
+            $projects = Projects::latest('created_at')->where( $category, 'Киргизия')->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'projects', $onFirstPage = 0
             );
             $active='Kirgizia';
@@ -54,7 +58,7 @@ class ProjectsController extends Controller
 
         if($status == 'Tajikistan')
         {
-            $projects = Projects::latest('created_at')->where( 'category', 'Таджикистан')->paginate(
+            $projects = Projects::latest('created_at')->where( $category, 'Таджикистан')->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'projects', $onFirstPage = 0
             );
             $active='Tajikistan';
@@ -64,7 +68,7 @@ class ProjectsController extends Controller
 
         if($status == 'Turkmenistan')
         {
-            $projects = Projects::latest('created_at')->where( 'category', 'Туркменистан')->paginate(
+            $projects = Projects::latest('created_at')->where( $category, 'Туркменистан')->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'projects', $onFirstPage = 0
             );
             $active='Turkmenistan';
@@ -74,7 +78,7 @@ class ProjectsController extends Controller
 
         if($status == 'uzbekistan')
         {
-            $projects = Projects::latest('created_at')->where( 'category', 'Узбекистан')->paginate(
+            $projects = Projects::latest('created_at')->where( $category, 'Узбекистан')->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'projects', $onFirstPage = 0
             );
             $active='uzbekistan';

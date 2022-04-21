@@ -14,14 +14,20 @@ class History extends Model
      * @var array
      */
     protected $fillable = [
-        'years',
+        'years_ru',
+        'years_en',
+        'years_oz',
         'name_ru',
         'name_en',
         'name_oz',
-        'images',
+        'images_ru',
+        'images_en',
+        'images_oz',
+
         'content_ru',
         'content_en',
         'content_oz',
+
     ];
 
     /**
@@ -43,6 +49,20 @@ class History extends Model
     {
         $locale = App::getLocale();
         $column = "content_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getImagesAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "images_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getYearsAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "years_" . $locale;
         return $this->{$column};
     }
 

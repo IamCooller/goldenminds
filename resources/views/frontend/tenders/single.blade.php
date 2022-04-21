@@ -53,7 +53,7 @@
             @foreach(json_decode($tenders->files) as $member)
                     <div class="sidebar__right_block_downloand">
                         <div class="sidebar__right_block_downloand-img">
-                            <img src="../img/donwload.svg" alt="{{ $member->title }}">
+                            <img src="/img/donwload.svg" alt="{{ $member->title }}">
                         </div>
                         <div class="sidebar__right_block_downloand_text">
                             <div class="sidebar__right_block_downloand-title">

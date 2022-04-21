@@ -79,6 +79,7 @@ class Departament extends Section
                 AdminFormElement::text('subname_ru', 'Подзаголовок'),
                 AdminFormElement::wysiwyg('task_ru', 'Задачи'),
                 AdminFormElement::wysiwyg('function_ru', 'Функции'),
+                AdminFormElement::image('image_ru', 'Фото 16:9 (макс. 1280 × 960 px)'),
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_oz', 'Title'),
@@ -89,6 +90,7 @@ class Departament extends Section
                 AdminFormElement::text('subname_oz', 'Подзаголовок'),
                 AdminFormElement::wysiwyg('task_oz', 'Задачи'),
                 AdminFormElement::wysiwyg('function_oz', 'Функции'),
+                AdminFormElement::image('image_oz', 'Фото 16:9 (макс. 1280 × 960 px)')
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_en', 'Title'),
@@ -99,6 +101,7 @@ class Departament extends Section
                 AdminFormElement::text('subname_en', 'Подзаголовок'),
                 AdminFormElement::wysiwyg('task_en', 'Задачи'),
                 AdminFormElement::wysiwyg('function_en', 'Функции'),
+                AdminFormElement::image('image_en', 'Фото 16:9 (макс. 1280 × 960 px)')
             ]))->setLabel('EN'); 
             return $tabsRU;
         });
@@ -109,12 +112,6 @@ class Departament extends Section
             $tabs
         ])
         ->addScript('custom-image', '/customjs/customimage.js', ['admin-default'])
-       ->addBody([
-     
-        AdminFormElement::image('image', 'Фото 16:9 (макс. 1280 × 960 px)')->required()->unique(),
-        
-       ])
-
        ->setHtmlAttribute('enctype', 'multipart/form-data');
       
    

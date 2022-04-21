@@ -61,18 +61,21 @@ class ISO extends Section
                 AdminFormElement::text('description_ru', 'Description'),
                 AdminFormElement::text('keywords_ru', 'Keywords'),
                 AdminFormElement::wysiwyg('content_ru', 'Контент'),
+                AdminFormElement::files('images_ru', 'Изображения'),
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_oz', 'Title'),
                 AdminFormElement::text('keywords_oz', 'Keywords'),
                 AdminFormElement::text('description_oz', 'Description'),
                 AdminFormElement::wysiwyg('content_oz', 'Контент'),
+                AdminFormElement::files('images_oz', 'Изображения'),
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_en', 'Title'),
                 AdminFormElement::text('description_en', 'Description'),
                 AdminFormElement::text('keywords_en', 'Keywords'),
                 AdminFormElement::wysiwyg('content_en', 'Контент'),
+                AdminFormElement::files('images_en', 'Изображения'),
             ]))->setLabel('EN'); 
             return $tabsRU;
         });
@@ -81,11 +84,7 @@ class ISO extends Section
         $form = AdminForm::card()
         ->addHeader([
             $tabs
-        ])
-        ->addScript('custom-image', '/customjs/customimage.js', ['admin-default'])
-       ->addBody([
-        AdminFormElement::files('images', 'Изображения'),
-       ]);
+        ]);
       
    
     return $form;

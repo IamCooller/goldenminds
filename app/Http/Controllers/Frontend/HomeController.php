@@ -32,19 +32,22 @@ class HomeController extends Controller
         dd($currentLocal); */
         $projects = Projects::all();
         
-      
-        $projectsAfg = Projects::where('category', 'Афганистан')->get();
-        $projectsViet = Projects::where('category', 'Вьетнам')->get();
-        $projectsKazah = Projects::where('category', 'Казахстан')->get();
-        $projectsKirgiz = Projects::where('category', 'Киргизия')->get();
-        $projectsTajik = Projects::where('category', 'Таджикистан')->get();
-        $projectsTurk = Projects::where('category', 'Туркменистан')->get();
-        $projectsUzbek = Projects::where('category', 'Узбекистан')->get();
+        $locale = App::getLocale();
+        $category = 'category_' . $locale;
+        
+
+        $projectsAfg = Projects::where($category, 'Афганистан')->get();
+        $projectsViet = Projects::where($category, 'Вьетнам')->get();
+        $projectsKazah = Projects::where($category, 'Казахстан')->get();
+        $projectsKirgiz = Projects::where($category, 'Киргизия')->get();
+        $projectsTajik = Projects::where($category, 'Таджикистан')->get();
+        $projectsTurk = Projects::where($category, 'Туркменистан')->get();
+        $projectsUzbek = Projects::where($category, 'Узбекистан')->get();
         $guidances = Guidance::all();
         
         $locale = App::getLocale();
-        $column = "date_" . $locale;
-        $news = News::latest($column)->where('published', '1')->paginate(5);
+        $newsl = "date_" . $locale;
+        $news = News::latest($newsl)->where('published', '1')->paginate(5);
         $homepage = HomePage::latest()->first();
         $options = Options::latest()->first();
     

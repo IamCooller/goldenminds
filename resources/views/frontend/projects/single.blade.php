@@ -96,7 +96,7 @@
                 <div class="projectsSingle__gallery_list">
                     
                     <div class="swiper-wrapper">
-                        @foreach($projects->images as $image)
+                        @foreach(explode(",", $projects->images) as $image)
                         <div class="projectsSingle__gallery_list-item swiper-slide">
                             <img src="/{{$image}}" alt="{{$image}}">
                         </div>

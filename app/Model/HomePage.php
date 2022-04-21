@@ -28,10 +28,6 @@ class HomePage extends Model
        "h1_ru",
        "h1_oz",
 
-        "completed_projects",
-        "year_market",
-        "million_power",
-        "billion_output",
         
        "about_en",
        "about_ru",
@@ -72,12 +68,30 @@ class HomePage extends Model
        "task_5_oz",
        "task_5_ru",
         
-       "task_img",
+       "toptitle_en",
+       "toptitle_ru",
+       "toptitle_oz",
 
-         "toptitle_en",
-        "toptitle_ru",
-        "toptitle_oz",
-        "background",
+       "task_img_ru",
+         "task_img_oz",
+            "task_img_en",
+
+        "background_ru",
+        "background_oz",
+        "background_en",
+        "completed_projects_ru",
+        "completed_projects_oz",
+        "completed_projects_en",
+        "year_market_ru",
+        "year_market_oz",
+        "year_market_en",
+        "million_power_ru",
+        "million_power_oz",
+        "million_power_en",
+        "billion_output_ru",
+        "billion_output_oz",
+        "billion_output_en",
+
     ];
 
     /**
@@ -88,7 +102,52 @@ class HomePage extends Model
         'updated_at'
     ];
 
-   
+    
+    
+    public function getTaskImgAttribute($value)
+    {
+        $locale = App::getLocale();
+        $column = 'task_img_' . $locale;
+        return $this->attributes[$column];
+    }
+
+    public function getBackgroundAttribute($value)
+    {
+        $locale = App::getLocale();
+        $column = 'background_' . $locale;
+        return $this->attributes[$column];
+    }
+
+    public function getCompletedProjectsAttribute($value)
+    {
+        $locale = App::getLocale();
+        $column = 'completed_projects_' . $locale;
+        return $this->attributes[$column];
+    }
+
+    public function getYearMarketAttribute($value)
+    {
+        $locale = App::getLocale();
+        $column = 'year_market_' . $locale;
+        return $this->attributes[$column];
+    }
+
+    public function getMillionPowerAttribute($value)
+    {
+        $locale = App::getLocale();
+        $column = 'million_power_' . $locale;
+        return $this->attributes[$column];
+    }
+
+    public function getBillionOutputAttribute($value)
+    {
+        $locale = App::getLocale();
+        $column = 'billion_output_' . $locale;
+        return $this->attributes[$column];
+    }
+
+
+
     public function getTitleAttribute()
     {
         $locale = App::getLocale();

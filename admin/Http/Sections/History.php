@@ -77,14 +77,20 @@ class History extends Section
                 AdminFormElement::text('name_ru', 'Заголовок'),
 
                 AdminFormElement::wysiwyg('content_ru', 'Контент'),
+                AdminFormElement::text('years_ru', 'Год'),
+                 AdminFormElement::files('images_ru', 'Галерея'),
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('name_oz', 'Заголовок'),
                 AdminFormElement::wysiwyg('content_oz', 'Контент'),
+                AdminFormElement::text('years_oz', 'Год'),
+                 AdminFormElement::files('images_oz', 'Галерея'),
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('name_en', 'Заголовок'),
                 AdminFormElement::wysiwyg('content_en', 'Контент'),
+                AdminFormElement::text('years_en', 'Год'),
+                 AdminFormElement::files('images_en', 'Галерея'),
             ]))->setLabel('EN'); 
             return $tabsRU;
         });
@@ -93,12 +99,7 @@ class History extends Section
         $form = AdminForm::card()
         ->addHeader([
             $tabs
-        ])
-        ->addScript('custom-image', '/customjs/customimage.js', ['admin-default'])
-       ->addBody([
-        AdminFormElement::text('years', 'Год')->required()->unique(),
-        AdminFormElement::files('images', 'Галлерея')->required()->unique(),
-       ]);
+        ]);
       
    
     return $form;

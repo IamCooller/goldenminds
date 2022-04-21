@@ -2,7 +2,7 @@
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;
-
+use App;
 class VideoGallery extends Model
 {
     /**
@@ -14,10 +14,19 @@ class VideoGallery extends Model
      * @var array
      */
     protected $fillable = [
-        'image',
-        'images',
-        'title',
-        'data',
+        'image_ru',
+        'image_en',
+        'image_oz',
+        'images_ru',
+        'images_en',
+        'images_oz',
+
+        'title_ru',
+        'title_en',
+        'title_oz',
+        'data_ru',
+        'data_en',
+        'data_oz',
     
     ];
 
@@ -32,64 +41,30 @@ class VideoGallery extends Model
     ];
 
    
-   
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function country()
+    public function getImageAttribute()
     {
-        return $this->belongsTo(Country::class);
+        $locale = App::getLocale();
+        $column = "image_" . $locale;
+        return $this->{$column};
     }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function author()
+    public function getImagesAttribute()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        $locale = App::getLocale();
+        $column = "images_" . $locale;
+        return $this->{$column};
     }
-
-    /**
-     * @param User $user
-     *
-     * @return bool
-     */
-    public function isAuthor(User $user)
+    public function getTitleAttribute()
     {
-        return ! is_null($author = $this->author) && $author->id == $user->id;
+        $locale = App::getLocale();
+        $column = "title_" . $locale;
+        return $this->{$column};
     }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
-     */
-    public function companies()
+    public function getDataAttribute()
     {
-        return $this->belongsToMany(Company::class, 'company_contact', 'contact_id');
+        $locale = App::getLocale();
+        $column = "data_" . $locale;
+        return $this->{$column};
     }
-
-    /**
-     * @return string
-     */
-    public function getFullNameAttribute()
-    {
-        return $this->firstName.' '.$this->lastName;
-    }
-
-    /**
-     * @param array $companies
-     */
-    public function setCompaniesAttribute($companies)
-    {
-        $this->companies()->detach();
-        if (! $companies) {
-            return;
-        }
-
-        if (! $this->exists) {
-            $this->save();
-        }
-
-        $this->companies()->attach($companies);
-    }
+  
 
 }

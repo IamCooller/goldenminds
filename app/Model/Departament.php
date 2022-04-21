@@ -14,7 +14,9 @@ class Departament extends Model
      * @var array
      */
     protected $fillable = [
-        'image',
+        'image_ru',
+        'image_en',
+        'image_oz',
         'publish_at',
 
         'title_en',
@@ -91,6 +93,13 @@ class Departament extends Model
     {
         $locale = App::getLocale();
         $column = "function_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getImageAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "image_" . $locale;
         return $this->{$column};
     }
 }

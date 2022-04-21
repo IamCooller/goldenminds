@@ -79,6 +79,13 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::textarea('task_3_ru', 'Задачи №3'),
                 AdminFormElement::textarea('task_4_ru', 'Задачи №4'),
                 AdminFormElement::textarea('task_5_ru', 'Задачи №5'),
+                
+            AdminFormElement::image('background_ru', 'Задний фон')->setView(view('admin.custom.image')),
+            AdminFormElement::text('completed_projects_ru', 'Выполненных проектов'),
+            AdminFormElement::text('year_market_ru', 'Год на рынке'),
+            AdminFormElement::text('million_power_ru', 'Млн. кВт мощности'),
+            AdminFormElement::text('billion_output_ru', 'Млрд. кВт*час выработки'),
+            AdminFormElement::image('task_img_ru', 'Изображение в секции (Задачи)')->setView(view('admin.custom.image')),
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_oz', 'Title'),
@@ -95,6 +102,13 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::textarea('task_3_oz', 'Задачи №3'),
                 AdminFormElement::textarea('task_4_oz', 'Задачи №4'),
                 AdminFormElement::textarea('task_5_oz', 'Задачи №5'),
+                AdminFormElement::image('background_oz', 'Задний фон')->setView(view('admin.custom.image')),
+                AdminFormElement::text('completed_projects_oz', 'Выполненных проектов'),
+                AdminFormElement::text('year_market_oz', 'Год на рынке'),
+                AdminFormElement::text('million_power_oz', 'Млн. кВт мощности'),
+                AdminFormElement::text('billion_output_oz', 'Млрд. кВт*час выработки'),
+                AdminFormElement::image('task_img_oz', 'Изображение в секции (Задачи)')->setView(view('admin.custom.image')),
+
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_en', 'Title'),
@@ -111,6 +125,14 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::textarea('task_3_en', 'Задачи №3'),
                 AdminFormElement::textarea('task_4_en', 'Задачи №4'),
                 AdminFormElement::textarea('task_5_en', 'Задачи №5'),
+                AdminFormElement::image('background_en', 'Задний фон')->setView(view('admin.custom.image')),
+                AdminFormElement::text('completed_projects_en', 'Выполненных проектов'),
+                AdminFormElement::text('year_market_en', 'Год на рынке'),
+
+                AdminFormElement::text('million_power_en', 'Млн. кВт мощности'),
+                AdminFormElement::text('billion_output_en', 'Млрд. кВт*час выработки'),
+                AdminFormElement::image('task_img_en', 'Изображение в секции (Задачи)')->setView(view('admin.custom.image')),
+                
             ]))->setLabel('EN'); 
             return $tabsRU;
         });
@@ -128,12 +150,6 @@ class HomePage extends Section implements Initializable
         ->addScript('custom-image', '/customjs/customimage.js', ['admin-default'])
        ->addBody([
 
-            AdminFormElement::image('background', 'Задний фон')->setView(view('admin.custom.image'))->required(),
-           AdminFormElement::text('completed_projects', 'Выполненных проектов'),
-           AdminFormElement::text('year_market', 'Год на рынке'),
-           AdminFormElement::text('million_power', 'Млн. кВт мощности'),
-           AdminFormElement::text('billion_output', 'Млрд. кВт*час выработки'),
-           AdminFormElement::image('task_img', 'Изображение в секции (Задачи)')->setView(view('admin.custom.image'))->required(),
           
 
        ]);

@@ -23,24 +23,45 @@ class Projects extends Model
         'content_en',
         'content_ru',
         'content_oz',
-        'years',
-        'category',
-        'image',
-        'images',
-        'power',
-        'status'
+        'years_ru',
+        'years_en',
+        'years_oz',
+        'category_ru',
+        'category_en',
+        'category_oz',
+        'image_ru',
+        'image_en',
+        'image_oz',
+        'images_ru',
+        'images_en',
+        'images_oz',
+        'power_ru',
+        'power_en',
+        'power_oz',
+        'status_ru',
+        'status_en',
+        'status_oz',
     ];
 
-    public function getImagesAttribute($value)
-    {
-        return preg_split('/,/', $value, -1, PREG_SPLIT_NO_EMPTY);
-    }
 
-    public function setImagesAttribute($images)
-    {
-        $this->attributes['images'] = implode(',', $images);
-    }
 
+    public function setImagesRuAttribute($images_ru)
+    {
+       
+        $this->attributes['images_ru'] = implode(',', $images_ru);
+        return preg_split('/,/',  $this->attributes['images_ru'], -1, PREG_SPLIT_NO_EMPTY);
+    }
+    public function setImagesOzAttribute($images_oz)
+    {
+        $this->attributes['images_oz'] = implode(',', $images_oz);
+        return preg_split('/,/',  $this->attributes['images_oz'], -1, PREG_SPLIT_NO_EMPTY);
+    }
+    public function setImagesEnAttribute($images_en)
+    {
+     
+        $this->attributes['images_en'] = implode(',', $images_en);
+        return preg_split('/,/',  $this->attributes['images_en'], -1, PREG_SPLIT_NO_EMPTY);
+    }
     public function getTitleAttribute()
     {
         $locale = App::getLocale();
@@ -71,4 +92,41 @@ class Projects extends Model
         $column = "name_" . $locale;
         return $this->{$column};
     }
+    public function getYearsAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "years_" . $locale;
+        return $this->{$column};
+    }
+    public function getCategoryAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "category_" . $locale;
+        return $this->{$column};
+    }
+    public function getImageAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "image_" . $locale;
+        return $this->{$column};
+    }
+    public function getImagesAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "images_" . $locale;
+        return $this->{$column};
+    }
+    public function getPowerAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "power_" . $locale;
+        return $this->{$column};
+    }
+    public function getStatusAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "status_" . $locale;
+        return $this->{$column};
+    }
+
 }

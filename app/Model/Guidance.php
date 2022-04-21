@@ -29,8 +29,12 @@ class Guidance extends Model
         'rank_ru',
         'rank_en',
         'rank_oz',
-        'image',
-        'category',
+        'image_ru',
+        'image_en',
+        'image_oz',
+        'category_ru',
+        'category_en',
+        'category_oz',
     ];
 
     /**
@@ -81,6 +85,18 @@ class Guidance extends Model
     {
         $locale = App::getLocale();
         $column = "rank_" . $locale;
+        return $this->{$column};
+    }
+    public function getImageAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "image_" . $locale;
+        return $this->{$column};
+    }
+    public function getCategoryAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "category_" . $locale;
         return $this->{$column};
     }
 }

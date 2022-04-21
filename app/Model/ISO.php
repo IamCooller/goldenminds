@@ -14,13 +14,15 @@ class ISO extends Model
      * @var array
      */
     protected $fillable = [
-        'images',
         'title_en',
         'title_ru',
         'title_oz',
         'content_en',
         'content_ru',
         'content_oz',
+        'images_en',
+        'images_ru',
+        'images_oz',
     ];
 
     /**
@@ -36,6 +38,12 @@ class ISO extends Model
     {
         $locale = App::getLocale();
         $column = "title_" . $locale;
+        return $this->{$column};
+    }
+    public function getImagesAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "images_" . $locale;
         return $this->{$column};
     }
     public function getDescriptionAttribute()

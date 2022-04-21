@@ -17,9 +17,15 @@ class Tenders extends Model
         'name_ru',
         'name_en',
         'name_oz',
-        'files',
-        'open',
-        'image',
+        'files_ru',
+        'files_en',
+        'files_oz',
+        'open_ru',
+        'open_en',
+        'open_oz',
+        'image_ru',
+        'image_en',
+        'image_oz',
         'title_en',
         'title_ru',
         'title_oz',
@@ -36,6 +42,27 @@ class Tenders extends Model
     public function setImagesAttribute($image)
     {
         $this->attributes['image'] = implode(',', $image);
+    }
+
+    public function getFilesAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "files_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getOpenAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "open_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getImageAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "image_" . $locale;
+        return $this->{$column};
     }
 
     public function getTitleAttribute()

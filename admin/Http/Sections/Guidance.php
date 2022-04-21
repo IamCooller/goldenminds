@@ -84,7 +84,10 @@ class Guidance extends Section
                 AdminFormElement::text('name_ru', 'ФИО'),
                 AdminFormElement::textarea('sketch_ru', 'Краткое описание'),
                 AdminFormElement::wysiwyg('content_ru', 'Текст'),
-                AdminFormElement::text('rank_ru', 'Должность')
+                AdminFormElement::text('rank_ru', 'Должность'),
+                
+        AdminFormElement::select('category_ru', 'Раздел',['УПРАВЛЯЮЩИЕ'=>'УПРАВЛЯЮЩИЕ И ДИРЕКТОРА','ЗАМЕСТИТЕЛИ'=>'ЗАМЕСТИТЕЛИ']),
+        AdminFormElement::image('image_ru', 'Фото 16:9 (макс. 1280 × 960 px)'),
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_oz', 'Title'),
@@ -93,7 +96,9 @@ class Guidance extends Section
                 AdminFormElement::text('name_oz', 'ФИО'),
                 AdminFormElement::textarea('sketch_oz', 'Краткое описание'),
                 AdminFormElement::wysiwyg('content_oz', 'Текст'),
-                AdminFormElement::text('rank_oz', 'Должность')
+                AdminFormElement::text('rank_oz', 'Должность'),
+                AdminFormElement::select('category_oz', 'Раздел',['УПРАВЛЯЮЩИЕ'=>'УПРАВЛЯЮЩИЕ И ДИРЕКТОРА','ЗАМЕСТИТЕЛИ'=>'ЗАМЕСТИТЕЛИ']),
+                AdminFormElement::image('image_oz', 'Фото 16:9 (макс. 1280 × 960 px)'),
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_en', 'Title'),
@@ -102,7 +107,9 @@ class Guidance extends Section
                 AdminFormElement::text('name_en', 'ФИО'),
                 AdminFormElement::textarea('sketch_en', 'Краткое описание'),
                 AdminFormElement::wysiwyg('content_en', 'Текст'),
-                AdminFormElement::text('rank_en', 'Должность')
+                AdminFormElement::text('rank_en', 'Должность'),
+                AdminFormElement::select('category_en', 'Раздел',['УПРАВЛЯЮЩИЕ'=>'УПРАВЛЯЮЩИЕ И ДИРЕКТОРА','ЗАМЕСТИТЕЛИ'=>'ЗАМЕСТИТЕЛИ']),
+                AdminFormElement::image('image_en', 'Фото 16:9 (макс. 1280 × 960 px)'),
             ]))->setLabel('EN'); 
             return $tabsRU;
         });
@@ -113,13 +120,6 @@ class Guidance extends Section
             $tabs
         ])
         ->addScript('custom-image', '/customjs/customimage.js', ['admin-default'])
-       ->addBody([
-     
-        AdminFormElement::select('category', 'Раздел',['УПРАВЛЯЮЩИЕ'=>'УПРАВЛЯЮЩИЕ И ДИРЕКТОРА','ЗАМЕСТИТЕЛИ'=>'ЗАМЕСТИТЕЛИ'])->required(),
-        AdminFormElement::image('image', 'Фото 16:9 (макс. 1280 × 960 px)')->required(),
-        
-       ])
-
        ->setHtmlAttribute('enctype', 'multipart/form-data');
       
    
