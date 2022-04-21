@@ -8,7 +8,7 @@ class HomePage extends Model
     /**
      * @var string
      */
-    protected $table = 'homePage';
+    protected $table = 'homepage';
 
     /**
      * @var array

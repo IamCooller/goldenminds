@@ -13,7 +13,7 @@ class AddHome extends Migration
      */
     public function up()
     {
-    Schema::create('homePage', function (Blueprint $table) {
+    Schema::create('homepage', function (Blueprint $table) {
         $table->string("title_en")->nullable();
         $table->string("title_oz")->nullable();
         $table->string("title_ru")->nullable();
@@ -83,6 +83,6 @@ class AddHome extends Migration
  */
 public function down()
 {
-    Schema::drop('homePage');
+    Schema::drop('homepage');
 }
 }

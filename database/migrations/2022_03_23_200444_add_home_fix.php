@@ -13,7 +13,7 @@ class AddHomeFix extends Migration
      */
     public function up()
     {
-        Schema::table('homePage', function (Blueprint $table) {
+        Schema::table('homepage', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamp('publish_at')->nullable();
             $table->timestamp('updated_at')->nullable();
@@ -29,7 +29,7 @@ class AddHomeFix extends Migration
      */
     public function down()
     {
-        Schema::drop('homePage');
+        Schema::drop('homepage');
     }
 
    

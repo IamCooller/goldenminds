@@ -13,7 +13,7 @@ class AddFixHome1704 extends Migration
      */
     public function up()
     {
-        Schema::table('homePage', function (Blueprint $table) {
+        Schema::table('homepage', function (Blueprint $table) {
 
 
             $table->text("toptitle_en")->nullable();
@@ -33,7 +33,7 @@ class AddFixHome1704 extends Migration
      */
     public function down()
     {
-        Schema::table('homePage', function (Blueprint $table) {
+        Schema::table('homepage', function (Blueprint $table) {
             $table->dropColumn("toptitle_en");
             $table->dropColumn("toptitle_ru");
             $table->dropColumn("toptitle_oz");
