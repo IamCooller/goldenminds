@@ -49,17 +49,18 @@
                                     <img src="/{{$news->image}}" />
                                 </div>
                                 
-
+                            @if($news['images'])
                             @foreach((explode(",", $news['images'])) as $el)
                                 <div class="swiper-slide">
                                     <img src="/{{$el}}" />
                                 </div>
                                 @endforeach
-                               
+                            @endif
                             </div>
                         </div>
 
                         <div class="PressCenterSingle_photo_wrapper">
+                        @if($news['images'])
                             <div class="swiper PressCenterSingle_photo_small">
                                 <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -74,6 +75,7 @@
                                
 
                                 </div>
+                                
                             </div>
 
                             <div class="buttons-slaider__reght reght-buttons">
@@ -90,6 +92,7 @@
                                     </svg>
                                 </div>
                             </div>
+                            @endif
                         </div>
                     </div>
                 
