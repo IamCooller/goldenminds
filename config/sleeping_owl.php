@@ -98,9 +98,9 @@ return [
     |  Default date and time formats
     |--------------------------------------------------------------------------
     */
-
-    'datetimeFormat' => 'd-m-Y H:i',
-    'dateFormat' => 'd-m-Y',
+    'timezone' => 'Asia/Dushanbe',
+    'datetimeFormat' => 'd.m.Y H:i',
+    'dateFormat' => 'd.m.Y',
     'timeFormat' => 'H:i',
 
     /*

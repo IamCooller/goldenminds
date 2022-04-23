@@ -25,11 +25,11 @@ class News2 extends News
         'images_en',
         'images_ru',
         'images_oz',
-
+        
     ];
 
 
- 
+
 
     public function scopeLast($query)
     {
