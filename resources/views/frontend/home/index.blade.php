@@ -1233,7 +1233,7 @@
 
                             <div class="projects__info-wrapper">
                                 <p class="projects__info-title">{{trans('Казахстан')}}</p>
-                                <p class="projects__info-subtitle">Количество проектов: <?php echo count($projectsKazah) ?></p>
+                                <p class="projects__info-subtitle">{{trans('Количество проектов')}}: <?php echo count($projectsKazah) ?></p>
                             </div>
                         </div>
                     </div>
@@ -1244,7 +1244,7 @@
 
                             <div class="projects__info-wrapper">
                                 <p class="projects__info-title">{{trans('Узбекистан')}}</p>
-                                <p class="projects__info-subtitle">Количество проектов: <?php echo count($projectsUzbek) ?></p>
+                                <p class="projects__info-subtitle">{{trans('Количество проектов')}}: <?php echo count($projectsUzbek) ?></p>
                             </div>
                         </div>
                     </div>
@@ -1255,7 +1255,7 @@
 
                             <div class="projects__info-wrapper">
                                 <p class="projects__info-title">{{trans('Туркменистан')}}</p>
-                                <p class="projects__info-subtitle">Количество проектов: <?php echo count($projectsTurk) ?></p>
+                                <p class="projects__info-subtitle">{{trans('Количество проектов')}}: <?php echo count($projectsTurk) ?></p>
                             </div>
                         </div>
                     </div>
@@ -1266,7 +1266,7 @@
 
                             <div class="projects__info-wrapper">
                                 <p class="projects__info-title">{{ trans('Афганистан')}}</p>
-                                <p class="projects__info-subtitle">Количество проектов: <?php echo count($projectsAfg) ?></p>
+                                <p class="projects__info-subtitle">{{trans('Количество проектов')}}: <?php echo count($projectsAfg) ?></p>
                             </div>
                         </div>
                     </div>
@@ -1277,7 +1277,7 @@
 
                             <div class="projects__info-wrapper">
                                 <p class="projects__info-title">{{ trans('Таджикистан')}}</p>
-                                <p class="projects__info-subtitle">Количество проектов: <?php echo count($projectsTajik) ?></p>
+                                <p class="projects__info-subtitle">{{trans('Количество проектов')}}: <?php echo count($projectsTajik) ?></p>
                             </div>
                         </div>
                     </div>
@@ -1288,7 +1288,7 @@
 
                             <div class="projects__info-wrapper">
                                 <p class="projects__info-title">{{ trans('Киргизия')}}</p>
-                                <p class="projects__info-subtitle">Количество проектов: <?php echo count($projectsKirgiz) ?></p>
+                                <p class="projects__info-subtitle">{{trans('Количество проектов')}}: <?php echo count($projectsKirgiz) ?></p>
                             </div>
                         </div>
                     </div>
@@ -1299,7 +1299,7 @@
 
                             <div class="projects__info-wrapper">
                                 <p class="projects__info-title">{{ trans('Вьетнам')}}</p>
-                                <p class="projects__info-subtitle">Количество проектов: <?php echo count($projectsViet) ?></p>
+                                <p class="projects__info-subtitle">{{trans('Количество проектов')}}: <?php echo count($projectsViet) ?></p>
                             </div>
                         </div>
                     </div>

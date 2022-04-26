@@ -129,4 +129,23 @@ class Projects extends Model
         return $this->{$column};
     }
 
+    public function getCountagrsAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "countagrs_" . $locale;
+        return $this->{$column};
+    }
+    public function getWatterAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "watter_" . $locale;
+        return $this->{$column};
+    }
+    public function getOutputAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "output_" . $locale;
+        return $this->{$column};
+    }
+    
 }

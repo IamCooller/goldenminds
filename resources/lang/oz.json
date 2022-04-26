@@ -26,7 +26,7 @@
     "Вакансии": "Ishlar",
     "Нормативно-правовые акты": "Qoidalar",
     "Учредителям": "Ta'sischilar",
-    "Главная": "Uy",
+    "Главная": "Bosh sahifa",
     "Устав АО": "OAJ ustavi",
     "Внутренние документы": "Ichki hujjatlar",
     "Раскрытие информации": "Axborotni oshkor qilish",
@@ -65,7 +65,7 @@
     "млн. кВт мощности": "million kVt quvvatga ega",
     "млрд. кВт*час выработки": "milliard kVt\/soat ishlab chiqarish",
     "О компании": "Kompaniya haqida",
-    "подробнее": "Ko'proq",
+    "подробнее": "Batafsil",
     "Миссия АО«Гидропроект» в Узбекистане и других странах:": "“Gidroproekt” AJning O‘zbekiston va boshqa mamlakatlardagi missiyasi:",
     "Наиболее ценными компетенциями, создающими конкурентные преимущества, являются": "Raqobat ustunliklarini yaratadigan eng qimmatli vakolatlar",
     "Задачи": "Vazifalar",
@@ -132,6 +132,7 @@
     "Документы": "Hujjatlar",
     "Ничего не найдено": "Hech narsa topilmadi",
     "Карта сайта": "Sayt xaritasi",
+    "АО \"Гидропроект\"": "\"Gidroloyiha\" OAJ",
     "Об институте": "Institut haqida",
     "Корпоративное управление": "Korporativ boshqaruv",
     "Тендеры и объявления": "Tenderlar va e'lonlar",
@@ -200,5 +201,6 @@
     "Общее количество сотрудников": "Xodimlarning umumiy soni",
     "В том числе АУП": "Shu jumladan AUPV, shu jumladan AUP",
     "Производственный персонал": "Ishlab chiqarish xodimlari",
-    "Обслуживание и тех. персонал": "Xizmat va texnologiya. xodimlar"
+    "Обслуживание и тех. персонал": "Xizmat va texnologiya. xodimlar",
+    "Количество проектов": "Loyihalar soni"
 }
