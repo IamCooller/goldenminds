@@ -571,7 +571,7 @@
                         </div>
                         <ul class="footerMain__RightBottom_links_inner">
                             <li class="footerMain__RightBottom_links_inner-link">
-                                <a href="https://minenergy.uz/ru"><img src="{{ asset('img/footerLinks/1.svg')}}"></a>
+                                <a href="https://minenergy.uz/ru"><img src="{{ asset('img/footerLinks/gerb300.png')}}"></a>
                             </li>
                             <li class="footerMain__RightBottom_links_inner-link">
                                 <a href="https://uzgidro.uz/"><img src="{{ asset('img/footerLinks/2.svg')}}"></a>
