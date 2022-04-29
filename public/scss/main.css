@@ -5721,8 +5721,9 @@ ul.breadcrumb li a:hover {
 
 .projectsSingle__gallery_list .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
 }
 
 .projectsSingle__gallery_list .swiper-slide .flex {
