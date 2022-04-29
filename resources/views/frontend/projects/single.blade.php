@@ -70,6 +70,7 @@
                 </ul>
                 {!! $projects->content !!}
             </div>
+            @if($projects->images)
             <div class="projectsSingle__gallery">
                 <div class="_container Single_container marginTopZero">
                     <div class="projectsSingle__gallery-title">{{trans('Фотогалерея')}}</div>
@@ -107,7 +108,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-        
+            @endif
         </section>
         <section class="projectsSingleMore" data-aos="fade-down">
             <div class="_container">
