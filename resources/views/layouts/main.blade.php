@@ -571,19 +571,19 @@
                         </div>
                         <ul class="footerMain__RightBottom_links_inner">
                             <li class="footerMain__RightBottom_links_inner-link">
-                                <a href="https://minenergy.uz/ru"><img src="{{ asset('img/footerLinks/gerb300.png')}}"></a>
+                                <a href="https://www.gov.uz/"><img src="{{ asset('img/footerLinks/new1.png')}}"></a>
                             </li>
                             <li class="footerMain__RightBottom_links_inner-link">
-                                <a href="https://uzgidro.uz/"><img src="{{ asset('img/footerLinks/2.svg')}}"></a>
+                                <a href="https://data.gov.uz/"><img src="{{ asset('img/footerLinks/new2.png')}}"></a>
                             </li>
                             <li class="footerMain__RightBottom_links_inner-link">
-                                <a href="https://www.gov.uz/uz"><img src="{{ asset('img/footerLinks/3.svg')}}"></a>
+                                <a href="https://my.gov.uz/"><img src="{{ asset('img/footerLinks/new3.png')}}"></a>
                             </li>
                             <li class="footerMain__RightBottom_links_inner-link">
-                                <a href="https://www.gov.uz/uz"><img src="{{ asset('img/footerLinks/4.svg')}}"></a>
+                                <a href="https://minenergy.uz/"><img src="{{ asset('img/footerLinks/new4.png')}}"></a>
                             </li>
                             <li class="footerMain__RightBottom_links_inner-link">
-                                <a href="https://my.gov.uz/"><img src="{{ asset('img/footerLinks/5.svg')}}"></a>
+                                <a href="https://uzgidro.uz/"><img src="{{ asset('img/footerLinks/new5.png')}}"></a>
                             </li>
                         </ul>
                     </div>
