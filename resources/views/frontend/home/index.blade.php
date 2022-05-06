@@ -1520,7 +1520,7 @@
                         </div>
                     </a>
                    
-                   @else
+                   
                     @continue
                    @endif
                    @endforeach
