@@ -16,7 +16,7 @@ class PressCenterController extends Controller
     {
         $locale = App::getLocale();
         $column = "date_" . $locale;
-        $news = News::latest($column)->where('published', '1')->paginate(
+        $news = News::latest($column)->paginate(
             $perPage = 9, $columns = ['*'], $pageName = 'news', $onFirstPage = 0
         );
 

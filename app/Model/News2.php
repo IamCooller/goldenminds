@@ -1,5 +1,6 @@
 <?php namespace App\Model;
 use App;
+use Carbon\Carbon;
 class News2 extends News
 {
     protected $fillable = [
@@ -31,10 +32,7 @@ class News2 extends News
 
 
 
-    public function scopeLast($query)
-    {
-        $query->orderBy('date', 'desc')->limit(4);
-    }
+
     public function getTitleAttribute()
             {
                 $locale = App::getLocale();
@@ -77,7 +75,8 @@ class News2 extends News
             {
                 $locale = App::getLocale();
                 $column = "date_" . $locale;
-                return $this->{$column};
+                return Carbon::parse($this->{$column})->format('d.m.Y');
+
             }
 
             public function getImageAttribute()
