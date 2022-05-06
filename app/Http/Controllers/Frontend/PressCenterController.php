@@ -19,6 +19,8 @@ class PressCenterController extends Controller
         $news = News::latest($column)->where('published', '1')->paginate(
             $perPage = 9, $columns = ['*'], $pageName = 'news', $onFirstPage = 0
         );
+
+  
        
         return view('frontend/press-center/index', compact('news'));
     }
