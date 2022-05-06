@@ -1490,9 +1490,10 @@
                  
                    
                 <div class="news__body">
-				@foreach($news as $el)
-                @if ($el->name)
-                @if ($loop->first)
+               
+				@foreach($news as $key => $el)
+                
+                @if($el->name)
                
                     <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="news__left left-news">
                         <div class="left-news__img ibg">
@@ -1518,15 +1519,16 @@
                             </div>
                         </div>
                     </a>
-                   @endif
+                   
+                   @else
+                    @continue
                    @endif
                    @endforeach
 
                    <div class="news__reght reght-news">
                    @foreach($news as $el)
-                   @if ($el->name)
+                   @if($el->name)
                    @if ($loop->first) @continue @endif
-                  
                         <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="reght-news__blok blok-reght">
                             <div class="blok-reght__left">
                                 <div class="blok-reght__data">
