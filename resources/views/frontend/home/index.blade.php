@@ -1489,15 +1489,15 @@
                    
                  
                    
-                <div class="news__body">
-               
-				@foreach($news as $key => $el)
+                <div class="news__body {{$test = 0}}">
                 
-                @if($el->name)
-               
+				@foreach($news as $key => $el)
+             
+                @if (($el->name)&&($test==0))
+                
                     <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="news__left left-news">
                         <div class="left-news__img ibg">
-                            @if ($el->image)<img src="/{{$el->image}}" alt="{{$el->name}}">@endif
+                            @if ($el->image)<img src="/{{$el->image}}" alt="{{$el->name}}  ">@endif
                         </div>
 
                         <div class="left-news__content">
@@ -1512,7 +1512,7 @@
                             {!! Str::words(strip_tags($el->text), 2, ' ...') !!}
                             </div>
                             <div class="left-news__link left-news__link-f">
-                                <span class="about-body__link">
+                                <span class="about-body__link {{$test=1}}">
 										<span>{{trans('подробнее')}}</span>
                                 <i class="fas fa-arrow-up"></i>
                                 </span>
@@ -1520,15 +1520,14 @@
                         </div>
                     </a>
                    
-                   
-                    @continue
+                    @continue 
                    @endif
-                   @endforeach
-
+                  
+                    
                    <div class="news__reght reght-news">
-                   @foreach($news as $el)
-                   @if($el->name)
-                   @if ($loop->first) @continue @endif
+                  
+                    
+                        @if($el->name)
                         <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="reght-news__blok blok-reght">
                             <div class="blok-reght__left">
                                 <div class="blok-reght__data">
@@ -1545,8 +1544,8 @@
                                 </div>
                             </div>
                         </a>
-
                         @endif
+                      
                         @endforeach
                     </div>
               
