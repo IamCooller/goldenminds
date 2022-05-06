@@ -1491,8 +1491,9 @@
                    
                 <div class="news__body">
 				@foreach($news as $el)
-                @if ($loop->first)
                 @if ($el->name)
+                @if ($loop->first)
+               
                     <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="news__left left-news">
                         <div class="left-news__img ibg">
                             @if ($el->image)<img src="/{{$el->image}}" alt="{{$el->name}}">@endif
@@ -1523,8 +1524,9 @@
 
                    <div class="news__reght reght-news">
                    @foreach($news as $el)
-                   @if ($loop->first) @continue @endif
                    @if ($el->name)
+                   @if ($loop->first) @continue @endif
+                  
                         <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="reght-news__blok blok-reght">
                             <div class="blok-reght__left">
                                 <div class="blok-reght__data">
