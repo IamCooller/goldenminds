@@ -403,7 +403,7 @@
             <div class="_container">
                 <div class="achievement__body">
                     <div class="achievement__sound">
-                        <i class="fas fa-volume-down"></i>
+                        
                     </div>
                     <h1 class="achievement__title">
                     {{$homepage->toptitle}}    
@@ -1492,6 +1492,7 @@
                 <div class="news__body">
 				@foreach($news as $el)
                 @if ($loop->first)
+                @if ($el->name)
                     <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="news__left left-news">
                         <div class="left-news__img ibg">
                             @if ($el->image)<img src="/{{$el->image}}" alt="{{$el->name}}">@endif
@@ -1517,11 +1518,13 @@
                         </div>
                     </a>
                    @endif
+                   @endif
                    @endforeach
 
                    <div class="news__reght reght-news">
                    @foreach($news as $el)
                    @if ($loop->first) @continue @endif
+                   @if ($el->name)
                         <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="reght-news__blok blok-reght">
                             <div class="blok-reght__left">
                                 <div class="blok-reght__data">
@@ -1539,7 +1542,7 @@
                             </div>
                         </a>
 
-                      
+                        @endif
                         @endforeach
                     </div>
               
