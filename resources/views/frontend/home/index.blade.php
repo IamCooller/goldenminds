@@ -1493,7 +1493,7 @@
                 
 				@foreach($news as $key => $el)
              
-                @if (($el->name)&&($test==0))
+                @if (($el->name))
                 
                     <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="news__left left-news">
                         <div class="left-news__img ibg">
@@ -1512,7 +1512,7 @@
                             {!! Str::words(strip_tags($el->text), 2, ' ...') !!}
                             </div>
                             <div class="left-news__link left-news__link-f">
-                                <span class="about-body__link {{$test=1}}">
+                                <span class="about-body__link {{$test=$loop->index}}">
 										<span>{{trans('подробнее')}}</span>
                                 <i class="fas fa-arrow-up"></i>
                                 </span>
@@ -1520,14 +1520,14 @@
                         </div>
                     </a>
                    
-                    @continue 
-                   @endif
-                  
+                        @break
+                       @endif
+                  @endforeach
                     
                    <div class="news__reght reght-news">
                   
-                    
-                        @if($el->name)
+                    @foreach($news as $key => $el)
+                        @if($el->name && $test != $loop->index)
                         <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="reght-news__blok blok-reght">
                             <div class="blok-reght__left">
                                 <div class="blok-reght__data">
@@ -1548,7 +1548,7 @@
                       
                         @endforeach
                     </div>
-              
+                    
                 
                 </div>
             </div>
