@@ -17,7 +17,7 @@ class HistoryController extends Controller
     {
         $locale = App::getLocale();
         $column = "years_" . $locale;
-        $History = History::latest($column);
+        $History = History::all()->orderBy('years_'.$locale, 'desc');
 
         return view('frontend.institute.history',compact('History'));
     }
