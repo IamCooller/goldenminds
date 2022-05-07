@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="PressCenter__gallery-subtitle">
                                 
-                                {!! Str::words(strip_tags($el->content), 10, ' ...') !!}
+                                {!! Str::words(strip_tags($el->content), 15, ' ...') !!}
                                 </div>
                                 <a href="{{ route('press-center-single', ['id'=>$el->id]) }}" class="PressCenter__gallery-href">{{trans('подробнее')}}<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4616 14.3564L16.7199 9.0981L16.7205 13.2086C16.7208 15.4694 16.7472 17.3452 16.779 17.377C16.8109 17.4089 17.1808 17.4336 17.601 17.432L18.3652 17.4291L18.3647 11.8744L18.3643 6.31985L12.8097 6.3194L7.25502 6.31894L7.25207 7.0831C7.25049 7.50334 7.27521 7.87322 7.30707 7.90509C7.33893 7.93695 9.21474 7.96331 11.4755 7.9636L15.586 7.96416L10.3277 13.2225L5.06937 18.4808L5.63634 19.0478L6.2033 19.6147L11.4616 14.3564Z" fill="white"/>
