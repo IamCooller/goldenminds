@@ -61,6 +61,7 @@ class HomePage extends Section implements Initializable
         $tabs = AdminDisplay::tabbed();
 
 
+
         $tabs->setTabs(function ($id) {
             $tabsRU = [];
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
@@ -68,18 +69,28 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::text('description_ru', 'Description'),
                 AdminFormElement::text('keywords_ru', 'Keywords'),
                 AdminFormElement::text('toptitle_ru', 'Главный заголовок'),
-                
+                AdminFormElement::text('realizedTitle_ru', 'Заголовок "РЕАЛИЗОВАННЫЕ И ДЕЙСТВУЮЩИЕ ПРОЕКТЫ АО “ГИДРОПРОЕКТ”"'),
+        
+                AdminFormElement::text('aboutTitle_ru', 'Заголовок "О компании"'),
+               
                 AdminFormElement::wysiwyg('about_ru', 'О компании'),
+                AdminFormElement::text('missionTitle_ru', 'Заголовок "МИССИЯ"'),
                 AdminFormElement::wysiwyg('mission_ru', 'МИССИЯ АО'),
+                AdminFormElement::text('richTitle_ru', 'Заголовок "Преимущества"'),
                 AdminFormElement::textarea('compitence_1_ru', 'Преимущество №1'),
                 AdminFormElement::textarea('compitence_2_ru', 'Преимущество №2'),
                 AdminFormElement::textarea('compitence_3_ru', 'Преимущество №3'),
+
+                
+                AdminFormElement::text('taskTitle_ru', 'Заголовок "Задачи"'),
                 AdminFormElement::textarea('task_1_ru', 'Задачи №1'),
                 AdminFormElement::textarea('task_2_ru', 'Задачи №2'),
                 AdminFormElement::textarea('task_3_ru', 'Задачи №3'),
                 AdminFormElement::textarea('task_4_ru', 'Задачи №4'),
                 AdminFormElement::textarea('task_5_ru', 'Задачи №5'),
-                
+                AdminFormElement::text('leadersTitle_ru', 'Заголовок "ЛИДЕРСТВО"'),
+                AdminFormElement::text('newsTitle_ru', 'Заголовок "НОВОСТИ"'),
+                AdminFormElement::text('contactTitle_ru', 'Заголовок "КОНТАКТЫ"'),
             AdminFormElement::image('background_ru', 'Задний фон')->setView(view('admin.custom.image')),
             AdminFormElement::text('completed_projects_ru', 'Выполненных проектов'),
             AdminFormElement::text('year_market_ru', 'Год на рынке'),
@@ -92,16 +103,26 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::text('keywords_oz', 'Keywords'),
                 AdminFormElement::text('description_oz', 'Description'),
                 AdminFormElement::text('toptitle_oz', 'Главный заголовок'),
+                AdminFormElement::text('realizedTitle_oz', 'Заголовок "РЕАЛИЗОВАННЫЕ И ДЕЙСТВУЮЩИЕ ПРОЕКТЫ АО “ГИДРОПРОЕКТ”"'),
+                AdminFormElement::text('aboutTitle_oz', 'Заголовок "О компании"'),
+                
+
                 AdminFormElement::wysiwyg('about_oz', 'О компании'),
+                AdminFormElement::text('missionTitle_oz', 'Заголовок "МИССИЯ"'),
                 AdminFormElement::wysiwyg('mission_oz', 'МИССИЯ АО'),
+                AdminFormElement::text('richTitle_oz', 'Заголовок "Преимущества"'),
                 AdminFormElement::textarea('compitence_1_oz', 'Преимущество №1'),
                 AdminFormElement::textarea('compitence_2_oz', 'Преимущество №2'),
                 AdminFormElement::textarea('compitence_3_oz', 'Преимущество №3'),
+                AdminFormElement::text('taskTitle_oz', 'Заголовок "Задачи"'),
                 AdminFormElement::textarea('task_1_oz', 'Задачи №1'),
                 AdminFormElement::textarea('task_2_oz', 'Задачи №2'),
                 AdminFormElement::textarea('task_3_oz', 'Задачи №3'),
                 AdminFormElement::textarea('task_4_oz', 'Задачи №4'),
                 AdminFormElement::textarea('task_5_oz', 'Задачи №5'),
+                AdminFormElement::text('leadersTitle_oz', 'Заголовок "ЛИДЕРСТВО"'),
+                AdminFormElement::text('newsTitle_oz', 'Заголовок "НОВОСТИ"'),
+                AdminFormElement::text('contactTitle_oz', 'Заголовок "КОНТАКТЫ"'),
                 AdminFormElement::image('background_oz', 'Задний фон')->setView(view('admin.custom.image')),
                 AdminFormElement::text('completed_projects_oz', 'Выполненных проектов'),
                 AdminFormElement::text('year_market_oz', 'Год на рынке'),
@@ -115,16 +136,25 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::text('description_en', 'Description'),
                 AdminFormElement::text('keywords_en', 'Keywords'),
                 AdminFormElement::text('toptitle_en', 'Главный заголовок'),
+                AdminFormElement::text('realizedTitle_en', 'Заголовок "РЕАЛИЗОВАННЫЕ И ДЕЙСТВУЮЩИЕ ПРОЕКТЫ АО “ГИДРОПРОЕКТ”"'),
+                AdminFormElement::text('aboutTitle_en', 'Заголовок "О компании"'),
+
                 AdminFormElement::wysiwyg('about_en', 'О компании'),
+                AdminFormElement::text('missionTitle_en', 'Заголовок "МИССИЯ"'),
                 AdminFormElement::wysiwyg('mission_en', 'МИССИЯ АО'),
+                AdminFormElement::text('richTitle_en', 'Заголовок "Преимущества"'),
                 AdminFormElement::textarea('compitence_1_en', 'Преимущество №1'),
                 AdminFormElement::textarea('compitence_2_en', 'Преимущество №2'),
                 AdminFormElement::textarea('compitence_3_en', 'Преимущество №3'),
+                AdminFormElement::text('taskTitle_en', 'Заголовок "Задачи"'),
                 AdminFormElement::textarea('task_1_en', 'Задачи №1'),
                 AdminFormElement::textarea('task_2_en', 'Задачи №2'),
                 AdminFormElement::textarea('task_3_en', 'Задачи №3'),
                 AdminFormElement::textarea('task_4_en', 'Задачи №4'),
                 AdminFormElement::textarea('task_5_en', 'Задачи №5'),
+                AdminFormElement::text('leadersTitle_en', 'Заголовок "ЛИДЕРСТВО"'),
+                AdminFormElement::text('newsTitle_en', 'Заголовок "НОВОСТИ"'),
+                AdminFormElement::text('contactTitle_en', 'Заголовок "КОНТАКТЫ"'),
                 AdminFormElement::image('background_en', 'Задний фон')->setView(view('admin.custom.image')),
                 AdminFormElement::text('completed_projects_en', 'Выполненных проектов'),
                 AdminFormElement::text('year_market_en', 'Год на рынке'),

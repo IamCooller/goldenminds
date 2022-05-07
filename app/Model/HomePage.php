@@ -92,6 +92,32 @@ class HomePage extends Model
         "billion_output_oz",
         "billion_output_en",
 
+
+        "aboutTitle_ru",
+        "aboutTitle_oz",
+        "aboutTitle_en",
+        "realizedTitle_ru",
+        "realizedTitle_oz",
+        "realizedTitle_en",
+        "missionTitle_ru",
+        "missionTitle_oz",
+        "missionTitle_en",
+        "richTitle_ru",
+        "richTitle_oz",
+        "richTitle_en",
+        "leadersTitle_ru",
+        "leadersTitle_oz",
+        "leadersTitle_en",
+        "newsTitle_ru",
+        "newsTitle_oz",
+        "newsTitle_en",
+        "contactTitle_ru",
+        "contactTitle_oz",
+        "contactTitle_en",
+
+        "taskTitle_ru",
+        "taskTitle_oz",
+        "taskTitle_en",
     ];
 
     /**
@@ -242,6 +268,64 @@ class HomePage extends Model
         return $this->{$column};
     }
 
+
+
+    public function getAboutTitleAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "aboutTitle_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getRealizedTitleAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "realizedTitle_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getMissionTitleAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "missionTitle_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getRichTitleAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "richTitle_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getLeadersTitleAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "leadersTitle_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getNewsTitleAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "newsTitle_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getContactTitleAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "contactTitle_" . $locale;
+        return $this->{$column};
+    }
+
+
+    public function getTaskTitleAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "taskTitle_" . $locale;
+        return $this->{$column};
+    }
     
    
 

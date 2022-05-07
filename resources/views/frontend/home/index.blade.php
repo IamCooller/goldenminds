@@ -5,6 +5,7 @@
 @section('content')
 
 
+
 <div class="popup popup-uz mfp-hide print_hide">
         <p class="popup__title">{{ trans('Реализованные и действующие проекты АО “Гидропроект”') }}</p>
 
@@ -447,7 +448,8 @@
             <div class="projects__container _container">
                 <div class="projects__container-inner">
                     <p class="projects__title">
-                        {{ trans('Реализованные и действующие проекты АО “Гидропроект”') }}
+                       
+                        {{$homepage->realizedTitle}}
                     </p>
 
                     <ul class="projects__list">
@@ -1314,7 +1316,7 @@
             <div class="about-company__content">
                 <div class="about-company__container">
                     <div class="about-company__body about-body">
-                        <div class="about-body__title">{{trans('О компании')}}</div>
+                        <div class="about-body__title">{{$homepage->aboutTitle}}</div>
                        {!! $homepage->about !!}
                         <a href="{{route('mainstream')}}" class="about-body__link">
                             <span>{{trans('подробнее')}}</span>
@@ -1329,7 +1331,8 @@
             <div class="_container">
                 <div class="missions__body">
                     <div class="missions__title">
-                    {{trans('Миссия АО«Гидропроект» в Узбекистане и других странах:')}}'
+                
+                    {{$homepage->missionTitle}}
                     </div>
                     <div class="missions__text">
                        {!! $homepage->mission !!}
@@ -1366,7 +1369,7 @@
             <div class="_container">
                 <div class="plans__body body-plans">
                     <div class="body-plans__title">
-                    {{trans('Наиболее ценными компетенциями, создающими конкурентные преимущества, являются')}}:
+                        {{$homepage->richTitle}}
                     </div>
                     <div class="body-plans__ul ul-plans">
                         <div class="ul-plans__blok">
@@ -1394,7 +1397,8 @@
 
         <section class="tasks" data-aos="fade-down">
             <div class="_container">
-                <div class="tasks__title">{{trans('Задачи')}}</div>
+                <div class="tasks__title">{{$homepage->taskTitle}}
+                </div>
                 <div class="tasks__body">
                     <div class="tasks__left left-tasks">
                         <div class="left-tasks__blok">
@@ -1446,7 +1450,9 @@
 
         <section class="slaider print_hide" id="s-director" data-aos="fade-down">
             <div class="_container">
-                <div class="slaider__title">{{trans('Руководство')}}</div>
+                <div class="slaider__title">
+                    {{$homepage->leadersTitle}}
+                </div>
                 <div class="slaider__body">
                     <div class="swiper-wrapper">
                         @foreach($guidances as $el)
@@ -1484,7 +1490,7 @@
 
         <section class="news" id="s-news" data-aos="fade-down">
             <div class="_container">
-                <div class="news__title">{{trans('Новости')}}</div>
+                <div class="news__title">{{$homepage->newsTitle}}</div>
                
                    
                  
@@ -1556,7 +1562,7 @@
 
         <section class="map" id="s-contacts" data-aos="fade-down">
             <div class="_container">
-                <div class="map__title">{{trans('Контакты')}}</div>
+                <div class="map__title">{{$homepage->contactTitle}}</div>
             </div>
             <div class="map__body" id="map">
                {!! $options->map !!}
