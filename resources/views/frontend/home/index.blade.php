@@ -1509,7 +1509,7 @@
                             </div>
                             <div class="left-news__text">
                            
-                            {!! Str::words(strip_tags($el->text), 2, ' ...') !!}
+                            {!! Str::words(strip_tags($el->content), 2, ' ...') !!}
                             </div>
                             <div class="left-news__link left-news__link-f">
                                 <span class="about-body__link {{$test=$loop->index}}">
