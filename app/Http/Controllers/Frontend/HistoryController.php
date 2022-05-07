@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\Model\History;
 use Illuminate\Http\Request;
-
+use App;
 class HistoryController extends Controller
 {
     /**
@@ -15,7 +15,10 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        $History = History::all();
+        $locale = App::getLocale();
+        $column = "years_" . $locale;
+        $History = History::latest($column);
+
         return view('frontend.institute.history',compact('History'));
     }
 
