@@ -24,7 +24,7 @@
         <div class="_container">
             <div class="PhotoGallerySingle__list">
               
-            @foreach(json_decode($data[0]) as $member)
+            @foreach(array_reverse(json_decode($data[0])) as $member)
                 <div class="PhotoGallerySingle__block">
                 <a href="/{{$member->url}}" title="{{ $member->title }}" data-description="{{ $member->desc }}" class="licensesAndSerf__item-href hoverImgHref">
                             <img src="/{{$member->url}}" alt="{{ $member->title }}" class="licensesAndSerf__item-img hoverImg">

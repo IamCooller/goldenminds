@@ -31,8 +31,8 @@
                                     <div class="PhotoGallery__block-title">{{$el->title}}</div>
                                     <div class="PhotoGallery__block-subtitle">
                                         <span>{{$el->data}}</span>
-                                       
-                                        <span>{{count($el->images)}} {{trans('фото')}}</span>
+                                            
+                                        <span>{{count(array(json_decode($el->images))[0])}} {{trans('фото')}}</span>
                                     </div>
                                 </div>
                                 <svg class="PhotoGallery__block-arrow" width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">

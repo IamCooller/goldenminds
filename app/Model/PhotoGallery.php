@@ -39,6 +39,9 @@ class PhotoGallery extends Model
 
     public function getImagesAttribute($value)
     {
+        $locale = App::getLocale();
+        $column = "images_" . $locale;
+        return $this->{$column};
         return preg_split('/,/', $value, -1, PREG_SPLIT_NO_EMPTY);
     }
 
@@ -60,12 +63,7 @@ class PhotoGallery extends Model
         return $this->{$column};
     }
 
-    public function getImagesHomeAttribute()
-    {
-        $locale = App::getLocale();
-        $column = "images_" . $locale;
-        return $this->{$column};
-    }
+
 
    
 }
