@@ -13,7 +13,7 @@ class FixPresscenteroption1005 extends Migration
      */
     public function up()
     {
-        Schema::table('newsOptions', function (Blueprint $table) {
+        Schema::table('newsoptions', function (Blueprint $table) {
             $table->increments('id');
         });
 
@@ -26,6 +26,6 @@ class FixPresscenteroption1005 extends Migration
      */
     public function down()
     {
-        Schema::drop('newsOptions');
+        Schema::drop('newsoptions');
     }
 }
