@@ -34,6 +34,7 @@
 
         <section class="institutTabs" id="tabs" data-aos="fade-down">
             <div class="_container">
+                <div class="institutTabs__nav-wrapper">    
                 <ul class="institutTabs__nav tabs-nav">
                     <li>
                         <a class="institutTabs__nav-link tab-active" href="#Tab-design">
@@ -43,7 +44,7 @@
                             <rect x="0.75" y="0.75" width="4.43617" height="4.43617" fill="white" stroke="#1E2A5E" stroke-width="1.5"/>
                             <rect x="0.75" y="23.1755" width="4.43617" height="4.43617" fill="white" stroke="#1E2A5E" stroke-width="1.5"/>
                             <rect x="24.4941" y="0.75" width="4.43617" height="4.43617" fill="white" stroke="#1E2A5E" stroke-width="1.5"/>
-                            </svg> {{trans('проектирование')}}
+                            </svg> <span>{{trans('проектирование')}}</span>
                         </a>
                     </li>
                     <li>
@@ -56,7 +57,7 @@
                     <rect x="20.6094" y="8.64471" width="2.71053" height="12.7105" stroke="#263475" stroke-width="1.5"/>
                     <line x1="20.083" y1="30.6667" x2="20.083" y2="35.3334" stroke="#263475" stroke-width="1.5"/>
                     <line x1="14.667" y1="35.25" x2="24.0003" y2="35.25" stroke="#263475" stroke-width="1.5"/>
-                    </svg> {{trans('расчеты')}}
+                    </svg> <span>{{trans('расчеты')}}</span>
                         </a>
                     </li>
                     <li>
@@ -67,11 +68,68 @@
                     <rect x="0.75" y="13.4167" width="4.05556" height="7.94444" stroke="#263475" stroke-width="1.5"/>
                     <rect x="21.3057" y="13.4167" width="4.05556" height="7.94444" stroke="#263475" stroke-width="1.5"/>
                     <rect x="12.417" y="27.8611" width="2.38889" height="2.38889" rx="1.19444" stroke="#263475" stroke-width="1.5"/>
-                    </svg> {{trans('Консультация')}}
+                    </svg> <span>{{trans('Консультация')}}</span>
                         </a>
                     </li>
 
+                    <li>
+                        <a class="institutTabs__nav-link" href="#Tab-injener">
+                            <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.75" y="0.75" width="37.1667" height="29.1667" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="10.083" y="14.4342" width="2.71053" height="6.92105" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="15.3457" y="10.75" width="2.71053" height="10.6053" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="25.873" y="10.75" width="2.71053" height="10.6053" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="20.6094" y="8.64471" width="2.71053" height="12.7105" stroke="#263475" stroke-width="1.5"/>
+                    <line x1="20.083" y1="30.6667" x2="20.083" y2="35.3334" stroke="#263475" stroke-width="1.5"/>
+                    <line x1="14.667" y1="35.25" x2="24.0003" y2="35.25" stroke="#263475" stroke-width="1.5"/>
+                    </svg> <span>{{trans('Инженерные изыскания')}}</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="institutTabs__nav-link" href="#Tab-laboratory">
+                            <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.75" y="0.75" width="37.1667" height="29.1667" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="10.083" y="14.4342" width="2.71053" height="6.92105" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="15.3457" y="10.75" width="2.71053" height="10.6053" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="25.873" y="10.75" width="2.71053" height="10.6053" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="20.6094" y="8.64471" width="2.71053" height="12.7105" stroke="#263475" stroke-width="1.5"/>
+                    <line x1="20.083" y1="30.6667" x2="20.083" y2="35.3334" stroke="#263475" stroke-width="1.5"/>
+                    <line x1="14.667" y1="35.25" x2="24.0003" y2="35.25" stroke="#263475" stroke-width="1.5"/>
+                    </svg> <span>{{trans('Лабораторные исследования')}}</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="institutTabs__nav-link" href="#Tab-author">
+                            <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.75" y="0.75" width="37.1667" height="29.1667" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="10.083" y="14.4342" width="2.71053" height="6.92105" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="15.3457" y="10.75" width="2.71053" height="10.6053" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="25.873" y="10.75" width="2.71053" height="10.6053" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="20.6094" y="8.64471" width="2.71053" height="12.7105" stroke="#263475" stroke-width="1.5"/>
+                    <line x1="20.083" y1="30.6667" x2="20.083" y2="35.3334" stroke="#263475" stroke-width="1.5"/>
+                    <line x1="14.667" y1="35.25" x2="24.0003" y2="35.25" stroke="#263475" stroke-width="1.5"/>
+                    </svg> <span>{{trans('Авторский надзор')}}
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="institutTabs__nav-link" href="#Tab-stroy">
+                            <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.75" y="0.75" width="37.1667" height="29.1667" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="10.083" y="14.4342" width="2.71053" height="6.92105" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="15.3457" y="10.75" width="2.71053" height="10.6053" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="25.873" y="10.75" width="2.71053" height="10.6053" stroke="#263475" stroke-width="1.5"/>
+                    <rect x="20.6094" y="8.64471" width="2.71053" height="12.7105" stroke="#263475" stroke-width="1.5"/>
+                    <line x1="20.083" y1="30.6667" x2="20.083" y2="35.3334" stroke="#263475" stroke-width="1.5"/>
+                    <line x1="14.667" y1="35.25" x2="24.0003" y2="35.25" stroke="#263475" stroke-width="1.5"/>
+                    </svg> <span>{{trans('Сопровождение строительства')}}</span>
+                        </a>
+                    </li>
+                        
                 </ul>
+                </div>
                 <div class="institutTabs__body tabs-items">
                     <div class="institutTabs__body-text tabs-item" id="Tab-design">
                     {!! $mainstream->content_design !!}
@@ -83,6 +141,21 @@
                     <div class="institutTabs__body-text tabs-item" id="Tab-advice">
                     
                     {!! $mainstream->content_consultation !!}
+                    </div>
+                    <div class="institutTabs__body-text tabs-item" id="Tab-injener">
+                    {!! $mainstream->content_injener !!}
+                    </div>
+                    <div class="institutTabs__body-text tabs-item" id="Tab-laboratory">
+                    
+                    {!! $mainstream->content_laboratory !!}
+                    </div>
+                    <div class="institutTabs__body-text tabs-item" id="Tab-author">
+                    
+                    {!! $mainstream->content_author !!}
+                    </div>
+                    <div class="institutTabs__body-text tabs-item" id="Tab-stroy">
+                    
+                    {!! $mainstream->content_stroy !!}
                     </div>
                 </div>
 

@@ -268,6 +268,13 @@
 				</button>
 
             <div class="_container hamburger-menu__container">
+            <a href="{{ route('home') }}" class="hamburger-menu-logo">
+                @if($options->blogo !='')
+                        <img src="/{{ $options->blogo}}" alt="Логотип" />
+                        @else
+                       <p style="font-size: 12px;">{{ trans('Реализованные и действующие проекты АО “Гидропроект”') }}</p> 
+                        @endif
+                </a>
                 <div class="hamburger-menu__col">
                     <div class="hamburger-menu__dropdown">
                         <p class="hamburger-menu__dropdown-heading">{{trans('Об институте')}}</p>

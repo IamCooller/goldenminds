@@ -31,6 +31,22 @@ class Mainstream extends Model
         'content_consultation_en',
         'content_consultation_ru',
         'content_consultation_oz',
+        'content_injener_en',
+        'content_injener_ru',
+        'content_injener_oz',
+
+        'content_laboratory_en',
+        'content_laboratory_ru',
+        'content_laboratory_oz',
+
+        'content_author_en',
+        'content_author_ru',
+        'content_author_oz',
+
+        'content_stroy_en',
+        'content_stroy_ru',
+        'content_stroy_oz',
+        
         'file',
         'file_en',
         'file_ru',
@@ -95,5 +111,28 @@ class Mainstream extends Model
         $column = "content_consultation_" . $locale;
         return $this->{$column};
     }
-
+    public function getContentInjenerAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "content_injener_" . $locale;
+        return $this->{$column};
+    }
+    public function getContentLaboratoryAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "content_laboratory_" . $locale;
+        return $this->{$column};
+    }
+    public function getContentAuthorAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "content_author_" . $locale;
+        return $this->{$column};
+    }
+    public function getContentStroyAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "content_stroy_" . $locale;
+        return $this->{$column};
+    }
 }

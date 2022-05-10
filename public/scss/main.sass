@@ -860,6 +860,13 @@ ul.breadcrumb li a:hover
 	z-index: 10
 	background-color: #E0E9EB
 	display: none
+	&-logo
+		display: block
+		width: 100%
+		height: auto
+		position: absolute
+		top: -80px
+		max-width: 299px
 	&__close
 		position: absolute
 		top: 30px
@@ -1124,8 +1131,8 @@ ul.breadcrumb li a:hover
 	&__nav
 		display: flex
 		align-items: center
-		@include adaptiv-value('grid-gap', 81, 10, 1)
-		
+		justify-content: space-between
+		grid-gap: 8px
 		padding-bottom: 30px
 		position: relative
 		&::after
@@ -1142,14 +1149,18 @@ ul.breadcrumb li a:hover
 			position: relative
 			align-items: center
 			cursor: pointer
-			@include adaptiv-value('font-size', 18, 10, 1)
-			line-height: 100%
-			text-transform: uppercase
+			justify-content: space-evenly
 			height: 36px
 			color: $black
 			font-family: Single
 			svg
-				@include adaptiv-value('margin-right', 26, 10, 1)
+				margin-right: 5px
+
+			span
+				max-width: 100px
+				@include adaptiv-value('font-size', 16, 10, 1)
+				line-height: 100%
+				text-transform: uppercase
 	&__body
 		padding: 60px 0
 		&-text
@@ -3425,6 +3436,9 @@ ul.breadcrumb li a:hover
 
 
 	.hamburger-menu
+		&-logo
+			top: -50px
+			max-width: 200px
 		&__col
 			width: 280px
 		&__dropdown
@@ -3600,6 +3614,14 @@ ul.breadcrumb li a:hover
 	.PressCenter__gallery_block_inner,
 	.PressCenter__gallery_block
 		max-height: 405px
+	.institutTabs__nav
+		&-link
+			svg
+				max-width: 27px
+				width: 100%
+
+			span
+				font-size: 11px
 @media only screen and (max-width : 1400px)
 
 	.popup
@@ -4246,6 +4268,16 @@ ul.breadcrumb li a:hover
 
 	.PressCenterSingle_photo_big img
 		max-height: 250px
+	.institutTabs__nav
+		width: 1100px
+		&-link
+			svg
+				max-width: inherit
+				width: auto
+		&-wrapper
+			overflow-y: hidden
+			overflow-x: scroll
+    		
 @media only screen and (max-width : 480px)
 	
 	.callback

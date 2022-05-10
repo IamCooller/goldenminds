@@ -66,6 +66,10 @@ class Mainstream extends Section
                 AdminFormElement::wysiwyg('content_design_ru', 'Контент Проектирование'),
                 AdminFormElement::wysiwyg('content_economy_ru', 'Контент Расчеты'),
                 AdminFormElement::wysiwyg('content_consultation_ru', 'Контент Консультация'),
+                AdminFormElement::wysiwyg('content_injener_ru', 'Контент Инженерные изыскания'),
+                AdminFormElement::wysiwyg('content_laboratory_ru', 'Контент Лабораторные исследования'),
+                AdminFormElement::wysiwyg('content_author_ru', 'Контент Авторский надзор'),
+                AdminFormElement::wysiwyg('content_stroy_ru', 'Контент Сопровождение строительства'),
                 AdminFormElement::files('file_ru', 'Файл'),
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
@@ -76,6 +80,10 @@ class Mainstream extends Section
                 AdminFormElement::wysiwyg('content_design_oz', 'Контент Проектирование'),
                 AdminFormElement::wysiwyg('content_economy_oz', 'Контент Расчеты'),
                 AdminFormElement::wysiwyg('content_consultation_oz', 'Контент Консультация'),
+                AdminFormElement::wysiwyg('content_injener_oz', 'Контент Инженерные изыскания'),
+                AdminFormElement::wysiwyg('content_laboratory_oz', 'Контент Лабораторные исследования'),
+                AdminFormElement::wysiwyg('content_author_oz', 'Контент Авторский надзор'),
+                AdminFormElement::wysiwyg('content_stroy_oz', 'Контент Сопровождение строительства'),
                 AdminFormElement::files('file_oz', 'Файл'),
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
@@ -86,6 +94,10 @@ class Mainstream extends Section
                 AdminFormElement::wysiwyg('content_design_en', 'Контент Проектирование'),
                 AdminFormElement::wysiwyg('content_economy_en', 'Контент Расчеты'),
                 AdminFormElement::wysiwyg('content_consultation_en', 'Контент Консультация'),
+                AdminFormElement::wysiwyg('content_injener_en', 'Контент Инженерные изыскания'),
+                AdminFormElement::wysiwyg('content_laboratory_en', 'Контент Лабораторные исследования'),
+                AdminFormElement::wysiwyg('content_author_en', 'Контент Авторский надзор'),
+                AdminFormElement::wysiwyg('content_stroy_en', 'Контент Сопровождение строительства'),
                 AdminFormElement::files('file_en', 'Файл'),
             ]))->setLabel('EN'); 
             return $tabsRU;

@@ -3085,6 +3085,15 @@ ul.breadcrumb li a:hover {
   display: none;
 }
 
+.hamburger-menu-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: -80px;
+  max-width: 299px;
+}
+
 .hamburger-menu__close {
   position: absolute;
   top: 30px;
@@ -3524,15 +3533,12 @@ ul.breadcrumb li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-gap: 81px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-gap: 8px;
   padding-bottom: 30px;
   position: relative;
-}
-
-@media (max-width: 1430px) {
-  .institutTabs__nav {
-    grid-gap: calc( 10px + 71 * ((100vw - 320px) / 1110));
-  }
 }
 
 .institutTabs__nav::after {
@@ -3555,27 +3561,28 @@ ul.breadcrumb li a:hover {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  font-size: 18px;
-  line-height: 100%;
-  text-transform: uppercase;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: 36px;
   color: #263475;
   font-family: Single;
 }
 
-@media (max-width: 1430px) {
-  .institutTabs__nav-link {
-    font-size: calc( 10px + 8 * ((100vw - 320px) / 1110));
-  }
-}
-
 .institutTabs__nav-link svg {
-  margin-right: 26px;
+  margin-right: 5px;
+}
+
+.institutTabs__nav-link span {
+  max-width: 100px;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1430px) {
-  .institutTabs__nav-link svg {
-    margin-right: calc( 10px + 16 * ((100vw - 320px) / 1110));
+  .institutTabs__nav-link span {
+    font-size: calc( 10px + 6 * ((100vw - 320px) / 1110));
   }
 }
 
@@ -8010,6 +8017,10 @@ ul.breadcrumb li a:hover {
     border-right: 3px solid #fff;
     border-bottom: 3px solid #fff;
   }
+  .hamburger-menu-logo {
+    top: -50px;
+    max-width: 200px;
+  }
   .hamburger-menu__col {
     width: 280px;
   }
@@ -8227,6 +8238,13 @@ ul.breadcrumb li a:hover {
   .PressCenter__gallery_block_inner,
   .PressCenter__gallery_block {
     max-height: 405px;
+  }
+  .institutTabs__nav-link svg {
+    max-width: 27px;
+    width: 100%;
+  }
+  .institutTabs__nav-link span {
+    font-size: 11px;
   }
 }
 
@@ -9091,6 +9109,17 @@ ul.breadcrumb li a:hover {
   }
   .PressCenterSingle_photo_big img {
     max-height: 250px;
+  }
+  .institutTabs__nav {
+    width: 1100px;
+  }
+  .institutTabs__nav-link svg {
+    max-width: inherit;
+    width: auto;
+  }
+  .institutTabs__nav-wrapper {
+    overflow-y: hidden;
+    overflow-x: scroll;
   }
 }
 
