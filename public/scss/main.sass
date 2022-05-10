@@ -2494,7 +2494,7 @@ ul.breadcrumb li a:hover
 				@include adaptiv-value('font-size', 18, 16, 1)
 				line-height: 124%
 				color: $black
-				font-weight: 400
+				font-weight: 400 
 			&-time
 				font-size: 14px
 				line-height: 150%
@@ -2503,6 +2503,18 @@ ul.breadcrumb li a:hover
 				align-items: center
 				svg
 					margin-right: 9px
+			&_bottom
+				display: flex
+				justify-content: space-between
+			&-view
+				font-size: 14px
+				line-height: 150%
+				color: $black
+				display: flex
+				align-items: center
+				svg
+					margin-right: 9px
+					fill: $black
 	&__paggination
 		display: flex
 		align-items: center

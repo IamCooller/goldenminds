@@ -5,6 +5,9 @@ use App\Http\Controllers\Controller;
 use App\Model\News2 as News;
 use Illuminate\Http\Request;
 use App;
+
+use App\Events\PostHasViewed;
+
 class PressCenterController extends Controller
 {
     /**
@@ -56,6 +59,7 @@ class PressCenterController extends Controller
     {
         $news = News::findOrFail($id);
         $allNews = News::paginate(7);
+        event(new PostHasViewed($news));
         return view('frontend/press-center/single', compact('news','allNews'));
     }
 

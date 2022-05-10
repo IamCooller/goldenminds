@@ -29,6 +29,12 @@ class Virtual extends Model
         'service_en',
         'service_oz',
         'service_ru',
+        'image_ru',
+        'image_en',
+        'image_oz',
+        'subimage_ru',
+        'subimage_en',
+        'subimage_oz',
         'count'
     ];
 
@@ -69,6 +75,18 @@ class Virtual extends Model
     {
         $locale = App::getLocale();
         $column = "service_" . $locale;
+        return $this->{$column};
+    }
+    public function getImageAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "image_" . $locale;
+        return $this->{$column};
+    }
+    public function getSubimageAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "subimage_" . $locale;
         return $this->{$column};
     }
 }

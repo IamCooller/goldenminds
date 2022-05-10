@@ -33,9 +33,9 @@
                         <h3> {{trans('Виртуальная приемная')}}</h3>
         				<div class="item">
 							 <div class="testimonial">
-								 <div class="virtual-img"> <img src="{{ asset('img/virtual/222.jpg')}}" alt="Виртуальная приемная"></div>
+								 <div class="virtual-img"> <img src="/{{ $virtual->image }}" alt="Виртуальная приемная"></div>
 								 <div class="testimonial-text">
-									 <p>{{trans('Заявления, жалобы и предложения директору АО "ГИДРОПРОЕКТ" можно направить позвонив по телефону или оформить "Электронное обращение"')}}</p>
+									 <p>{{$virtual->subimage}}</p>
 								 </div>
 							 </div>
 						</div>

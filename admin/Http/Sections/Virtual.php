@@ -68,7 +68,8 @@ class Virtual extends Section implements Initializable
                 AdminFormElement::text('title_ru', 'Title'),
                 AdminFormElement::text('description_ru', 'Description'),
                 AdminFormElement::text('keywords_ru', 'Keywords'),
-               
+                AdminFormElement::image('image_ru', 'Изображение'),
+                AdminFormElement::text('subimage_ru', 'Подпись к изображению'),
                 AdminFormElement::wysiwyg('content_ru', 'Текст'),
           
                 AdminFormElement::text('service_ru', 'Области (вводить через ,)'),
@@ -79,7 +80,8 @@ class Virtual extends Section implements Initializable
                 AdminFormElement::text('title_oz', 'Title'),
                 AdminFormElement::text('keywords_oz', 'Keywords'),
                 AdminFormElement::text('description_oz', 'Description'),
-              
+                AdminFormElement::image('image_oz', 'Изображение'),
+                AdminFormElement::text('subimage_oz', 'Подпись к изображению'),
                 AdminFormElement::wysiwyg('content_oz', 'Текст'),
                 AdminFormElement::text('service_oz', 'Области (вводить через ,)'),
             ]))->setLabel('OZ');
@@ -87,7 +89,8 @@ class Virtual extends Section implements Initializable
                 AdminFormElement::text('title_en', 'Title'),
                 AdminFormElement::text('description_en', 'Description'),
                 AdminFormElement::text('keywords_en', 'Keywords'),
-             
+                AdminFormElement::image('image_en', 'Изображение'),
+                AdminFormElement::text('subimage_en', 'Подпись к изображению'),
                 AdminFormElement::wysiwyg('content_en', 'Текст'),
                 AdminFormElement::text('service_en', 'Области (вводить через ,)'),
             ]))->setLabel('EN'); 

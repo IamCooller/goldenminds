@@ -526,7 +526,7 @@ body {
     text-transform: uppercase;
 }
 
-.about-body__text {
+.about-company__body p {
     font-family: Roboto;
     @include adaptiv-value('font-size', 18, 14, 1);
     font-weight: 400;

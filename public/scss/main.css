@@ -689,7 +689,7 @@ body._lock {
   }
 }
 
-.about-body__text {
+.about-company__body p {
   font-family: Roboto;
   font-size: 18px;
   font-weight: 400;
@@ -699,24 +699,24 @@ body._lock {
 }
 
 @media (max-width: 1430px) {
-  .about-body__text {
+  .about-company__body p {
     font-size: calc( 14px + 4 * ((100vw - 320px) / 1110));
   }
 }
 
 @media (max-width: 1430px) {
-  .about-body__text {
+  .about-company__body p {
     line-height: calc( 21px + 6 * ((100vw - 320px) / 1110));
   }
 }
 
 @media (max-width: 1430px) {
-  .about-body__text {
+  .about-company__body p {
     padding-bottom: calc( 20px + 20 * ((100vw - 320px) / 1110));
   }
 }
 
-.about-body__text a {
+.about-company__body p a {
   color: #263475;
   font-weight: 700;
 }
@@ -6307,6 +6307,32 @@ ul.breadcrumb li a:hover {
 
 .PressCenterNews__list_item-time svg {
   margin-right: 9px;
+}
+
+.PressCenterNews__list_item_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.PressCenterNews__list_item-view {
+  font-size: 14px;
+  line-height: 150%;
+  color: #263475;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.PressCenterNews__list_item-view svg {
+  margin-right: 9px;
+  fill: #263475;
 }
 
 .PressCenterNews__paggination {
