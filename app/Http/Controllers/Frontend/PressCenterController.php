@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Model\News2 as News;
+use App\Model\NewsOptions;
 use Illuminate\Http\Request;
 use App;
 
@@ -23,9 +24,9 @@ class PressCenterController extends Controller
             $perPage = 9, $columns = ['*'], $pageName = 'news', $onFirstPage = 0
         );
 
-  
+        $NewsOptions = NewsOptions::latest()->first();
        
-        return view('frontend/press-center/index', compact('news'));
+        return view('frontend/press-center/index', compact('news','NewsOptions'));
     }
 
     /**

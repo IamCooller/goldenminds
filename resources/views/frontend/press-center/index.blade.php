@@ -154,7 +154,20 @@
 
         </div>
         {!! $news->links() !!}
-
+        <div class="PressCenterNews__bottom">
+            <div class="PressCenterNews__bottom-image">
+            <img src="/{{$NewsOptions->image}}" alt=" {{$NewsOptions->rank}}">
+            </div>
+            <div class="PressCenterNews__bottom_content">
+                <h2 class="PressCenterNews__bottom_content-title PressCenterNews-title">
+                    {{$NewsOptions->rank}}
+                </h2>
+                <div class="PressCenterNews__bottom_content-text">
+                    {!! $NewsOptions->content !!}
+                </div>
+            </div>
+        </div>
+        
     </div>
 </section>
 @endsection

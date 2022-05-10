@@ -46,6 +46,7 @@ class AdminSectionsServiceProvider extends ServiceProvider {
         
         'App\Model\ContactMain'  => 'Admin\Http\Sections\Contact',
         'App\Model\News2' => 'Admin\Http\Sections\News2',
+        'App\Model\NewsOptions' => 'Admin\Http\Sections\NewsOptions',
         'App\Model\Virtual' => 'Admin\Http\Sections\Virtual',
         
         'App\Model\PhotoGallery'  => 'Admin\Http\Sections\PhotoGallery',

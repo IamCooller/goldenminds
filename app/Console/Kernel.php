@@ -26,6 +26,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        $schedule->exec('chown -R www-root:www-root /var/www/www-root/data/www/test.goldenminds.uz/storage/logs')->everyMinute();
     }
 
     /**

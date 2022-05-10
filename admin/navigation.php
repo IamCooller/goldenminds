@@ -84,6 +84,11 @@ $navigation->setFromArray([
             ->setPriority(0)
            ,
 
+           (new Page(\App\Model\NewsOptions::class))
+            ->setIcon('fa fa-newspaper')
+            ->setPriority(0)
+           ,
+
             (new Page(\App\Model\PhotoGallery::class))
             ->setIcon('fa fa-paint-brush')
             ->setPriority(0),
