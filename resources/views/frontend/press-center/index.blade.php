@@ -1,6 +1,8 @@
 @extends('layouts.main')
 
-
+@section('title') {{$NewsOptions->title}}  @endsection
+@section('description') {{$NewsOptions->description}}  @endsection
+@section('keywords') {{$NewsOptions->keywords}}  @endsection
 
 @section('content')
 <section class="instituteMain PressCenterMain" data-aos="fade-down">
