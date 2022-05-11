@@ -26,7 +26,7 @@
 
             <div class="_container">
                 <div class="guidance__wrapper">
-                    <div class="guidance-title">
+                    <div class="guidance-title" style="display:none">
                     {{trans('Управляющие и директора')}}
                     </div>
                     <div class="guidance__list">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="guidance__wrapper">
-                    <div class="guidance-title">
+                    <div class="guidance-title" style="display:none">
                     {{trans('Заместители')}}
                     </div>
 
