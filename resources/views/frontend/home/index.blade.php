@@ -20,7 +20,7 @@
                 </p>
                 <nav class="popup__list custom-scroll">
                     @foreach($projectsUzbek as $el)
-                    <a href="{{ url('/project') }}/{{$el->id}}" class="popup__list-item">
+                    <a href="{{ route('project-single',['id'=>$el->id]) }}" class="popup__list-item">
                         <div class="popup__list-item-image" style="background-image: url('{{$el->image}}')"></div>
                         <div class="popup__list-item-wrapper">
                             <p class="popup__list-item-heading">{{$el->name}}</p>
@@ -78,7 +78,7 @@
                 </p>
                 <nav class="popup__list custom-scroll">
                 @foreach($projectsKazah as $el)
-                <a href="{{ url('/project') }}/{{$el->id}}" class="popup__list-item">
+                 <a href="{{ route('project-single',['id'=>$el->id]) }}" class="popup__list-item">
                         <div class="popup__list-item-image" style="background-image: url('{{$el->image}}')"></div>
                         <div class="popup__list-item-wrapper">
                             <p class="popup__list-item-heading">{{$el->name}}</p>
@@ -134,7 +134,7 @@
                 </p>
                 <nav class="popup__list custom-scroll">
                 @foreach($projectsTurk as $el)
-                <a href="{{ url('/project') }}/{{$el->id}}" class="popup__list-item">
+                 <a href="{{ route('project-single',['id'=>$el->id]) }}" class="popup__list-item">
                         <div class="popup__list-item-image" style="background-image: url('{{$el->image}}')"></div>
                         <div class="popup__list-item-wrapper">
                             <p class="popup__list-item-heading">{{$el->name}}</p>
@@ -190,7 +190,7 @@
                 </p>
                 <nav class="popup__list custom-scroll">
                 @foreach($projectsAfg as $el)
-                <a href="{{ url('/project') }}/{{$el->id}}" class="popup__list-item">
+                 <a href="{{ route('project-single',['id'=>$el->id]) }}" class="popup__list-item">
                         <div class="popup__list-item-image" style="background-image: url('{{$el->image}}')"></div>
                         <div class="popup__list-item-wrapper">
                             <p class="popup__list-item-heading">{{$el->name}}</p>
@@ -245,7 +245,7 @@
                 </p>
                 <nav class="popup__list custom-scroll">
                 @foreach($projectsViet as $el)
-                <a href="{{ url('/project') }}/{{$el->id}}" class="popup__list-item">
+                 <a href="{{ route('project-single',['id'=>$el->id]) }}" class="popup__list-item">
                         <div class="popup__list-item-image" style="background-image: url('{{$el->image}}')"></div>
                         <div class="popup__list-item-wrapper">
                             <p class="popup__list-item-heading">{{$el->name}}</p>
@@ -301,7 +301,7 @@
                 </p>
                 <nav class="popup__list custom-scroll">
                 @foreach($projectsTajik as $el)
-                <a href="{{ url('/project') }}/{{$el->id}}" class="popup__list-item">
+                 <a href="{{ route('project-single',['id'=>$el->id]) }}" class="popup__list-item">
                         <div class="popup__list-item-image" style="background-image: url('{{$el->image}}')"></div>
                         <div class="popup__list-item-wrapper">
                             <p class="popup__list-item-heading">{{$el->name}}</p>
@@ -356,7 +356,7 @@
                 </p>
                 <nav class="popup__list custom-scroll">
                 @foreach($projectsKirgiz as $el)
-                <a href="{{ url('/project') }}/{{$el->id}}" class="popup__list-item">
+                 <a href="{{ route('project-single',['id'=>$el->id]) }}" class="popup__list-item">
                         <div class="popup__list-item-image" style="background-image: url('{{$el->image}}')"></div>
                         <div class="popup__list-item-wrapper">
                             <p class="popup__list-item-heading">{{$el->name}}</p>
