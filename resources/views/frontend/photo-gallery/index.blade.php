@@ -25,7 +25,10 @@
                 @foreach($photo as $el)
                 @if($el->title)
                 <div class="PhotoGallery__block">
-                <a href="{{ route('photo-gallery-single',['id'=>$el->id]) }}" class="arrow-hover"><img src="/{{$el->image}}" alt="{{$el->title}}">
+                <a href="{{ route('photo-gallery-single',['id'=>$el->id]) }}" class="arrow-hover">
+                @if($el->image)
+                    <img src="/{{$el->image}}" alt="{{$el->title}}">
+                    @endif
                             <div class="PhotoGallery__block_wrapper">
                                 <div class="PhotoGallery__block_text">
                                     <div class="PhotoGallery__block-title">{{$el->title}}</div>
