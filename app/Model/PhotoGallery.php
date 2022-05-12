@@ -3,6 +3,7 @@
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use App;
+use Carbon\Carbon;
 class PhotoGallery extends Model
 {
     /**
@@ -64,6 +65,12 @@ class PhotoGallery extends Model
     }
 
 
+    public function getDataAttribute()
+    {
+
+        return Carbon::parse($this->attributes['data'])->format('d.m.Y');
+
+    }
 
    
 }

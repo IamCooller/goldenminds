@@ -36,7 +36,7 @@
             <ul class="institutTabs__nav tabs-nav">
                 <li>
                     <a class="institutTabs__nav-link tab-active" href="#Tab-design">
-                        <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="39" height="36" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M30.9997 22.5197L25.1023 24.0543L23.8737 29.6808L18.4678 17.1489L30.9997 22.5197Z" stroke="#1E2A5E" stroke-width="1.5" />
                             <path d="M27.0425 17.4181V2.63824H3.29785V26.3829H17.5931" stroke="#1E2A5E" stroke-width="1.5" />
                             <rect x="0.75" y="0.75" width="4.43617" height="4.43617" fill="white" stroke="#1E2A5E" stroke-width="1.5" />
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                     <a class="institutTabs__nav-link" href="#Tab-advice">
-                        <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="39" height="36" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.8893 12.6667V11.8333C23.8893 5.85025 19.0391 1 13.056 1V1C7.0729 1 2.22266 5.85025 2.22266 11.8333V12.6667" stroke="#263475" stroke-width="1.5" />
                             <path d="M15.5553 28.7778L17.222 28.7778C20.9039 28.7778 23.8887 25.793 23.8887 22.1111V22.1111" stroke="#263475" stroke-width="1.5" />
                             <rect x="0.75" y="13.4167" width="4.05556" height="7.94444" stroke="#263475" stroke-width="1.5" />
@@ -72,7 +72,7 @@
 
                 <li>
                     <a class="institutTabs__nav-link" href="#Tab-injener">
-                        <svg width="27" height="31" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
+                        <svg width="39" height="36" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
                             <style type="text/css">
                                 .st0 {
                                     fill: #253573;
@@ -135,7 +135,7 @@
 
                 <li>
                     <a class="institutTabs__nav-link" href="#Tab-laboratory">
-                        <svg width="27" height="31" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
+                        <svg width="39" height="36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
                             <style type="text/css">
                                 .st0 {
                                     fill: #253573;
@@ -179,7 +179,7 @@
 
                 <li>
                     <a class="institutTabs__nav-link" href="#Tab-author">
-                        <svg width="27" height="31" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
+                        <svg width="39" height="36" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
                             <style type="text/css">
                                 .st0 {
                                     fill: #253573;
@@ -219,7 +219,7 @@
 
                 <li>
                     <a class="institutTabs__nav-link" href="#Tab-stroy">
-                        <svg width="27" height="31" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
+                        <svg width="39" height="36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Слой_1" x="0px" y="0px" viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
                             <style type="text/css">
                                 .st0 {
                                     fill: none;
