@@ -18,7 +18,7 @@ class PhotoGalleryController extends Controller
      */
     public function index()
     {
-        $photo= PhotoGallery::latest('created_at')->paginate(
+        $photo= PhotoGallery::latest('data')->paginate(
             $perPage = 4, $columns = ['*'], $pageName = 'photo', $onFirstPage = 0
         );
       
