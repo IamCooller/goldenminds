@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 
-
+use App;
 use App\Model\VideoGallery;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -14,7 +14,10 @@ class VideoGalleryController extends Controller
     public function index()
     {
 
-        $video= VideoGallery::latest('date')->paginate(
+        $locale = App::getLocale();
+            $column = "date_" . $locale;
+
+        $video= VideoGallery::latest($column)->paginate(
             $perPage = 4, $columns = ['*'], $pageName = 'video', $onFirstPage = 0
         );
         return view('frontend/video-gallery/index',compact('video'));

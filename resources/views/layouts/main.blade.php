@@ -132,7 +132,13 @@
 
                         <div class="top-header__labgvidg labgvidg-header">
                             <div class="labgvidg-header__text">
-                                {{ str_replace('_', '-', app()->getLocale()) }}
+                                @if (str_replace('_', '-', app()->getLocale()) == 'ru')
+                                    RU
+                                @elseif (str_replace('_', '-', app()->getLocale()) == 'en')
+                                    EN
+                                @elseif (str_replace('_', '-', app()->getLocale()) == 'oz')
+                                    O'Z
+                               @endif
                                 <div class="labgvidg-header__icon">
                                     <i class="fas fa-angle-down"></i>
                                 </div>
