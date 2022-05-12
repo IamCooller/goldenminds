@@ -23,7 +23,7 @@
         <div class="_container">
             <div class="PhotoGallery__list">
                 @foreach($photo as $el)
-                @if($el->image)
+                @if($el->title)
                 <div class="PhotoGallery__block">
                 <a href="{{ route('photo-gallery-single',['id'=>$el->id]) }}" class="arrow-hover"><img src="/{{$el->image}}" alt="{{$el->title}}">
                             <div class="PhotoGallery__block_wrapper">
