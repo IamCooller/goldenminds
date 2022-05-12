@@ -29,8 +29,8 @@
                                 <div class="PhotoGallery__block_text">
                                     <div class="PhotoGallery__block-title">{{$el->title}}</div>
                                     <div class="PhotoGallery__block-subtitle">
-                                        <span>{{$el->data}}</span>
-                                        <span>{{count(explode(",", $el->images))}} видео</span>
+                                        <span>{{$el->date}}</span>
+                                        <span>{{count(explode(",", $el->images))}} {{trans('видео')}}</span>
                                     </div>
                                 </div>
                                 <svg class="PhotoGallery__block-arrow" width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">

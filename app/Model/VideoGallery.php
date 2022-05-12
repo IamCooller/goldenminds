@@ -3,6 +3,7 @@
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use App;
+use Carbon\Carbon;
 class VideoGallery extends Model
 {
     /**
@@ -59,11 +60,11 @@ class VideoGallery extends Model
         $column = "title_" . $locale;
         return $this->{$column};
     }
-    public function getDataAttribute()
+    public function getDateAttribute()
     {
         $locale = App::getLocale();
-        $column = "data_" . $locale;
-        return $this->{$column};
+        $column = "date_" . $locale;
+        return Carbon::parse($this->{$column})->format('d.m.Y');
     }
   
 
