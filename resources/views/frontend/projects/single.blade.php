@@ -68,7 +68,8 @@
                     </li>
                     @endif
                 </ul>
-                {!! $projects->content !!}
+                <div class="projectsSingle__ref Single__ref">{!! $projects->content !!}</div>
+                
             </div>
             @if($projects->images)
             <div class="projectsSingle__gallery">
