@@ -28,7 +28,7 @@
             @foreach($videos as $link)
                 <div class="PhotoGallerySingle__block">
                 <a href="https://www.youtube.com/watch?v={{ $link }}" class="popup-youtube licensesAndSerf__item-href">
-                            <img src="http://i.ytimg.com/vi/{{ $link }}/hqdefault.jpg" alt="{{ $link }}" class="licensesAndSerf__item-img">
+                            <iframe src="https://www.youtube.com/embed/{{ $link }}" title="YouTube video player" class="licensesAndSerf__item-img" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </a>
                 </div>
                       @endforeach

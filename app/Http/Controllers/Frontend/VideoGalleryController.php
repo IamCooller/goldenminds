@@ -13,7 +13,8 @@ class VideoGalleryController extends Controller
 {
     public function index()
     {
-        $video= VideoGallery::paginate(
+
+        $video= VideoGallery::latest('date')->paginate(
             $perPage = 4, $columns = ['*'], $pageName = 'video', $onFirstPage = 0
         );
         return view('frontend/video-gallery/index',compact('video'));
