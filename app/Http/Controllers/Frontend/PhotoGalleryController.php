@@ -21,7 +21,7 @@ class PhotoGalleryController extends Controller
 
        
         $photo= PhotoGallery::latest('data')->paginate(
-            $perPage = 1, $columns = ['*'], $pageName = 'photo', $onFirstPage = 0
+            $perPage = 4, $columns = ['*'], $pageName = 'photo', $onFirstPage = 0
         );
 
   
