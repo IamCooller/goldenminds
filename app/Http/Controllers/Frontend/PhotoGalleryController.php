@@ -20,12 +20,11 @@ class PhotoGalleryController extends Controller
     {
 
         $locale = App::getLocale();
-        $column = "images_" . $locale;
-
+        $column = "title_" . $locale;
         
        
-        $photo= PhotoGallery::latest('data')->where($column, !' ')->paginate(
-            $perPage = 4, $columns = ['*'], $pageName = 'photo', $onFirstPage = 0
+        $photo= PhotoGallery::latest('data')->where($column, !'NULL')->paginate(
+            $perPage = 1, $columns = ['*'], $pageName = 'photo', $onFirstPage = 0
         );
       
         return view('frontend/photo-gallery/index',compact('photo'));
