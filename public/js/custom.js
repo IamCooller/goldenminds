@@ -430,7 +430,7 @@ $(function() {
 
 $(function() {
     var tab = $('.history__body > div');
-    tab.hide().filter(':first').show();
+    tab.hide().filter(':last').show();
 
     // Клики по вкладкам.
     $('.history__timeLaps a').click(function() {
@@ -439,7 +439,7 @@ $(function() {
         $('.history__timeLaps li').removeClass('timeLaps-active');
         $(this).parent().addClass('timeLaps-active');
         return false;
-    }).filter(':first').click();
+    }).filter(':last').click();
 
 
 

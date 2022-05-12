@@ -4626,14 +4626,14 @@ ul.breadcrumb li a:hover {
   margin-top: 0;
 }
 
-.Single__ref p {
+.Single__ref p, .Single__ref span {
   color: #263475;
   font-size: 18px;
   margin-bottom: 36px;
 }
 
 @media (max-width: 1430px) {
-  .Single__ref p {
+  .Single__ref p, .Single__ref span {
     font-size: calc( 14px + 4 * ((100vw - 320px) / 1110));
   }
 }

@@ -28,7 +28,8 @@
 
                     @foreach($History as $el)
                     @if($el->content)
-                    <li   @if ($el->first) class="timeLaps-active"  @endif>
+                    <li   @if ($el == end($History)) class="timeLaps-active"  @endif>
+                        
                         <a href="#history_{{$el->id}}">
                             <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.97363e-07 3.01662e-07L-7.64288e-07 11L1.28039 11L10 5.41983L1.19935 4.06513e-07L1.97363e-07 3.01662e-07Z" fill="#E1EAEC"/>
