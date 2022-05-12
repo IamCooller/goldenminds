@@ -72,64 +72,27 @@
 
                 <li>
                     <a class="institutTabs__nav-link" href="#Tab-injener">
-                        <svg width="39" height="36" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
-                            <style type="text/css">
-                                .st0 {
-                                    fill: #253573;
-                                }
-                            </style>
-                            <g>
-                                <g>
-                                    <g>
-                                        <rect x="15" y="8.7" class="st0" width="3.2" height="1.1" />
-                                    </g>
-                                    <g>
-                                        <rect x="15" y="13.2" class="st0" width="3.2" height="1.1" />
-                                    </g>
-                                    <g>
-                                        <rect x="15" y="17.8" class="st0" width="3.2" height="1.1" />
-                                    </g>
-                                    <g>
-                                        <rect x="15" y="22.4" class="st0" width="3.2" height="1.1" />
-                                    </g>
-                                    <g>
-                                        <rect x="15" y="26.9" class="st0" width="3.2" height="1.1" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <g>
-                                        <rect x="22.7" y="13.2" class="st0" width="3.2" height="1.1" />
-                                    </g>
-                                    <g>
-                                        <rect x="22.7" y="17.8" class="st0" width="3.2" height="1.1" />
-                                    </g>
-                                    <g>
-                                        <rect x="22.7" y="22.4" class="st0" width="3.2" height="1.1" />
-                                    </g>
-                                    <g>
-                                        <rect x="22.7" y="26.9" class="st0" width="3.2" height="1.1" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <path class="st0" d="M18.5,31.2h-6.9V5.5h6.9V31.2z M12.8,30.1h4.6V6.7h-4.6V30.1z" />
-                                </g>
-                                <g>
-                                    <g>
-                                        <path class="st0" d="M10.9,29.1C5,29.1,0.1,24.3,0.1,18.4C0.1,12.4,5,7.6,10.9,7.6c0.4,0,0.9,0,1.4,0.1l0.5,0.1V29L12.3,29
-				C11.8,29.1,11.3,29.1,10.9,29.1z M10.9,8.8c-5.3,0-9.6,4.3-9.6,9.6c0,5.3,4.3,9.6,9.6,9.6c0.2,0,0.5,0,0.7,0V8.8
-				C11.4,8.8,11.1,8.8,10.9,8.8z" />
-                                    </g>
-                                </g>
-                                <g>
-                                    <path class="st0" d="M11.1,23c-2.6,0-4.7-2.1-4.7-4.7s2.1-4.7,4.7-4.7c0.4,0,0.8,0.1,1.3,0.2l0.4,0.1v8.7l-0.4,0.1
-			C11.9,23,11.5,23,11.1,23z M11.1,14.8c-1.9,0-3.5,1.6-3.5,3.5s1.6,3.5,3.5,3.5c0.2,0,0.3,0,0.5-0.1v-6.9
-			C11.5,14.9,11.3,14.8,11.1,14.8z" />
-                                </g>
-                                <g>
-                                    <path class="st0" d="M38.9,31.2H21.7v-28L38.9,31.2z M22.8,30.1h14l-14-22.8V30.1z" />
-                                </g>
-                            </g>
-                        </svg><span>{{trans('Инженерные изыскания')}}</span>
+                    <svg width="39" height="36" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#253573;stroke-width:1.5;stroke-miterlimit:10;}
+</style>
+<rect x="12.3" y="6" class="st0" width="5.6" height="24.7"/>
+<line class="st0" x1="17.8" y1="9.1" x2="15" y2="9.1"/>
+<line class="st0" x1="24.1" y1="13.6" x2="21.3" y2="13.6"/>
+<line class="st0" x1="24.1" y1="18.3" x2="21.3" y2="18.3"/>
+<line class="st0" x1="24.1" y1="22.9" x2="21.3" y2="22.9"/>
+<line class="st0" x1="24.1" y1="27.5" x2="21.3" y2="27.5"/>
+<line class="st0" x1="17.8" y1="13.7" x2="15" y2="13.7"/>
+<line class="st0" x1="17.8" y1="18.2" x2="15" y2="18.2"/>
+<line class="st0" x1="17.8" y1="22.8" x2="15" y2="22.8"/>
+<line class="st0" x1="17.8" y1="27.4" x2="15" y2="27.4"/>
+<polygon class="st0" points="20.9,4.2 20.9,30.7 37,30.7 "/>
+<g>
+	<path class="st0" d="M12.3,7.5c-0.1,0-0.3,0-0.4,0c-5.9,0-10.7,4.8-10.7,10.7c0,5.9,4.8,10.7,10.7,10.7c0.2,0,0.3,0,0.4,0V7.5z"/>
+</g>
+<path class="st0" d="M12.3,13.9c-0.1,0-0.3,0-0.4,0c-2.4,0-4.4,2-4.4,4.4c0,2.4,2,4.4,4.4,4.4c0.2,0,0.3,0,0.4,0V13.9z"/>
+</svg><span>{{trans('Инженерные изыскания')}}</span>
                     </a>
                 </li>
 
@@ -179,40 +142,22 @@
 
                 <li>
                     <a class="institutTabs__nav-link" href="#Tab-author">
-                        <svg width="39" height="36" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
-                            <style type="text/css">
-                                .st0 {
-                                    fill: #253573;
-                                }
-                            </style>
-                            <g>
-                                <g>
-                                    <rect x="18.9" y="0.3" class="st0" width="1.4" height="6.4" />
-                                </g>
-                                <g>
-                                    <rect x="18.9" y="20.3" class="st0" width="1.4" height="6.4" />
-                                </g>
-                                <g>
-                                    <g>
-                                        <path class="st0" d="M19.6,11.5c-0.8,0-1.6-0.3-2.1-0.9c-0.6-0.6-0.9-1.3-0.9-2.1c0-0.5,0.1-0.9,0.3-1.3c0.3-0.5,0.7-1,1.3-1.3
-				c1.2-0.6,2.6-0.4,3.6,0.5c0.6,0.6,0.9,1.4,0.9,2.2c0,0.7-0.2,1.3-0.6,1.8c-0.4,0.5-1,0.9-1.6,1.1C20.2,11.5,19.9,11.5,19.6,11.5z
-				 M19.6,6.9c-0.3,0-0.5,0.1-0.8,0.2c-0.3,0.2-0.5,0.4-0.7,0.7C18,8,18,8.3,18,8.5c0,0.4,0.2,0.8,0.5,1.1c0.4,0.4,1,0.6,1.6,0.4
-				c0.3-0.1,0.6-0.3,0.8-0.6c0.2-0.3,0.3-0.6,0.3-1c0-0.4-0.2-0.8-0.5-1.2C20.4,7.1,20,6.9,19.6,6.9z" />
-                                    </g>
-                                </g>
-                                <g>
+                    <svg width="39" height="36" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#253573;stroke:#253573;stroke-width:1.5;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#253573;stroke-width:1.5;stroke-miterlimit:10;}
+</style>
+<line class="st0" x1="33.4" y1="23.4" x2="5.8" y2="23.4"/>
+<line class="st0" x1="19.6" y1="26.5" x2="19.6" y2="20.3"/>
+<line class="st0" x1="19.6" y1="6.5" x2="19.6" y2="0.3"/>
+<g>
+	<line class="st0" x1="18.5" y1="10.4" x2="7" y2="35.5"/>
+	<line class="st0" x1="20.7" y1="10.3" x2="32.2" y2="35.5"/>
+</g>
+<circle class="st1" cx="19.6" cy="8.5" r="2.4"/>
+</svg>
 
-                                    <rect x="-1" y="22.4" transform="matrix(0.4141 -0.9102 0.9102 0.4141 -13.5846 25.0886)" class="st0" width="27.4" height="1.4" />
-                                </g>
-                                <g>
-
-                                    <rect x="25.8" y="9.4" transform="matrix(0.9101 -0.4143 0.4143 0.9101 -7.1902 13.0412)" class="st0" width="1.4" height="27.4" />
-                                </g>
-                                <g>
-                                    <rect x="6" y="22.7" class="st0" width="27.2" height="1.4" />
-                                </g>
-                            </g>
-                        </svg>
                         <span>{{trans('Авторский надзор')}}
                     </a>
                 </li>
