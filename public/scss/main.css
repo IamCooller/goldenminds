@@ -6431,9 +6431,14 @@ ul.breadcrumb li a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  grid-gap: 10px;
-  max-width: 217px;
+  grid-gap: 35px;
   margin-top: 80px;
+}
+
+@media (max-width: 1430px) {
+  .pagination {
+    grid-gap: calc( 10px + 25 * ((100vw - 320px) / 1110));
+  }
 }
 
 @media (max-width: 1430px) {
