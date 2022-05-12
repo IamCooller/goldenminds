@@ -118,6 +118,24 @@ class HomePage extends Model
         "taskTitle_ru",
         "taskTitle_oz",
         "taskTitle_en",
+
+
+
+            'section_completed_projects_ru',
+            'section_completed_projects_en',
+            'section_completed_projects_oz',
+
+            'section_year_market_ru',
+            'section_year_market_en',
+            'section_year_market_oz',
+
+            'section_million_power_ru',
+            'section_million_power_en',
+            'section_million_power_oz',
+
+            'section_billion_output_ru',
+            'section_billion_output_en',
+            'section_billion_output_oz',
     ];
 
     /**
@@ -326,7 +344,34 @@ class HomePage extends Model
         $column = "taskTitle_" . $locale;
         return $this->{$column};
     }
-    
+
+    public function getSectionCompletedProjectsAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "section_completed_projects_" . $locale;
+        return $this->{$column};
+    }
+  
+    public function getSectionYearMarketAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "section_year_market_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getSectionMillionPowerAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "section_million_power_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getSectionBillionOutputAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "section_billion_output_" . $locale;
+        return $this->{$column};
+    }
    
 
 }

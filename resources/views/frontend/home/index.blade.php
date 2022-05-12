@@ -409,32 +409,33 @@
                     <h1 class="achievement__title">
                     {{$homepage->toptitle}}    
                     </h1>
+                    
 
                     <div class="achievement__ul ul-achievement">
                         <div class="ul-achievement__blok blok-ul">
                             <div class="blok-ul__title voice">{{$homepage->completed_projects}}</div>
-                            <div class="blok-ul__subtitle voice">{{ trans('выполненных проектов')}}</div>
+                            <div class="blok-ul__subtitle voice">{{$homepage->section_completed_projects}}</div>
                             <div class="blok-ul__img">
                                 <img src="/img/main/icon-1.svg" alt="Иконка" />
                             </div>
                         </div>
                         <div class="ul-achievement__blok blok-ul">
                             <div class="blok-ul__title voice">{{$homepage->year_market}}</div>
-                            <div class="blok-ul__subtitle voice">{{ trans('год на рынке')}}</div>
+                            <div class="blok-ul__subtitle voice">{{$homepage->section_year_market}}</div>
                             <div class="blok-ul__img">
                                 <img src="/img/main/icon-2.svg" alt="Иконка" />
                             </div>
                         </div>
                         <div class="ul-achievement__blok blok-ul">
                             <div class="blok-ul__title voice">{{$homepage->million_power}}</div>
-                            <div class="blok-ul__subtitle voice">{{ trans('млн. кВт мощности')}}</div>
+                            <div class="blok-ul__subtitle voice">{{$homepage->section_million_power}}</div>
                             <div class="blok-ul__img">
                                 <img src="/img/main/icon-3.svg" alt="Иконка" />
                             </div>
                         </div>
                         <div class="ul-achievement__blok blok-ul">
                             <div class="blok-ul__title voice">{{$homepage->billion_output}}</div>
-                            <div class="blok-ul__subtitle voice">{{ trans('млрд. кВт*час выработки')}}</div>
+                            <div class="blok-ul__subtitle voice">{{$homepage->section_billion_output}}</div>
                             <div class="blok-ul__img">
                                 <img src="/img/main/icon-4.png" alt="Иконка" />
                             </div>
