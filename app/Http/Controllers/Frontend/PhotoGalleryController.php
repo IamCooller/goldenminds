@@ -18,7 +18,13 @@ class PhotoGalleryController extends Controller
      */
     public function index()
     {
-        $photo= PhotoGallery::latest('data')->paginate(
+
+        $locale = App::getLocale();
+        $column = "images_" . $locale;
+
+        
+       
+        $photo= PhotoGallery::latest('data')->where($column, !' ')->paginate(
             $perPage = 4, $columns = ['*'], $pageName = 'photo', $onFirstPage = 0
         );
       
