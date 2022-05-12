@@ -59,17 +59,21 @@ class Structura extends Section
             $tabsRU = [];
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::file('image_ru', 'Изображение'),
-                AdminFormElement::text('link_ru', 'Ссылка'),
+
+                AdminFormElement::wysiwyg('instruction_ru', 'Инструкция'),
+                
                 AdminFormElement::wysiwyg('tabs_ru', 'Таблица'),
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::file('image_oz', 'Изображение'),
-                AdminFormElement::text('link_oz', 'Ссылка'),
+
+                AdminFormElement::wysiwyg('instruction_oz', 'Инструкция'),
                 AdminFormElement::wysiwyg('tabs_oz', 'Таблица'),
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::file('image_en', 'Изображение'),
-                AdminFormElement::text('link_en', 'Ссылка'),
+
+                AdminFormElement::wysiwyg('instruction_en', 'Инструкция'),
                 AdminFormElement::wysiwyg('tabs_en', 'Таблица'),
             ]))->setLabel('EN'); 
             return $tabsRU;

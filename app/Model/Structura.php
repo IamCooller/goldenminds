@@ -23,6 +23,9 @@ class Structura extends Model
         'tabs_ru',
         'tabs_en',
         'tabs_oz',
+        'instruction_ru',
+        'instruction_en',
+        'instruction_oz',
     ];
 
     /**
@@ -52,6 +55,13 @@ class Structura extends Model
     {
         $locale = App::getLocale();
         $column = "tabs_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getInstructionAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "instruction_" . $locale;
         return $this->{$column};
     }
 }
