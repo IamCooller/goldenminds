@@ -2852,6 +2852,12 @@ ul.breadcrumb li a:hover {
   overflow: hidden;
 }
 
+.footer a {
+  color: #1E2A5E;
+  font-family: Roboto;
+  position: relative;
+}
+
 .footer .hamburger-menu__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
