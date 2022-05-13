@@ -1496,7 +1496,7 @@
                    
                  
                    
-                <div class="news__body {{$test = 0}}">
+                <div class="news__body {{$test = 0}}  {{$counter = 0}}">
                 
 				@foreach($news as $key => $el)
              
@@ -1545,14 +1545,16 @@
                                 </div>
                             </div>
 
-                            <div class="blok-reght__reght">
+                            <div class="blok-reght__reght {{$counter += 1}}">
                                 <div class="blok-reght__img ibg">
                                 @if ($el->image)<img src="/{{$el->image}}" alt="{{$el->title}}">@endif
                                 </div>
                             </div>
                         </a>
                         @endif
-                      
+                        @if($counter == 4)
+                        @break
+                        @endif
                         @endforeach
                     </div>
                     
