@@ -8100,6 +8100,7 @@ ul.breadcrumb li a:hover {
     display: -ms-flexbox;
     display: flex;
     width: 200px;
+    margin-right: 5px;
   }
   .footerMain::after {
     display: block;

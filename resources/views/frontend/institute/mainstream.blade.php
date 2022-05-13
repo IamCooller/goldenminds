@@ -122,17 +122,17 @@
                     <svg width="39" height="36" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 39 36" style="enable-background:new 0 0 39 36;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#253573;stroke:#253573;stroke-width:1.5;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#253573;stroke-width:1.5;stroke-miterlimit:10;}
+	.st5{fill:#253573;stroke:#253573;stroke-width:1.5;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#253573;stroke-width:1.5;stroke-miterlimit:10;}
 </style>
-<line class="st0" x1="33.4" y1="23.4" x2="5.8" y2="23.4"/>
-<line class="st0" x1="19.6" y1="26.5" x2="19.6" y2="20.3"/>
-<line class="st0" x1="19.6" y1="6.5" x2="19.6" y2="0.3"/>
+<line class="st5" x1="33.4" y1="23.4" x2="5.8" y2="23.4"/>
+<line class="st5" x1="19.6" y1="26.5" x2="19.6" y2="20.3"/>
+<line class="st5" x1="19.6" y1="6.5" x2="19.6" y2="0.3"/>
 <g>
-	<line class="st0" x1="18.5" y1="10.4" x2="7" y2="35.5"/>
-	<line class="st0" x1="20.7" y1="10.3" x2="32.2" y2="35.5"/>
+	<line class="st5" x1="18.5" y1="10.4" x2="7" y2="35.5"/>
+	<line class="st5" x1="20.7" y1="10.3" x2="32.2" y2="35.5"/>
 </g>
-<circle class="st1" cx="19.6" cy="8.5" r="2.4"/>
+<circle class="st6" cx="19.6" cy="8.5" r="2.4"/>
 </svg>
 
                         <span>{{trans('Авторский надзор')}}
