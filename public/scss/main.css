@@ -3679,6 +3679,10 @@ ul.breadcrumb li a:hover {
   color: #263475;
 }
 
+.footerMain a {
+  color: #263475;
+}
+
 .footerMain .footerMain__nav-title {
   position: relative;
   max-width: 130px;
