@@ -6158,7 +6158,7 @@ ul.breadcrumb li a:hover {
 }
 
 .PressCenter__gallery-title {
-  font-size: 28px;
+  font-size: 24px;
   line-height: 124%;
   color: #FFFFFF;
   margin-bottom: 24px;
@@ -6167,7 +6167,7 @@ ul.breadcrumb li a:hover {
 
 @media (max-width: 1430px) {
   .PressCenter__gallery-title {
-    font-size: calc( 20px + 8 * ((100vw - 320px) / 1110));
+    font-size: calc( 20px + 4 * ((100vw - 320px) / 1110));
   }
 }
 
