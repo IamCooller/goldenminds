@@ -4017,6 +4017,10 @@ ul.breadcrumb li a:hover {
   }
 }
 
+a.popup-modal.footerMain__RightBottom-button.button {
+  color: #fff !important;
+}
+
 .structuraMap {
   padding: 97px 0 155px 0;
 }
