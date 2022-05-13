@@ -47,7 +47,7 @@ class HomeController extends Controller
         
         $newsl = "date_" . $locale;
         $news = News::latest($newsl)->where('published', '1')->paginate(
-            $perPage = 9, $columns = ['*'], $pageName = 'news', $onFirstPage = 0
+            $perPage = 5, $columns = ['*'], $pageName = 'news', $onFirstPage = 0
         );
         dd($news);
         $homepage = HomePage::latest()->first();
