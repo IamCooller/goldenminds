@@ -39,7 +39,9 @@
                 @endif
                 <div class="tendersSingle__about">
                     <div class="tendersSingle_photo">
+                        @if($tenders->image)
                         <img src="/{{$tenders->image}}" alt="Photo" class="tendersSingle_photo-img">
+                        @endif
                     </div>
 
                 </div>
