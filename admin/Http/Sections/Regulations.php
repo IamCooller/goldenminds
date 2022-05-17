@@ -47,12 +47,12 @@ class Regulations extends Section
         $display = AdminDisplay::datatablesAsync()->setColumns([
             AdminColumn::link('tab')->setLabel('# Таблица'),
             AdminColumn::link('regist')->setLabel('Дата регистрации'),
-            AdminColumn::link('title')->setLabel('Заголовок'),
+            AdminColumn::link('title_oz')->setLabel('Заголовок'),
             AdminColumn::link('created_at')->setLabel('Дата создания'),
         ]);
         $display
         ->getExtension('links')
-        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Текст появляется после заполнения формы на Узбекском языке</div>')
+        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Заголовок появляется после заполнения формы на Узбекском языке</div>')
         ->setPlacement('card.footer');
         $display->paginate(15);
 

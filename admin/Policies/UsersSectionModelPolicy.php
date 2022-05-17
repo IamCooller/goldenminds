@@ -63,4 +63,11 @@ class UsersSectionModelPolicy
     {
         return $item->id > 2;
     }
+
+
+
+    public function create(User $user, $section, $model)
+    {
+        return $user->hasRole('admin');
+    }
 }

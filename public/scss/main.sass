@@ -1169,7 +1169,7 @@ ul.breadcrumb li a:hover
 	&__body
 		padding: 60px 0
 		&-text
-			p
+			> *
 				@include adaptiv-value('font-size', 18, 14, 1)
 				line-height: 150%
 				color: $black
@@ -4364,8 +4364,8 @@ a.popup-modal.footerMain__RightBottom-button.button
 					padding: 20px 4px
 	.licensesAndSerf__list
 		grid-gap: 10px
-	.history__timeLaps
-		width: 770px
+	.history__timeLaps::before
+		width: 105%
 	.history__body_wrapper
 		max-width: 223px
 		& p

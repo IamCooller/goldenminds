@@ -11,6 +11,10 @@ use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 use SleepingOwl\Admin\Contracts\Form\FormInterface;
 use SleepingOwl\Admin\Section;
 
+
+
+use SleepingOwl\Admin\Contracts\Initializable;
+use SleepingOwl\Admin\Contracts\WithRoutesInterface;
 /**
  * Class Users
  *
@@ -18,7 +22,7 @@ use SleepingOwl\Admin\Section;
  *
  * @see http://sleepingowladmin.ru/docs/model_configuration_section
  */
-class Users extends Section
+class Users extends Section 
 {
     /**
      * @see http://sleepingowladmin.ru/docs/model_configuration#ограничение-прав-доступа
@@ -37,14 +41,19 @@ class Users extends Section
      */
     public function onDisplay()
     {
-        return AdminDisplay::table()
+     
+
+
+            $display = AdminDisplay::datatablesAsync()
             ->with('roles')
             ->setHtmlAttribute('class', 'table-primary')
             ->setColumns([
                 AdminColumn::link('name', 'Username'),
                 AdminColumn::email('email', 'Email')->setWidth('150px'),
-                AdminColumn::lists('roles.label', 'Roles')->setWidth('200px'),
-            ])->paginate(20);
+            ]);
+            $display->paginate(15);
+    
+            return $display;
     }
 
     /**
@@ -59,11 +68,10 @@ class Users extends Section
             AdminFormElement::password('password', 'Password')->required()->addValidationRule('min:6'),
             AdminFormElement::text('email', 'E-mail')->required()->addValidationRule('email'),
             AdminFormElement::multiselect('roles', 'Roles', Role::class)->setDisplay('name'),
-            AdminFormElement::upload('avatar', 'Avatar')->addValidationRule('image'),
-            AdminColumn::image('avatar')->setWidth('150px'),
         ])->setHtmlAttribute('enctype', 'multipart/form-data');
     }
 
+    
     /**
      * @return FormInterface
      */
@@ -71,20 +79,9 @@ class Users extends Section
     {
         return $this->onEdit(null);
     }
-
-    /**
-     * @return void
-     */
+    
     public function onDelete($id)
     {
-        // todo: remove if unused
-    }
-
-    /**
-     * @return void
-     */
-    public function onRestore($id)
-    {
-        // todo: remove if unused
+        
     }
 }

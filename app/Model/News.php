@@ -10,6 +10,9 @@ class News extends Model
     protected $fillable = [
         'date',
         'published',
+        'published_oz',
+        'published_ru',
+        'published_en',
         'text',
         'title_en',
         'title_ru',
@@ -51,6 +54,14 @@ class News extends Model
             {
                 $locale = App::getLocale();
                 $column = "name_" . $locale;
+                return $this->{$column};
+            }
+
+            public function getPublishedAttribute()
+            {
+           
+                $locale = App::getLocale();
+                $column = "published_" . $locale;
                 return $this->{$column};
             }
 }

@@ -51,7 +51,7 @@
 
 {!! $options->nip !!}
 {!! $options->google_analyt !!}
-{!! $options->yandex_met !!}
+
    
 
 </head>
@@ -456,6 +456,7 @@
                 <a href="https://goldenminds.uz/" class="footer__dev">
                     <img src="{{ asset('img/logo__goldenminds.svg')}}" alt="Логотип" />
                 </a>
+                {!! $options->yandex_met !!}
             </div>
 
             <div class="footer__container-inner footerMain__container-inner footerMain__containerRight-inner">

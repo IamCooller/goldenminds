@@ -46,16 +46,16 @@ class Projects extends Section implements Initializable
      */
     public function onDisplay()
     {
-        $display = AdminDisplay::table()->setColumns([
+        $display = AdminDisplay::datatablesAsync()->setColumns([
             AdminColumn::image('image')->setLabel('Изображение'),
-            AdminColumn::link('name')->setLabel('Заголовок'),
-            AdminColumn::link('status')->setLabel('Статус'),
-            AdminColumn::link('category')->setLabel('Категория'),
+            AdminColumn::link('name_oz')->setLabel('Заголовок'),
+            AdminColumn::link('status_oz')->setLabel('Статус'),
+            AdminColumn::link('category_oz')->setLabel('Категория'),
             AdminColumn::text('created_at')->setLabel('Дата')->setWidth('15%')->setHtmlAttribute('class', 'text-muted'),
         ]);
         $display
         ->getExtension('links')
-        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Текст появляется после заполнения формы на Узбекском языке</div>')
+        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Заголовок, Статус, Катеогория появляется после заполнения формы на Узбекском языке</div>')
         ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i> Для добавления новых стран на карте, обратитесь к разработчикам</div>')
         ->setPlacement('card.footer');
         $display->paginate(15);

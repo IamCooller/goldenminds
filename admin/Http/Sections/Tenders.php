@@ -46,14 +46,14 @@ class Tenders extends Section implements Initializable
     public function onDisplay()
     {
         $display = AdminDisplay::datatablesAsync()->setColumns([
-            AdminColumn::image('image')->setLabel('Изображение')->setWidth('200px'),
-            AdminColumn::link('name')->setLabel('Заголовок')->setWidth('400px'),
-            AdminColumn::text('open')->setLabel('Открыт/Закрыт')->setHtmlAttribute('class', 'text-muted'),
+            AdminColumn::image('image')->setLabel('Изображение'),
+            AdminColumn::link('name_oz')->setLabel('Заголовок'),
+            AdminColumn::text('open_oz')->setLabel('Открыт/Закрыт')->setHtmlAttribute('class', 'text-muted'),
         ]);
 
         $display
         ->getExtension('links')
-        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Текст появляется после заполнения формы на Узбекском языке</div>')
+        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Заголовок, Открыть/Закрыть появляется после заполнения формы на Узбекском языке</div>')
         ->setPlacement('card.footer');
         $display->paginate(15);
 

@@ -47,14 +47,14 @@ class Vacancy extends Section
     {
         $display = AdminDisplay::datatablesAsync()->setColumns([
             AdminColumn::link('vacancy_oz')->setLabel('Вакансия')->setWidth('30%'),
-            AdminColumn::link('title')->setLabel('Заголовок')->setWidth('50%'),
+            AdminColumn::link('title_oz')->setLabel('Заголовок')->setWidth('50%'),
             AdminColumn::link('created_at')->setLabel('Дата создания')->setWidth('20%'),
         ]);
   
       
         $display
             ->getExtension('links')
-            ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Текст появляется после заполнения формы на Узбекском языке</div>')
+            ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Вакансия, Заголовок появляется после заполнения формы на Узбекском языке</div>')
             ->setPlacement('card.footer');
 
        

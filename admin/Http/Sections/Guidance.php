@@ -46,15 +46,15 @@ class Guidance extends Section
     public function onDisplay()
     {
         $display = AdminDisplay::datatablesAsync()->setColumns([
-            AdminColumn::image('image')->setLabel('Фото')->setWidth('20%'),
-            AdminColumn::link('name')->setLabel('ФИО'),
-            AdminColumn::link('category')->setLabel('Категория'),
+            AdminColumn::image('image_oz')->setLabel('Фото')->setWidth('20%'),
+            AdminColumn::link('name_oz')->setLabel('ФИО'),
+            AdminColumn::link('category_oz')->setLabel('Категория'),
             AdminColumn::link('created_at')->setLabel('Дата создания'),
             
         ]);
         $display
         ->getExtension('links')
-        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Текст появляется после заполнения формы на Узбекском языке</div>')
+        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Фото, ФИО, Категория появляется после заполнения формы на Узбекском языке</div>')
         ->setPlacement('card.footer');
         $display->paginate(15);
 

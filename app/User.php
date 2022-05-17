@@ -6,7 +6,11 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laratrust\Traits\LaratrustUserTrait;
-
+use Illuminate\Database\Eloquent\Model;
+use App;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
 class User extends Authenticatable
 {
     use LaratrustUserTrait;
@@ -50,5 +54,14 @@ class User extends Authenticatable
     
         return $this->roles()->where('role_id', '1')->exists();
     }
+
+   
+
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
+
+
 
 }

@@ -46,13 +46,13 @@ class History extends Section
     {
         $display = AdminDisplay::datatablesAsync()->setColumns([
             AdminColumn::link('name_oz')->setLabel('Заголовок')->setWidth('50%'),
-            AdminColumn::link('years')->setLabel('Дата')->setWidth('30%'),
+            AdminColumn::link('years_oz')->setLabel('Дата')->setWidth('30%'),
             AdminColumn::link('created_at')->setLabel('Дата создания')->setWidth('20%'),
         ]);
 
         $display
         ->getExtension('links')
-        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Текст появляется после заполнения формы на Узбекском языке</div>')
+        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Текст и Дата появляется после заполнения формы на Узбекском языке</div>')
         ->setPlacement('card.footer');
         $display->paginate(15);
 

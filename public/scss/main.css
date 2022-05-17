@@ -3597,7 +3597,7 @@ ul.breadcrumb li a:hover {
   padding: 60px 0;
 }
 
-.institutTabs__body-text p {
+.institutTabs__body-text > * {
   font-size: 18px;
   line-height: 150%;
   color: #263475;
@@ -3605,12 +3605,12 @@ ul.breadcrumb li a:hover {
 }
 
 @media (max-width: 1430px) {
-  .institutTabs__body-text p {
+  .institutTabs__body-text > * {
     font-size: calc( 14px + 4 * ((100vw - 320px) / 1110));
   }
 }
 
-.institutTabs__body-text p:last-child {
+.institutTabs__body-text > *:last-child {
   margin: 0;
 }
 
@@ -9266,8 +9266,8 @@ a.popup-modal.footerMain__RightBottom-button.button {
   .licensesAndSerf__list {
     grid-gap: 10px;
   }
-  .history__timeLaps {
-    width: 770px;
+  .history__timeLaps::before {
+    width: 105%;
   }
   .history__body_wrapper {
     max-width: 223px;

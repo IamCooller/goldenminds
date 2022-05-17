@@ -45,13 +45,13 @@ class Departament extends Section
     public function onDisplay()
     {
         $display = AdminDisplay::datatablesAsync()->setColumns([
-            AdminColumn::image('image')->setLabel('Фото')->setWidth('30%'),
-            AdminColumn::link('content')->setLabel('Отдел')->setWidth('50%'),
+            AdminColumn::image('image_oz')->setLabel('Фото')->setWidth('30%'),
+            AdminColumn::link('content_oz')->setLabel('Отдел')->setWidth('50%'),
             AdminColumn::link('created_at')->setLabel('Дата создания')->setWidth('20%'),
         ]);
         $display
         ->getExtension('links')
-        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Текст появляется после заполнения формы на Узбекском языке</div>')
+        ->add('<div class="alert alert-info mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Фото и Отдел появляется после заполнения формы на Узбекском языке</div>')
         ->setPlacement('card.footer');
         $display->paginate(15);
 

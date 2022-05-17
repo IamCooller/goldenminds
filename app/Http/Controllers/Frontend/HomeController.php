@@ -46,7 +46,8 @@ class HomeController extends Controller
         $guidances = Guidance::all();
         
         $newsl = "date_" . $locale;
-        $news = News::latest($newsl)->where('published', '1')->paginate(
+        $publish = 'published_' . $locale;
+        $news = News::latest($newsl)->where($publish, '1')->paginate(
             $perPage = 9, $columns = ['*'], $pageName = 'news', $onFirstPage = 0
         );
      
