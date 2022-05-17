@@ -8024,6 +8024,18 @@ a.popup-modal.footerMain__RightBottom-button.button {
 }
 
 @media only screen and (max-width: 1600px) {
+  ul.breadcrumb li {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1600px) and (max-width: 1430px) {
+  ul.breadcrumb li {
+    font-size: calc( 10px + 2 * ((100vw - 320px) / 1110));
+  }
+}
+
+@media only screen and (max-width: 1600px) {
   .projects {
     padding: 150px 0;
   }
