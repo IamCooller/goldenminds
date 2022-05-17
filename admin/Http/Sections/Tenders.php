@@ -113,7 +113,8 @@ class Tenders extends Section implements Initializable
         ])
         ->addScript('custom-image', '/customjs/customimage.js', ['admin-default'])
        ->addBody([
-         
+        ('<div class="alert alert-danger mb-0 m-3"><i class="fa fa-fw fa-info-circle"></i>Перед сохранением проверьте все поля! Тендер не будет отображаться без заголовка !</div>')
+
        ]);
       
    
