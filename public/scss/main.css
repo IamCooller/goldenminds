@@ -1741,8 +1741,15 @@ ul.breadcrumb {
 
 ul.breadcrumb li {
   display: inline;
-  font-size: 12px;
+  line-height: 1.5;
+  font-size: 14px;
   color: #263475;
+}
+
+@media (max-width: 1430px) {
+  ul.breadcrumb li {
+    font-size: calc( 10px + 4 * ((100vw - 320px) / 1110));
+  }
 }
 
 ul.breadcrumb li + li:before {
@@ -6372,10 +6379,18 @@ a.popup-modal.footerMain__RightBottom-button.button {
 .PressCenterNews__bottom_content {
   margin-left: 20px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .PressCenterNews__bottom_content-title {
   text-align: center;
+  margin: 0 !important;
 }
 
 .PressCenterNews__bottom_content p,
@@ -6390,6 +6405,10 @@ a.popup-modal.footerMain__RightBottom-button.button {
   .PressCenterNews__bottom_content a {
     font-size: calc( 16px + 2 * ((100vw - 320px) / 1110));
   }
+}
+
+.PressCenterNews__bottom_content-text {
+  margin-top: auto;
 }
 
 .PressCenterNews__bottom-image {
