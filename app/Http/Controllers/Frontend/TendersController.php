@@ -17,9 +17,10 @@ class TendersController extends Controller
         $active ='';
         $locale = App::getLocale();
         $name = 'name_' . $locale;
+        $open = 'open_' . $locale;
         if($status == 'done')
         {
-            $tenders = Tenders::latest('created_at')->where( 'open', 'Действующие')->where($name, '!=', NULL)->paginate(
+            $tenders = Tenders::latest('created_at')->where( $open, 'Действующие')->where($name, '!=', NULL)->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'tenders', $onFirstPage = 0
             );
             $active='done';
@@ -27,7 +28,7 @@ class TendersController extends Controller
         }
         if($status == 'close')
         {
-            $tenders = Tenders::latest('created_at')->where( 'open', 'Завершённые')->where($name, '!=', NULL)->paginate(
+            $tenders = Tenders::latest('created_at')->where( $open, 'Завершённые')->where($name, '!=', NULL)->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'tenders', $onFirstPage = 0
             );
             $active='close';
