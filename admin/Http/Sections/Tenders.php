@@ -79,7 +79,7 @@ class Tenders extends Section implements Initializable
                 AdminFormElement::text('keywords_ru', 'Keywords'),
                 AdminFormElement::text('name_ru', 'Заголовок'),
                 AdminFormElement::wysiwyg('content_ru', 'Текст'),
-                AdminFormElement::select('open_ru', 'Открыт/Закрыт',['Завершённые'=>'Завершённые','Действующие'=>'Действующие']),
+                AdminFormElement::select('open_ru', 'Открыт/Закрыт',['Завершённые'=>'Завершённые','Действующие'=>'Действующие'])->setDefaultValue('Завершённые'),
                 AdminFormElement::files('files_ru', 'Файлы'),
                 AdminFormElement::file('image_ru', 'Главное изображение 16:9 (макс. 1280 × 960 px)')->addValidationRule('mimes:jpg,bmp,png')->setView(view('admin.custom.image')),
             ]))->setLabel('RU');
@@ -89,7 +89,7 @@ class Tenders extends Section implements Initializable
                 AdminFormElement::text('description_oz', 'Description'),
                 AdminFormElement::text('name_oz', 'Заголовок'),
                 AdminFormElement::wysiwyg('content_oz', 'Текст'),
-                AdminFormElement::select('open_oz', 'Открыт/Закрыт',['Завершённые'=>'Завершённые','Действующие'=>'Действующие']),
+                AdminFormElement::select('open_oz', 'Открыт/Закрыт',['Завершённые'=>'Завершённые','Действующие'=>'Действующие'])->setDefaultValue('Завершённые'),
                 AdminFormElement::files('files_oz', 'Файлы'),
                 AdminFormElement::file('image_oz', 'Главное изображение 16:9 (макс. 1280 × 960 px)')->addValidationRule('mimes:jpg,bmp,png')->setView(view('admin.custom.image')),
             ]))->setLabel('OZ');
@@ -99,7 +99,7 @@ class Tenders extends Section implements Initializable
                 AdminFormElement::text('keywords_en', 'Keywords'),
                 AdminFormElement::text('name_en', 'Заголовок'),
                 AdminFormElement::wysiwyg('content_en', 'Текст'),
-                AdminFormElement::select('open_en', 'Открыт/Закрыт',['Завершённые'=>'Завершённые','Действующие'=>'Действующие']),
+                AdminFormElement::select('open_en', 'Открыт/Закрыт',['Завершённые'=>'Завершённые','Действующие'=>'Действующие'])->setDefaultValue('Завершённые'),
                 AdminFormElement::files('files_en', 'Файлы'),
                 AdminFormElement::file('image_en', 'Главное изображение 16:9 (макс. 1280 × 960 px)')->addValidationRule('mimes:jpg,bmp,png')->setView(view('admin.custom.image')),
             ]))->setLabel('EN'); 
