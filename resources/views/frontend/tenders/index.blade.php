@@ -37,7 +37,9 @@
                     <div class="tenders__list_item">
                         <a href="{{ route('tender-single',['id'=>$el->id]) }}">
                             <div class="tenders__list_item_img">
+                                @if($el->image)
                                 <img src="/{{$el->image}}" alt="tender">
+                                @endif
                             </div>
                             <div class="tenders__list_item_options">
                                 <div class="tenders__list_item-title">{{$el->name}}</div>

@@ -49,7 +49,7 @@
                 <div class="constitutive">
               
               
-          
+            @if($tenders->files)
             @foreach(json_decode($tenders->files) as $member)
                     <div class="sidebar__right_block_downloand">
                         <div class="sidebar__right_block_downloand-img">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                     @endforeach
-                  
+                  @endif
                 </div>
 
             </div>
@@ -90,7 +90,9 @@
                             <div class="tenders__list_item swiper-slide">
                                 <a href="{{ route('tender-single',['id'=>$el->id]) }}">
                                     <div class="tenders__list_item_img">
+                                        @if($el->image)
                                         <img src="/{{$el->image}}" alt="tender">
+                                        @endif
                                     </div>
                                     <div class="tenders__list_item_options">
                                         <div class="tenders__list_item-title">{{$el->name}}</div>
