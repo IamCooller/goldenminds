@@ -2338,7 +2338,8 @@ a.popup-modal.footerMain__RightBottom-button.button
 				grid-template-columns: 1fr 2fr
 				border: 1px solid #D5E0E2
 				box-sizing: border-box
-				height: 320px
+				min-height: 320px
+				height: auto
 			&_options
 				padding: 30px
 				display: flex
@@ -2369,6 +2370,7 @@ a.popup-modal.footerMain__RightBottom-button.button
 				font-size: 14px
 				line-height: 150%
 				color: $black
+				margin: 5px 0
 				svg
 					margin-right: 9px
 			&_img
@@ -3608,7 +3610,8 @@ a.popup-modal.footerMain__RightBottom-button.button
 			grid-gap: 20px
 			&_item
 				a
-					height: 190px
+					min-height: 190px
+					height: auto
 				&_options
 					padding: 13px
 				&-title

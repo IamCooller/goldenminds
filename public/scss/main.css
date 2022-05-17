@@ -5912,7 +5912,8 @@ a.popup-modal.footerMain__RightBottom-button.button {
   border: 1px solid #D5E0E2;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 320px;
+  min-height: 320px;
+  height: auto;
 }
 
 .tenders__list_item_options {
@@ -5981,6 +5982,7 @@ a.popup-modal.footerMain__RightBottom-button.button {
   font-size: 14px;
   line-height: 150%;
   color: #263475;
+  margin: 5px 0;
 }
 
 .tenders__list_item-time svg {
@@ -8282,7 +8284,8 @@ a.popup-modal.footerMain__RightBottom-button.button {
     grid-gap: 20px;
   }
   .tenders__list_item a {
-    height: 190px;
+    min-height: 190px;
+    height: auto;
   }
   .tenders__list_item_options {
     padding: 13px;
