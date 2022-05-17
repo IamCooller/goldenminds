@@ -4,7 +4,7 @@ use App\Http\Controllers\Controller;
 
 use App\Model\Tenders;
 use Illuminate\Http\Request;
-
+use App;
 class TendersController extends Controller
 {
     /**
@@ -15,9 +15,11 @@ class TendersController extends Controller
     public function index($status='all')
     {
         $active ='';
+        $locale = App::getLocale();
+        $name = 'name_' . $locale;
         if($status == 'done')
         {
-            $tenders = Tenders::where( 'open', 'Действующие')->paginate(
+            $tenders = Tenders::latest('created_at')->where( 'open', 'Действующие')->where($name, '!=', NULL)->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'tenders', $onFirstPage = 0
             );
             $active='done';
@@ -25,13 +27,13 @@ class TendersController extends Controller
         }
         if($status == 'close')
         {
-            $tenders = Tenders::where( 'open', 'Завершённые')->paginate(
+            $tenders = Tenders::latest('created_at')->where( 'open', 'Завершённые')->where($name, '!=', NULL)->paginate(
                 $perPage = 8, $columns = ['*'], $pageName = 'tenders', $onFirstPage = 0
             );
             $active='close';
             return view('frontend/tenders/index', compact('tenders','active'));
         }
-        $tenders = Tenders::paginate(
+        $tenders = Tenders::latest('created_at')->where($name, '!=', NULL)->paginate(
             $perPage = 8, $columns = ['*'], $pageName = 'tenders', $onFirstPage = 0
         );
       
