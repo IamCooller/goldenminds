@@ -33,7 +33,7 @@
             <div class="_container">
                 <div class="tenders__list">
                 @foreach($tenders as $el)
-                @if($el->content)
+                @if($el->name)
                     <div class="tenders__list_item">
                         <a href="{{ route('tender-single',['id'=>$el->id]) }}">
                             <div class="tenders__list_item_img">
