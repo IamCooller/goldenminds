@@ -10,6 +10,7 @@ use SleepingOwl\Admin\Contracts\Display\DisplayInterface;
 use SleepingOwl\Admin\Contracts\Form\FormInterface;
 use SleepingOwl\Admin\Section;
 use SleepingOwl\Admin\Contracts\Initializable;
+use SleepingOwl\Admin\Form\FormElements;
 /**
  * Class HomePage
  *
@@ -59,8 +60,45 @@ class HomePage extends Section implements Initializable
 
 
         $tabs = AdminDisplay::tabbed();
+        $addTabs = AdminDisplay::tabbed();
 
+    /*     'popupGerb_ru',
+        'popupGerb_en',
+        'popupGerb_oz',
 
+        'popupFlag_ru',
+        'popupFlag_en',
+        'popupFlag_oz',
+
+        'popupGimn_ru',
+        'popupGimn_en',
+        'popupGimn_oz',
+        
+        'popupGerbTitle_ru',
+        'popupGerbTitle_en',
+        'popupGerbTitle_oz',
+
+        'popupFlagTitle_ru',
+        'popupFlagTitle_en',
+        'popupFlagTitle_oz',
+
+        'popupGimnTitle_ru',
+        'popupGimnTitle_en',
+        'popupGimnTitle_oz',
+
+        'popupGimnImage_ru',
+        'popupGimnImage_en',
+        'popupGimnImage_oz',
+
+        'popupGerbImage_ru',
+        'popupGerbImage_en',
+        'popupGerbImage_oz',
+
+        'popupFlagImage_ru',
+        'popupFlagImage_en',
+        'popupFlagImage_oz', */
+
+       
 
         $tabs->setTabs(function ($id) {
             $tabsRU = [];
@@ -101,7 +139,11 @@ class HomePage extends Section implements Initializable
             AdminFormElement::text('section_billion_output_ru', 'Секция Млрд. кВт*час выработки'),
             AdminFormElement::text('billion_output_ru', 'Млрд. кВт*час выработки'),
             AdminFormElement::image('task_img_ru', 'Изображение в секции (Задачи)')->setView(view('admin.custom.image')),
+            
+
+      
             ]))->setLabel('RU');
+
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_oz', 'Title'),
                 AdminFormElement::text('keywords_oz', 'Keywords'),
@@ -138,6 +180,7 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::text('billion_output_oz', 'Млрд. кВт*час выработки'),
                 AdminFormElement::image('task_img_oz', 'Изображение в секции (Задачи)')->setView(view('admin.custom.image')),
 
+              
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('title_en', 'Title'),
@@ -174,12 +217,11 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::text('billion_output_en', 'Млрд. кВт*час выработки'),
                 AdminFormElement::image('task_img_en', 'Изображение в секции (Задачи)')->setView(view('admin.custom.image')),
                 
+             
             ]))->setLabel('EN'); 
             return $tabsRU;
         });
-
-     
-
+      
   
 
       

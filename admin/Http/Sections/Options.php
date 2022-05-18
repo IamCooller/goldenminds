@@ -74,6 +74,18 @@ class Options extends Section implements Initializable
                 AdminFormElement::ckeditor('address_ru', 'Адрес'),
                 AdminFormElement::file('blogo_ru', 'Логотип'),
                 AdminFormElement::file('slogo_ru', 'Мини логотип'),
+
+                AdminFormElement::text('popupGerbTitle_ru', 'Попап Герб Заголовок'),
+                AdminFormElement::image('popupGerbImage_ru', 'Попап Герб изображение'),
+                AdminFormElement::wysiwyg('popupGerb_ru', 'Попап Герб Текст'),
+    
+                AdminFormElement::text('popupFlagTitle_ru', 'Попап Флаг Заголовок'),
+                AdminFormElement::image('popupFlagImage_ru', 'Попап Флаг изображение'),
+                AdminFormElement::wysiwyg('popupFlag_ru', 'Попап Флаг Текст'),
+                
+                AdminFormElement::text('popupGimnTitle_ru', 'Попап Гимн Заголовок'),
+                AdminFormElement::image('popupGimnImage_ru', 'Попап Гимн изображение'),
+                AdminFormElement::wysiwyg('popupGimn_ru', 'Попап Гимн Текст'),
            
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
@@ -84,6 +96,18 @@ class Options extends Section implements Initializable
                 AdminFormElement::ckeditor('address_oz', 'Адрес'),
                 AdminFormElement::file('blogo_oz', 'Логотип'),
                 AdminFormElement::file('slogo_oz', 'Мини логотип'),
+
+                AdminFormElement::text('popupGerbTitle_oz', 'Попап Герб Заголовок'),
+                AdminFormElement::image('popupGerbImage_oz', 'Попап Герб изображение'),
+                AdminFormElement::wysiwyg('popupGerb_oz', 'Попап Герб Текст'),
+
+                AdminFormElement::text('popupFlagTitle_oz', 'Попап Флаг Заголовок'),
+                AdminFormElement::image('popupFlagImage_oz', 'Попап Флаг изображение'),
+                AdminFormElement::wysiwyg('popupFlag_oz', 'Попап Флаг Текст'),
+
+                AdminFormElement::text('popupGimnTitle_oz', 'Попап Гимн Заголовок'),
+                AdminFormElement::image('popupGimnImage_oz', 'Попап Гимн изображение'),
+                AdminFormElement::wysiwyg('popupGimn_oz', 'Попап Гимн Текст'),
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
                 AdminFormElement::text('tel1_en', 'Номер телефона №1'),
@@ -93,6 +117,18 @@ class Options extends Section implements Initializable
                 AdminFormElement::ckeditor('address_en', 'Адрес'),
                 AdminFormElement::file('blogo_en', 'Логотип'),
                 AdminFormElement::file('slogo_en', 'Мини логотип'),
+
+                AdminFormElement::text('popupGerbTitle_en', 'Попап Герб Заголовок'),
+                AdminFormElement::image('popupGerbImage_en', 'Попап Герб изображение'),
+                AdminFormElement::wysiwyg('popupGerb_en', 'Попап Герб Текст'),
+
+                AdminFormElement::text('popupFlagTitle_en', 'Попап Флаг Заголовок'),
+                AdminFormElement::image('popupFlagImage_en', 'Попап Флаг изображение'),
+                AdminFormElement::wysiwyg('popupFlag_en', 'Попап Флаг Текст'),
+
+                AdminFormElement::text('popupGimnTitle_en', 'Попап Гимн Заголовок'),
+                AdminFormElement::image('popupGimnImage_en', 'Попап Гимн изображение'),
+                AdminFormElement::wysiwyg('popupGimn_en', 'Попап Гимн Текст'),
                 
             ]))->setLabel('EN'); 
             return $tabsRU;

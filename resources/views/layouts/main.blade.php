@@ -569,15 +569,15 @@
             </div>
                 <div class="footerMain__RightBottom">
                     <div class="footerMain__RightBottom_flags">
-                        <div class="footerMain__RightBottom_flags-item">
+                        <a href="#popup-gerb" class="popup-modal footerMain__RightBottom_flags-item">
                             <img src="{{ asset('img/gerb.svg')}}" alt="Герб"> {{trans('Герб')}}
-                        </div>
-                        <div class="footerMain__RightBottom_flags-item">
+                        </a>
+                        <a href="#popup-flag" class="popup-modal footerMain__RightBottom_flags-item">
                             <img src="{{ asset('img/flag.svg')}}" alt="Флаг"> {{trans('Флаг')}}
-                        </div>
-                        <div class="footerMain__RightBottom_flags-item">
+                        </a>
+                        <a href="#popup-gimn" class="popup-modal footerMain__RightBottom_flags-item">
                             <img src="{{ asset('img/gimn.svg')}}" alt="Гимн"> {{trans('Гимн')}}
-                        </div>
+                        </a>
                     </div>
                     <div class="footerMain__RightBottom_links">
                         <div class="footerMain__RightBottom_links-title">
@@ -606,6 +606,68 @@
             </div>
         </div>
     </footer>
+
+    <div class="mfp-hide" id="popup-gerb">
+    <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mb-0 text-center">{{$options->popupGerbTitle}}</h5>
+                </div>
+                <div class="modal-body container">
+                    @if($options->popupGerbImage)
+                    <div class="modal-img">
+                    <img src="/{{$options->popupGerbImage}}">
+                    </div>
+                    @endif
+                   <div class="modal-text">
+                        {!! $options->popupGerb !!}
+                   </div>  
+                </div>
+                <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            </div>
+
+    
+    </div>
+
+    <div class="mfp-hide" id="popup-flag">
+    <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mb-0 text-center">{{$options->popupFlagTitle}}</h5>
+                </div>
+                <div class="modal-body container">
+                    @if($options->popupFlagImage)
+                    <div class="modal-img">
+                    <img src="/{{$options->popupFlagImage}}">
+                    </div>
+                    @endif
+                   <div class="modal-text">
+                        {!! $options->popupFlag !!}
+                   </div>  
+                </div>
+                <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            </div>
+
+    
+    </div>
+    <div class="mfp-hide" id="popup-gimn">
+    <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mb-0 text-center">{{$options->popupGimnTitle}}</h5>
+                </div>
+                <div class="modal-body container">
+                    @if($options->popupGimnImage)
+                    <div class="modal-img">
+                    <img src="/{{$options->popupGimnImage}}">
+                    </div>
+                    @endif
+                   <div class="modal-text">
+                        {!! $options->popupGimn !!}
+                   </div>  
+                </div>
+                <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+            </div>
+
+    
+    </div>
     <form method="POST" action="/send" id="callback__form" class="callback mfp-hide"  name="myFormPop" onsubmit="return validatePop()">
     {{ csrf_field() }}
         <div class="callback-title">

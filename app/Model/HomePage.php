@@ -136,6 +136,10 @@ class HomePage extends Model
             'section_billion_output_ru',
             'section_billion_output_en',
             'section_billion_output_oz',
+
+
+
+            
     ];
 
     /**
@@ -372,6 +376,9 @@ class HomePage extends Model
         $column = "section_billion_output_" . $locale;
         return $this->{$column};
     }
+
+
+   
    
 
 }

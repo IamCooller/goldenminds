@@ -1776,6 +1776,97 @@ ul.breadcrumb li a:hover {
   margin-right: 20px;
 }
 
+#popup-gerb,
+#popup-gimn,
+#popup-flag {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+#popup-gerb .modal-content,
+#popup-gimn .modal-content,
+#popup-flag .modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+
+#popup-gerb .modal-header,
+#popup-gimn .modal-header,
+#popup-flag .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+
+#popup-gerb .modal-img,
+#popup-gimn .modal-img,
+#popup-flag .modal-img {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#popup-gerb .modal-img img,
+#popup-gimn .modal-img img,
+#popup-flag .modal-img img {
+  width: 100%;
+  max-width: 40%;
+  display: block;
+  margin: 20px auto;
+}
+
+#popup-gerb p, #popup-gerb a, #popup-gerb span,
+#popup-gimn p,
+#popup-gimn a,
+#popup-gimn span,
+#popup-flag p,
+#popup-flag a,
+#popup-flag span {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #1e2a5e;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90%;
+          flex: 0 0 90%;
+}
+
+#popup-gerb .modal-text,
+#popup-gimn .modal-text,
+#popup-flag .modal-text {
+  padding: 1rem;
+}
+
+#popup-gerb .mfp-close,
+#popup-gimn .mfp-close,
+#popup-flag .mfp-close {
+  color: #1e2a5e;
+}
+
 #successForm {
   display: block;
   max-width: 500px;

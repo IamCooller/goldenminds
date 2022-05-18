@@ -54,7 +54,50 @@ ul.breadcrumb li a:hover
 	margin-right: 20px
 
 /////Popap////
-
+#popup-gerb,
+#popup-gimn,
+#popup-flag
+	max-width: 650px
+	margin: 0 auto
+	.modal-content
+		position: relative
+		display: flex
+		flex-direction: column
+		width: 100%
+		pointer-events: auto
+		background-color: #fff
+		background-clip: padding-box
+		border: 1px solid rgba(0,0,0,0.2)
+		border-radius: 0.3rem
+		outline: 0
+		
+	.modal-header
+		display: flex
+		flex-shrink: 0
+		align-items: center
+		justify-content: space-between
+		padding: 1rem 1rem
+		border-bottom: 1px solid #dee2e6
+		border-top-left-radius: calc(0.3rem - 1px)
+		border-top-right-radius: calc(0.3rem - 1px)
+	.modal-img
+		border-bottom: 1px solid rgba(0,0,0,0.2)
+		img
+			width: 100%
+			max-width: 40%
+			display: block
+			margin: 20px auto
+	p,a,span
+		font-family: Roboto
+		font-size: 18px
+		font-weight: 400
+		line-height: 27px
+		color: #1e2a5e
+		flex: 0 0 90%
+	.modal-text
+		padding: 1rem
+	.mfp-close
+		color: #1e2a5e
 #successForm
 	display: block
 	max-width: 500px
