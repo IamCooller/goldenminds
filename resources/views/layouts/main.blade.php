@@ -49,8 +49,6 @@
 <link rel="stylesheet" href="https://unpkg.com/gutenberg-css@0.6/dist/themes/oldstyle.min.css" media="print">
 
 
-{!! $options->nip !!}
-{!! $options->google_analyt !!}
 
    
 
@@ -457,6 +455,9 @@
                     <img src="{{ asset('img/logo__goldenminds.svg')}}" alt="Логотип" />
                 </a>
                 {!! $options->yandex_met !!}
+                {!! $options->nip !!}
+                {!! $options->google_analyt !!}
+
             </div>
 
             <div class="footer__container-inner footerMain__container-inner footerMain__containerRight-inner">
