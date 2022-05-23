@@ -6274,6 +6274,10 @@ ul.breadcrumb li a:hover {
   }
 }
 
+.PressCenterSingle__ref img {
+  height: auto;
+}
+
 .PressCenterSingle__options {
   display: -webkit-box;
   display: -ms-flexbox;

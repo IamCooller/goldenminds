@@ -6609,6 +6609,10 @@ a.popup-modal.footerMain__RightBottom-button.button {
   }
 }
 
+.PressCenterSingle__ref img {
+  height: auto;
+}
+
 .PressCenterSingle__options {
   display: -webkit-box;
   display: -ms-flexbox;

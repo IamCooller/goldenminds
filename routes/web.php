@@ -52,7 +52,7 @@ Route::group(['prefix' => App\Http\Middleware\LocaleMiddleware::getLocale()], fu
     }
     return redirect($url); //Перенаправляем назад на ту же страницу                            
 
-})->name('newlocale');
+    })->name('newlocale');
 
 
   Route::post('/', '\App\Http\Controllers\Frontend\MainController@index');
