@@ -6280,7 +6280,6 @@ a.popup-modal.footerMain__RightBottom-button.button {
   line-height: 150%;
   color: #FFFFFF;
   font-weight: 400;
-  margin-bottom: 48px;
   max-width: 447px;
 }
 
@@ -7885,7 +7884,9 @@ a.popup-modal.footerMain__RightBottom-button.button {
 .PressCenter__gallery_block_img img,
 .PressCenter__gallery_block_inner {
   max-height: 420px;
-  min-height: 100%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
 }
 
 .PressCenterSingle_photo_big img {

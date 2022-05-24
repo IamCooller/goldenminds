@@ -22,7 +22,7 @@
         </section>
         <section class="PhotoGallerySingle aos-init aos-animate" data-aos="fade-down">
         <div class="_container">
-            <div class="popup-gallery PhotoGallerySingle__list">
+            <div class="PhotoGallerySingle__list">
               
       
             @foreach($videos as $link)
