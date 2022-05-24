@@ -6376,7 +6376,7 @@ a.popup-modal.footerMain__RightBottom-button.button {
   grid-gap: 74px;
 }
 
-.PressCenterNews__list_item {
+.PressCenterNews__list_item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
