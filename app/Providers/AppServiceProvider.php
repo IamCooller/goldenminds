@@ -27,5 +27,9 @@ class AppServiceProvider extends ServiceProvider
             include $assetsFile;
         }
         $this->loadViewsFrom(__DIR__.'/../../resources/views/vendor/translation-manager', 'translation-manager');
+       $formElementContainer = app('sleeping_owl.form.element');
+        
+       $formElementContainer->add('partners',  \App\Form\OurPartnersElement::class);
+      
     }
 }

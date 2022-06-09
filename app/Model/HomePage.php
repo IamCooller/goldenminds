@@ -23,7 +23,12 @@ class HomePage extends Model
        "keywords_en",
        "keywords_ru",
        "keywords_oz",
-
+        'partnresTitle_oz',
+        'partnresTitle_ru',
+        'partnresTitle_en',
+        'partnresImages_oz',
+        'partnresImages_ru',
+        'partnresImages_en',
        "h1_en",
        "h1_ru",
        "h1_oz",
@@ -378,6 +383,23 @@ class HomePage extends Model
     }
 
 
+
+   
+
+
+    public function getPartnresTitleAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "partnresTitle_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getPartnresImagesAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "partnresImages_" . $locale;
+        return $this->{$column};
+    }
    
    
 

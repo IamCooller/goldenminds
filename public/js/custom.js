@@ -204,6 +204,33 @@ $(function() {
 
     })
 
+    const partners = new Swiper('.partners__slider', {
+        loop: true,
+        //slidesPerView: 3,
+        spaceBetween: 30,
+
+        navigation: {
+            nextEl: '.reght-buttons__button-next',
+            prevEl: '.reght-buttons__button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            720: {
+                slidesPerView: 3,
+            },
+            992: {
+                slidesPerView: 5,
+            },
+        },
+    })
+
     const guidanceDirections = new Swiper('.guidanceDirections-gallery', {
         loop: true,
         spaceBetween: 30,

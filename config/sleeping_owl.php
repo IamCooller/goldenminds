@@ -84,7 +84,24 @@ return [
     */
 
     'filesUploadDirectory' => 'storage/files',
+  /*
+    |--------------------------------------------------------------------------
+    |  Allowed Extensions for uploaded images - array
+    |--------------------------------------------------------------------------
+    */
 
+    'imagesAllowedExtensions' => [
+        'jpg', 'jpeg', 'png', 'gif', 'bmp', 'svg', 'webp',
+        'ico', 'jpe',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    |  Allow to upload svg-files without required xml-header as image - boolean
+    |--------------------------------------------------------------------------
+    */
+
+    'imagesAllowSvg' => true,
     /*
     |--------------------------------------------------------------------------
     |  Admin panel template

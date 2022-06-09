@@ -60,43 +60,7 @@ class HomePage extends Section implements Initializable
 
 
         $tabs = AdminDisplay::tabbed();
-        $addTabs = AdminDisplay::tabbed();
 
-    /*     'popupGerb_ru',
-        'popupGerb_en',
-        'popupGerb_oz',
-
-        'popupFlag_ru',
-        'popupFlag_en',
-        'popupFlag_oz',
-
-        'popupGimn_ru',
-        'popupGimn_en',
-        'popupGimn_oz',
-        
-        'popupGerbTitle_ru',
-        'popupGerbTitle_en',
-        'popupGerbTitle_oz',
-
-        'popupFlagTitle_ru',
-        'popupFlagTitle_en',
-        'popupFlagTitle_oz',
-
-        'popupGimnTitle_ru',
-        'popupGimnTitle_en',
-        'popupGimnTitle_oz',
-
-        'popupGimnImage_ru',
-        'popupGimnImage_en',
-        'popupGimnImage_oz',
-
-        'popupGerbImage_ru',
-        'popupGerbImage_en',
-        'popupGerbImage_oz',
-
-        'popupFlagImage_ru',
-        'popupFlagImage_en',
-        'popupFlagImage_oz', */
 
        
 
@@ -139,8 +103,9 @@ class HomePage extends Section implements Initializable
             AdminFormElement::text('section_billion_output_ru', 'Секция Млрд. кВт*час выработки'),
             AdminFormElement::text('billion_output_ru', 'Млрд. кВт*час выработки'),
             AdminFormElement::image('task_img_ru', 'Изображение в секции (Задачи)')->setView(view('admin.custom.image')),
-            
-
+            AdminFormElement::text('partnresTitle_ru', 'Заголовок "Партнеры"'),
+            AdminFormElement::partners('partnresImages_ru', 'Партнеры'),
+                
       
             ]))->setLabel('RU');
 
@@ -179,7 +144,8 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::text('section_billion_output_oz', 'Секция Млрд. кВт*час выработки'),
                 AdminFormElement::text('billion_output_oz', 'Млрд. кВт*час выработки'),
                 AdminFormElement::image('task_img_oz', 'Изображение в секции (Задачи)')->setView(view('admin.custom.image')),
-
+                AdminFormElement::text('partnresTitle_oz', 'Заголовок "Партнеры"'),
+                AdminFormElement::partners('partnresImages_oz', 'Партнеры'),
               
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
@@ -216,7 +182,8 @@ class HomePage extends Section implements Initializable
                 AdminFormElement::text('section_billion_output_en', 'Секция Млрд. кВт*час выработки'),
                 AdminFormElement::text('billion_output_en', 'Млрд. кВт*час выработки'),
                 AdminFormElement::image('task_img_en', 'Изображение в секции (Задачи)')->setView(view('admin.custom.image')),
-                
+                AdminFormElement::text('partnresTitle_en', 'Заголовок "Партнеры"'),
+                AdminFormElement::partners('partnresImages_en', 'Партнеры'),
              
             ]))->setLabel('EN'); 
             return $tabsRU;

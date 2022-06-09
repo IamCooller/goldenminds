@@ -1340,6 +1340,7 @@
                     </div>
 
 					@if(App::isLocale('ru'))
+                    
 					@if($options->slogo_ru !='')
                         <img src="/{{ $options->blogo_ru}}" alt="Логотип" />
                         @else
@@ -1562,7 +1563,46 @@
                 </div>
             </div>
         </section>
-
+        @if($homepage->partnresImages)
+        <section class="partners" data-aos="fade-down">
+        <div class="_container">
+                <div class="partners__title slaider__title">{{$homepage->partnresTitle}}</div>
+                <div class="partners__slider">
+              
+                        <div class="swiper-wrapper">
+                            @foreach(json_decode($homepage->partnresImages) as $member)
+                            <div class="swiper-slide">
+                                <a 
+                                @if($member->title)
+                                href="{{ $member->title }}"
+                                @endif
+                                class="swiper-slide__img">
+                                    <img src="/{{$member->url}}" alt="{{$member->title}}" />
+                                </a>
+                            </div>
+                            @endforeach
+                        </div>
+                        <div class="slaider__buttons buttons-slaider">
+                    <div class="buttons-slaider__numbers">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="buttons-slaider__line"></div>
+                    <div class="buttons-slaider__reght reght-buttons">
+                        <div class="reght-buttons__button reght-buttons__button-prev">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <div class="reght-buttons__button reght-buttons__button-next">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                   
+                </div>
+                
+                </div>
+            </div>
+        </section>
+    @endif
         <section class="map" id="s-contacts" data-aos="fade-down">
             <div class="_container">
                 <div class="map__title">{{$homepage->contactTitle}}</div>
