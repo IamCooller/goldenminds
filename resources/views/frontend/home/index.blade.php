@@ -1583,9 +1583,7 @@
                             @endforeach
                         </div>
                         <div class="slaider__buttons buttons-slaider">
-                    <div class="buttons-slaider__numbers">
-                        <div class="swiper-pagination"></div>
-                    </div>
+                    
                     <div class="buttons-slaider__line"></div>
                     <div class="buttons-slaider__reght reght-buttons">
                         <div class="reght-buttons__button reght-buttons__button-prev">
