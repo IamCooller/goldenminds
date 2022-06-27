@@ -42,7 +42,7 @@
                             <rect x="0.75" y="0.75" width="4.43617" height="4.43617" fill="white" stroke="#1E2A5E" stroke-width="1.5" />
                             <rect x="0.75" y="23.1755" width="4.43617" height="4.43617" fill="white" stroke="#1E2A5E" stroke-width="1.5" />
                             <rect x="24.4941" y="0.75" width="4.43617" height="4.43617" fill="white" stroke="#1E2A5E" stroke-width="1.5" />
-                        </svg> <span>{{trans('проектирование')}}</span>
+                        </svg> <span> {{$mainstream->title_design}}</span>
                     </a>
                 </li>
                 <li>
@@ -55,7 +55,7 @@
                             <rect x="20.6094" y="8.64471" width="2.71053" height="12.7105" stroke="#263475" stroke-width="1.5" />
                             <line x1="20.083" y1="30.6667" x2="20.083" y2="35.3334" stroke="#263475" stroke-width="1.5" />
                             <line x1="14.667" y1="35.25" x2="24.0003" y2="35.25" stroke="#263475" stroke-width="1.5" />
-                        </svg> <span>{{trans('расчеты')}}</span>
+                        </svg> <span>{{$mainstream->title_economy}}</span>
                     </a>
                 </li>
                 <li>
@@ -66,7 +66,7 @@
                             <rect x="0.75" y="13.4167" width="4.05556" height="7.94444" stroke="#263475" stroke-width="1.5" />
                             <rect x="21.3057" y="13.4167" width="4.05556" height="7.94444" stroke="#263475" stroke-width="1.5" />
                             <rect x="12.417" y="27.8611" width="2.38889" height="2.38889" rx="1.19444" stroke="#263475" stroke-width="1.5" />
-                        </svg> <span>{{trans('Консультация')}}</span>
+                        </svg> <span>{{$mainstream->title_consultation}}</span>
                     </a>
                 </li>
 
@@ -92,7 +92,7 @@
 	<path class="st0" d="M12.3,7.5c-0.1,0-0.3,0-0.4,0c-5.9,0-10.7,4.8-10.7,10.7c0,5.9,4.8,10.7,10.7,10.7c0.2,0,0.3,0,0.4,0V7.5z"/>
 </g>
 <path class="st0" d="M12.3,13.9c-0.1,0-0.3,0-0.4,0c-2.4,0-4.4,2-4.4,4.4c0,2.4,2,4.4,4.4,4.4c0.2,0,0.3,0,0.4,0V13.9z"/>
-</svg><span>{{trans('Инженерные изыскания')}}</span>
+</svg><span>{{$mainstream->title_injener}}</span>
                     </a>
                 </li>
 
@@ -113,7 +113,7 @@
 <line class="st4" x1="14.5" y1="35" x2="22.6" y2="35"/>
 <line class="st4" x1="3.7" y1="27" x2="17.3" y2="27"/>
 <path class="st4" d="M9.5,27.2c0,0,5.7,6.5,13.9,2.8s8.4-12.4,5.6-17.1"/>
-</svg><span>{{trans('Лабораторные исследования')}}</span>
+</svg><span>{{$mainstream->title_laboratory}}</span>
                     </a>
                 </li>
 
@@ -135,7 +135,7 @@
 <circle class="st6" cx="19.6" cy="8.5" r="2.4"/>
 </svg>
 
-                        <span>{{trans('Авторский надзор')}}
+                        <span>{{$mainstream->title_author}}
                     </a>
                 </li>
 
@@ -162,7 +162,7 @@
                                 </g>
                                 <path class="st1" d="M3.5,35.8h1.4c0.3-3.9,4.3-7.3,10.2-8.6l0.6-0.1v-3.4l-0.4-0.2c-2.6-1.5-4.2-4.3-4.3-7.3h17.2   c0,3-1.7,5.8-4.3,7.3l-0.4,0.2V27l0.6,0.1c6.2,1.1,10.6,4.7,10.8,8.7h1.4c-0.2-4.6-4.8-8.6-11.4-10v-1.3c2.9-1.8,4.6-5,4.6-8.5   c0-0.2,0-0.4,0-0.6l0-0.7H9.7l0,0.7c0,0.2,0,0.4,0,0.6c0,3.4,1.8,6.6,4.6,8.5V26C7.9,27.5,3.7,31.4,3.5,35.8z" />
                             </g>
-                        </svg><span>{{trans('Сопровождение строительства')}}</span>
+                        </svg><span>{{$mainstream->title_stroy}}</span>
                     </a>
                 </li>
 

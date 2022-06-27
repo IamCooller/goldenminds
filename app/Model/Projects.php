@@ -3,6 +3,7 @@
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use App;
+use Carbon\Carbon;
 class Projects extends Model
 {
     /**
@@ -146,6 +147,14 @@ class Projects extends Model
         $locale = App::getLocale();
         $column = "output_" . $locale;
         return $this->{$column};
+    }
+
+    public function getDateAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "date_" . $locale;
+        return Carbon::parse($this->{$column})->format('d.m.Y');
+
     }
     
 }

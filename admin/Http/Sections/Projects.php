@@ -100,7 +100,7 @@ class Projects extends Section implements Initializable
                 AdminFormElement::text('countagrs_ru', 'Количество агрегатов'),
                 AdminFormElement::text('watter_ru', 'Расход воды'),
                 AdminFormElement::text('output_ru', 'Годовая выработка'),
-                
+                AdminFormElement::date('date_ru', 'Дата')->setCurrentDate(),
                 AdminFormElement::select('status_ru', 'Статус', ['Действующая'=>'Действующая','Модернизированная'=>'Модернизированная','Списанная'=>'Списанная','Неизвестен'=>'Неизвестен']),
             ]))->setLabel('RU');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
@@ -124,7 +124,7 @@ class Projects extends Section implements Initializable
                 AdminFormElement::text('countagrs_oz', 'Количество агрегатов'),
                 AdminFormElement::text('watter_oz', 'Расход воды'),
                 AdminFormElement::text('output_oz', 'Годовая выработка'),
-                
+                AdminFormElement::date('date_oz', 'Дата')->setCurrentDate(),
                 AdminFormElement::select('status_oz', 'Статус', ['Действующая'=>'Действующая','Модернизированная'=>'Модернизированная','Списанная'=>'Списанная','Неизвестен'=>'Неизвестен']),
             ]))->setLabel('OZ');
             $tabsRU[] = AdminDisplay::tab(AdminForm::elements([
@@ -148,7 +148,7 @@ class Projects extends Section implements Initializable
                 AdminFormElement::text('countagrs_en', 'Количество агрегатов'),
                 AdminFormElement::text('watter_en', 'Расход воды'),
                 AdminFormElement::text('output_en', 'Годовая выработка'),
-                
+                AdminFormElement::date('date_en', 'Дата')->setCurrentDate(),
                 AdminFormElement::select('status_en', 'Статус', ['Действующая'=>'Действующая','Модернизированная'=>'Модернизированная','Списанная'=>'Списанная','Неизвестен'=>'Неизвестен']),
             ]))->setLabel('EN'); 
             return $tabsRU;

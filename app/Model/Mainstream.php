@@ -135,4 +135,54 @@ class Mainstream extends Model
         $column = "content_stroy_" . $locale;
         return $this->{$column};
     }
+
+    public function getTitleDesignAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "title_design_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getTitleEconomyAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "title_economy_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getTitleConsultationAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "title_consultation_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getTitleInjenerAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "title_injener_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getTitleLaboratoryAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "title_laboratory_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getTitleAuthorAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "title_author_" . $locale;
+        return $this->{$column};
+    }
+
+    public function getTitleStroyAttribute()
+    {
+        $locale = App::getLocale();
+        $column = "title_stroy_" . $locale;
+        return $this->{$column};
+    }
+
 }

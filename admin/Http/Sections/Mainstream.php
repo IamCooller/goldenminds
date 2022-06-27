@@ -63,12 +63,21 @@ class Mainstream extends Section
                 AdminFormElement::text('description_ru', 'Description'),
                 AdminFormElement::text('keywords_ru', 'Keywords'),
                 AdminFormElement::wysiwyg('content_ru', 'Контент'),
+                AdminFormElement::text('title_design_ru', 'Заголовок Проектирование'),
                 AdminFormElement::wysiwyg('content_design_ru', 'Контент Проектирование'),
+                AdminFormElement::text('title_economy_ru', 'Заголовок Расчеты'),
                 AdminFormElement::wysiwyg('content_economy_ru', 'Контент Расчеты'),
+                AdminFormElement::text('title_consultation_ru', 'Заголовок Консультация'),
                 AdminFormElement::wysiwyg('content_consultation_ru', 'Контент Консультация'),
+                AdminFormElement::text('title_injener_ru', 'Заголовок Инженерные изыскания'),
                 AdminFormElement::wysiwyg('content_injener_ru', 'Контент Инженерные изыскания'),
+                AdminFormElement::text('title_laboratory_ru', 'Заголовок Лабораторные исследования'),
                 AdminFormElement::wysiwyg('content_laboratory_ru', 'Контент Лабораторные исследования'),
+                AdminFormElement::text('title_author_ru', 'Заголовок Авторский надзор'),
+
                 AdminFormElement::wysiwyg('content_author_ru', 'Контент Авторский надзор'),
+                AdminFormElement::text('title_stroy_ru', 'Заголовок Сопровождение строительства'),
+
                 AdminFormElement::wysiwyg('content_stroy_ru', 'Контент Сопровождение строительства'),
                 AdminFormElement::files('file_ru', 'Файл'),
             ]))->setLabel('RU');
@@ -77,12 +86,26 @@ class Mainstream extends Section
                 AdminFormElement::text('keywords_oz', 'Keywords'),
                 AdminFormElement::text('description_oz', 'Description'),
                 AdminFormElement::wysiwyg('content_oz', 'Контент'),
+                AdminFormElement::text('title_design_oz', 'Заголовок Проектирование'),
+
                 AdminFormElement::wysiwyg('content_design_oz', 'Контент Проектирование'),
+                AdminFormElement::text('title_economy_oz', 'Заголовок Расчеты'),
+
                 AdminFormElement::wysiwyg('content_economy_oz', 'Контент Расчеты'),
+                AdminFormElement::text('title_consultation_oz', 'Заголовок Консультация'),
+
                 AdminFormElement::wysiwyg('content_consultation_oz', 'Контент Консультация'),
+                AdminFormElement::text('title_injener_oz', 'Заголовок Инженерные изыскания'),
+
                 AdminFormElement::wysiwyg('content_injener_oz', 'Контент Инженерные изыскания'),
+                AdminFormElement::text('title_laboratory_oz', 'Заголовок Лабораторные исследования'),
+
                 AdminFormElement::wysiwyg('content_laboratory_oz', 'Контент Лабораторные исследования'),
+                AdminFormElement::text('title_author_oz', 'Заголовок Авторский надзор'),
+
                 AdminFormElement::wysiwyg('content_author_oz', 'Контент Авторский надзор'),
+                AdminFormElement::text('title_stroy_oz', 'Заголовок Сопровождение строительства'),
+
                 AdminFormElement::wysiwyg('content_stroy_oz', 'Контент Сопровождение строительства'),
                 AdminFormElement::files('file_oz', 'Файл'),
             ]))->setLabel('OZ');
@@ -91,12 +114,26 @@ class Mainstream extends Section
                 AdminFormElement::text('description_en', 'Description'),
                 AdminFormElement::text('keywords_en', 'Keywords'),
                 AdminFormElement::wysiwyg('content_en', 'Контент'),
+                AdminFormElement::text('title_design_en', 'Заголовок Проектирование'),
+
                 AdminFormElement::wysiwyg('content_design_en', 'Контент Проектирование'),
+                AdminFormElement::text('title_economy_en', 'Заголовок Расчеты'),
+
                 AdminFormElement::wysiwyg('content_economy_en', 'Контент Расчеты'),
+                AdminFormElement::text('title_consultation_en', 'Заголовок Консультация'),
+
                 AdminFormElement::wysiwyg('content_consultation_en', 'Контент Консультация'),
+                AdminFormElement::text('title_injener_en', 'Заголовок Инженерные изыскания'),
+
                 AdminFormElement::wysiwyg('content_injener_en', 'Контент Инженерные изыскания'),
+                AdminFormElement::text('title_laboratory_en', 'Заголовок Лабораторные исследования'),
+
                 AdminFormElement::wysiwyg('content_laboratory_en', 'Контент Лабораторные исследования'),
+                AdminFormElement::text('title_author_en', 'Заголовок Авторский надзор'),
+
                 AdminFormElement::wysiwyg('content_author_en', 'Контент Авторский надзор'),
+                AdminFormElement::text('title_stroy_en', 'Заголовок Сопровождение строительства'),
+
                 AdminFormElement::wysiwyg('content_stroy_en', 'Контент Сопровождение строительства'),
                 AdminFormElement::files('file_en', 'Файл'),
             ]))->setLabel('EN'); 
