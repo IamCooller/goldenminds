@@ -73,9 +73,7 @@ class Mainstream extends Section
                 AdminFormElement::wysiwyg('content_injener_ru', 'Контент Инженерные изыскания'),
                 AdminFormElement::text('title_laboratory_ru', 'Заголовок Лабораторные исследования'),
                 AdminFormElement::wysiwyg('content_laboratory_ru', 'Контент Лабораторные исследования'),
-                AdminFormElement::text('title_author_ru', 'Заголовок Авторский надзор'),
-
-                AdminFormElement::wysiwyg('content_author_ru', 'Контент Авторский надзор'),
+              
                 AdminFormElement::text('title_stroy_ru', 'Заголовок Сопровождение строительства'),
 
                 AdminFormElement::wysiwyg('content_stroy_ru', 'Контент Сопровождение строительства'),
@@ -101,9 +99,7 @@ class Mainstream extends Section
                 AdminFormElement::text('title_laboratory_oz', 'Заголовок Лабораторные исследования'),
 
                 AdminFormElement::wysiwyg('content_laboratory_oz', 'Контент Лабораторные исследования'),
-                AdminFormElement::text('title_author_oz', 'Заголовок Авторский надзор'),
-
-                AdminFormElement::wysiwyg('content_author_oz', 'Контент Авторский надзор'),
+            
                 AdminFormElement::text('title_stroy_oz', 'Заголовок Сопровождение строительства'),
 
                 AdminFormElement::wysiwyg('content_stroy_oz', 'Контент Сопровождение строительства'),
@@ -129,9 +125,7 @@ class Mainstream extends Section
                 AdminFormElement::text('title_laboratory_en', 'Заголовок Лабораторные исследования'),
 
                 AdminFormElement::wysiwyg('content_laboratory_en', 'Контент Лабораторные исследования'),
-                AdminFormElement::text('title_author_en', 'Заголовок Авторский надзор'),
-
-                AdminFormElement::wysiwyg('content_author_en', 'Контент Авторский надзор'),
+               
                 AdminFormElement::text('title_stroy_en', 'Заголовок Сопровождение строительства'),
 
                 AdminFormElement::wysiwyg('content_stroy_en', 'Контент Сопровождение строительства'),
